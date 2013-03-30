@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<root>
+  <!--
+    Adapted from the built-in "Simultaneous Vi Mode" option:
+    https://github.com/tekezo/KeyRemap4MacBook/blob/6aa99ba/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4
+  -->
+  <item>
+    <name>(S)uper (D)uper Mode</name>
+    <item>
+      <name>What's (S)uper (D)uper Mode?</name>
+      <identifier vk_config="true">notsave.com.jasonrudolph.simultaneouskeypresses_vimode</identifier>
+
+      <appendix>To activate, push S and D keys simultaneously and hold them down.</appendix>
+      <appendix>Now you're in (S)uper (D)uper mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.)</appendix>
+      <appendix>It's optimized for keeping you on the home row, or very close to it.</appendix>
+      <appendix>---</appendix>
+
+      <appendix>Now you can:</appendix>
+      <appendix>- Use H/J/K/L for Left/Down/Up/Right</appendix>
+      <autogen>__ShowStatusMessage__ $uper Mode</autogen>
+      <autogen>__KeyToKey__ {{VI_H}}, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ {{VI_J}}, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ {{VI_K}}, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ {{VI_L}}, KeyCode::CURSOR_RIGHT</autogen>
+
+      <appendix>- Use A for Option (AKA Alt)</appendix>
+      <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
+
+      <appendix>- Use F for Command</appendix>
+      <autogen>__KeyToKey__ KeyCode::F, KeyCode::COMMAND_L</autogen>
+
+      <appendix>- Use Space for Shift</appendix>
+      <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
+    </item>
+    <item>
+      <name>Simultaneous Key Presses [S+D] turns on "(S)uper (D)uper mode"</name>
+      <identifier>remap.com_jasonrudolph_simultaneouskeypresses_vimode_sd</identifier>
+      <autogen>
+        __SimultaneousKeyPresses__
+        KeyCode::D, KeyCode::S,
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_com_jasonrudolph_simultaneouskeypresses_vimode
+      </autogen>
+    </item>
+  </item>
+</root>
