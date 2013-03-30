@@ -1,5 +1,22 @@
 <?xml version="1.0"?>
 <root>
+  <item>
+    <!--
+      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:
+      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
+    -->
+    <name>F19 to Escape/Control</name>
+    <appendix>Tap F19 for Escape; Hold F19 for Control</appendix>
+    <appendix>(Recommendation: Use PCKeyboardHack to remap Caps Lock to F19.)</appendix>
+    <identifier>com.jasonrudolph.f192f19_escape_or_control</identifier>
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::F19,
+      KeyCode::CONTROL_L,
+      KeyCode::ESCAPE
+    </autogen>
+  </item>
+
   <!--
     Adapted from the built-in "Simultaneous Vi Mode" option:
     https://github.com/tekezo/KeyRemap4MacBook/blob/6aa99ba/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4
