@@ -31,6 +31,18 @@
 
       <appendix>- Use Space for Shift</appendix>
       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
+
+      <appendix>- Use I/O to move left/right between tabs (in most apps)</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::I,
+        KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::O,
+        KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+      </autogen>
     </item>
     <item>
       <name>Simultaneous Key Presses [S+D] turns on "(S)uper (D)uper mode"</name>
