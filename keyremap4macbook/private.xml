@@ -43,6 +43,18 @@
         KeyCode::O,
         KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
       </autogen>
+
+      <appendix>- Use U/P to go to the first/last tab (in most apps)</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U,
+        KeyCode::KEY_1, ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::P,
+        KeyCode::KEY_9, ModifierFlag::COMMAND_L
+      </autogen>
     </item>
     <item>
       <name>Simultaneous Key Presses [S+D] turns on "(S)uper (D)uper mode"</name>
