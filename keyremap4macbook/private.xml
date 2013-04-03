@@ -34,7 +34,7 @@
 
       <appendix>Now you can:</appendix>
       <appendix>- Use H/J/K/L for Left/Down/Up/Right</appendix>
-      <autogen>__ShowStatusMessage__ $uper Mode</autogen>
+      <autogen>__ShowStatusMessage__ (S)uper (D)uper Mode</autogen>
       <autogen>__KeyToKey__ {{VI_H}}, KeyCode::CURSOR_LEFT</autogen>
       <autogen>__KeyToKey__ {{VI_J}}, KeyCode::CURSOR_DOWN</autogen>
       <autogen>__KeyToKey__ {{VI_K}}, KeyCode::CURSOR_UP</autogen>
