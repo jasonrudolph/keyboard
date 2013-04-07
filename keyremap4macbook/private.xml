@@ -49,7 +49,7 @@
       <appendix>- Use Space for Shift</appendix>
       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
 
-      <appendix>- Use I/O to move left/right between tabs (in most apps)</appendix>
+      <appendix>- Use I/O to move left/right between tabs</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::I,
