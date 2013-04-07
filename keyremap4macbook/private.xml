@@ -54,6 +54,21 @@
       <appendix>It's optimized for keeping you on the home row, or very close to it.</appendix>
       <appendix>---</appendix>
 
+      <appendix>- Use A for Option (AKA Alt)</appendix>
+      <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
+
+      <appendix>- Use A+J/K Page Down/Up</appendix>
+      <autogen>
+        __KeyToKey__
+        {{VI_J}}, VK_OPTION,
+        KeyCode::PAGEDOWN
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        {{VI_K}}, VK_OPTION,
+        KeyCode::PAGEUP
+      </autogen>
+
       <appendix>Now you can:</appendix>
       <appendix>- Use H/J/K/L for Left/Down/Up/Right</appendix>
       <autogen>__ShowStatusMessage__ (S)uper (D)uper Mode</autogen>
@@ -61,9 +76,6 @@
       <autogen>__KeyToKey__ {{VI_J}}, KeyCode::CURSOR_DOWN</autogen>
       <autogen>__KeyToKey__ {{VI_K}}, KeyCode::CURSOR_UP</autogen>
       <autogen>__KeyToKey__ {{VI_L}}, KeyCode::CURSOR_RIGHT</autogen>
-
-      <appendix>- Use A for Option (AKA Alt)</appendix>
-      <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
 
       <appendix>- Use F for Command</appendix>
       <autogen>__KeyToKey__ KeyCode::F, KeyCode::COMMAND_L</autogen>
