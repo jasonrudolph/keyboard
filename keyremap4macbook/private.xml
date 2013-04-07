@@ -17,6 +17,28 @@
     </autogen>
   </item>
 
+  <item>
+    <name>Option+H/L to delete previous/next word</name>
+    <identifier>com.jasonrudolph.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
+
+    <!--
+      "ModifierFlag::OPTION_L | ModifierFlag::NONE" causes this remapping to
+      fire *only* when the the left option key is used *without* any other
+      modifiers.
+      See http://pqrs.org/macosx/keyremap4macbook/xml-basic.html.en#modifierflag-none
+    -->
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::DELETE, ModifierFlag::OPTION_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
+    </autogen>
+  </item>
+
   <!--
     Adapted from the built-in "Simultaneous Vi Mode" option:
     https://github.com/tekezo/KeyRemap4MacBook/blob/6aa99ba/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4
