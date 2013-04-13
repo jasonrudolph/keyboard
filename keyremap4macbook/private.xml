@@ -40,6 +40,30 @@
   </item>
 
   <item>
+    <name>Option+H/L to delete previous/next word in iTerm 2 (and Terminal)</name>
+    <identifier>com.jasonrudolph.terminal.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
+    <only>TERMINAL</only>
+
+    <!--
+      "ModifierFlag::OPTION_L | ModifierFlag::NONE" causes this remapping to
+      fire *only* when the the left option key is used *without* any other
+      modifiers.
+      See http://pqrs.org/macosx/keyremap4macbook/xml-basic.html.en#modifierflag-none
+    -->
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::W, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::ESCAPE,
+      KeyCode::D
+    </autogen>
+  </item>
+
+  <item>
     <name>Option+H/L to delete previous/next word</name>
     <identifier>com.jasonrudolph.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
 
