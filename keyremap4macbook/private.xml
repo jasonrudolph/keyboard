@@ -18,6 +18,29 @@
   </item>
 
   <item>
+    <!--
+      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:
+      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper
+    -->
+    <name>Right Option to Hyper</name>
+    <appendix>OS X doesn't have a Hyper. This maps Right Option to Control+Shift+Option+Command.</appendix>
+
+    <identifier>com.jasonrudolph.right_option_hyper</identifier>
+
+    <!--
+      "ModifierFlag::OPTION_R | ModifierFlag::NONE" causes this remapping to
+      fire *only* when the the right option key is used *without* any other
+      modifiers.
+      See http://pqrs.org/macosx/keyremap4macbook/xml-basic.html.en#modifierflag-none
+    -->
+    <autogen>
+      __KeyToKey__
+      KeyCode::OPTION_R, ModifierFlag::OPTION_R | ModifierFlag::NONE,
+      KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+
+  <item>
     <name>Option+H/L to delete previous/next word</name>
     <identifier>com.jasonrudolph.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
 

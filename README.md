@@ -115,6 +115,7 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 ## TODO
 
+- Document usage of "Hyper" key
 - Incorporate [Keyboard Maestro][keyboard-maestro] configuration
 - Describe `.inputrc` settings that enable standard forward/backward word navigation in Bash shell in iTerm2
 - Automate with [Boxen][boxen]
