@@ -89,7 +89,7 @@
 
       <item>
         <name>Use A+H/L to move to previous/next word in iTerm 2 (and Terminal)</name>
-        <identifier>com.jasonrudolph.simultaneouskeypresses_vimode.previous_next_work_in_terminal</identifier>
+        <identifier>com.jasonrudolph.simultaneouskeypresses_vimode.terminal.previous_next_word</identifier>
         <only>TERMINAL</only>
 
         <autogen>
