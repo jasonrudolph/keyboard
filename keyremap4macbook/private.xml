@@ -105,6 +105,8 @@
       <appendix>- Use F for Command</appendix>
       <appendix>- Use A for Option (AKA Alt)</appendix>
       <appendix>- Use Space for Shift</appendix>
+      <appendix>- Use M to copy</appendix>
+      <appendix>- Use , to paste</appendix>
       <appendix>- Use A+J/K for Page Down/Up</appendix>
       <appendix>- Use I/O to move left/right between tabs</appendix>
       <appendix>- Use U/P to go to the first/last tab (in most apps)</appendix>
@@ -149,6 +151,17 @@
       <autogen>__KeyToKey__ KeyCode::F, KeyCode::COMMAND_L</autogen>
 
       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
+
+      <autogen>
+        __KeyToKey__
+        KeyCode::M,
+        KeyCode::C, ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::COMMA,
+        KeyCode::V, ModifierFlag::COMMAND_L
+      </autogen>
 
       <autogen>
         __KeyToKey__
