@@ -88,6 +88,27 @@
 
       <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
 
+      <item>
+        <name>Use A+H/L to move to previous/next word in iTerm 2 (and Terminal)</name>
+        <identifier>com.jasonrudolph.simultaneouskeypresses_vimode.previous_next_work_in_terminal</identifier>
+        <only>TERMINAL</only>
+
+        <autogen>
+          --KeyToKey--
+          {{VI_H}}, VK_OPTION,
+
+          KeyCode::ESCAPE,
+          KeyCode::B
+        </autogen>
+        <autogen>
+          --KeyToKey--
+          {{VI_L}}, VK_OPTION,
+
+          KeyCode::ESCAPE,
+          KeyCode::F
+        </autogen>
+      </item>
+
       <autogen>
         __KeyToKey__
         {{VI_J}}, VK_OPTION,
