@@ -24,7 +24,6 @@
     -->
     <name>Right Option to Hyper</name>
     <appendix>OS X doesn't have a Hyper. This maps Right Option to Control+Shift+Option+Command.</appendix>
-
     <identifier>com.jasonrudolph.right_option_hyper</identifier>
 
     <!--
@@ -96,14 +95,12 @@
         <autogen>
           --KeyToKey--
           {{VI_H}}, VK_OPTION,
-
           KeyCode::ESCAPE,
           KeyCode::B
         </autogen>
         <autogen>
           --KeyToKey--
           {{VI_L}}, VK_OPTION,
-
           KeyCode::ESCAPE,
           KeyCode::F
         </autogen>
