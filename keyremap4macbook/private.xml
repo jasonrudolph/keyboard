@@ -1,5 +1,30 @@
 <?xml version="1.0"?>
 <root>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+    <url>file:///Applications/Google%20Chrome.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
+    <url>file:///Applications/iTerm.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Mailplane</name>
+    <url>file:///Applications/Mailplane%203.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_PropanePlus</name>
+    <url>file:///Applications/PropanePlus.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Rdio</name>
+    <url>file:///Applications/Rdio.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
+    <url>file:///Applications/Sublime%20Text%202.app</url>
+  </vkopenurldef>
+
   <item>
     <!--
       Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:
@@ -22,8 +47,9 @@
       Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:
       http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper
     -->
-    <name>Right Option to Hyper</name>
-    <appendix>OS X doesn't have a Hyper. This maps Right Option to Control+Shift+Option+Command.</appendix>
+    <name>Right Option to "Hyper"</name>
+    <appendix>OS X doesn't have a native Hyper key. Let's define Hyper as Control+Shift+Option+Command.</appendix>
+    <appendix>(This maps Right Option to our definition of Hyper.)</appendix>
     <identifier>com.jasonrudolph.right_option_hyper</identifier>
 
     <!--
@@ -37,6 +63,66 @@
       KeyCode::OPTION_R, ModifierFlag::OPTION_R | ModifierFlag::NONE,
       KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
     </autogen>
+
+    <item>
+      <name>Hyper+B to open Chrome ("B" for "Browser")</name>
+      <identifier>com.jasonrudolph.hyper_b</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::B, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Chrome,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+C to open PropanePlus ("C" for "Chat")</name>
+      <identifier>com.jasonrudolph.hyper_c</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::C, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_PropanePlus,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+E to open Sublime Text ("E" for "Editor")</name>
+      <identifier>com.jasonrudolph.hyper_e</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Sublime_Text,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+G to open Mailplane ("G" for "Gmail")</name>
+      <identifier>com.jasonrudolph.hyper_g</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::G, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Mailplane,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+R to open Rdio ("R" for "Rdio")</name>
+      <identifier>com.jasonrudolph.hyper_r</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::R, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Rdio,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+T to open iTerm ("T" for "Terminal")</name>
+      <identifier>com.jasonrudolph.hyper_t</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::T, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_iTerm,
+      </autogen>
+    </item>
   </item>
 
   <item>
