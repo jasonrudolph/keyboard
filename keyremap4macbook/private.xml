@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <root>
+  <appdef>
+    <appname>ITERM</appname>
+    <equal>com.googlecode.iterm2</equal>
+  </appdef>
+
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
     <url>file:///Applications/Google%20Chrome.app</url>
@@ -168,6 +173,22 @@
       __KeyToKey__
       KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::NONE,
       KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
+    </autogen>
+  </item>
+
+  <item>
+    <name>Control+dash/pipe to split iTerm2 panes horizontally/vertically</name>
+    <identifier>com.jasonrudolph.iterm.control_with_dash_or_pipe_to_split_pane</identifier>
+    <only>ITERM</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::MINUS, ModifierFlag::CONTROL_L,
+      KeyCode::D, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::BACKSLASH, ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::D, ModifierFlag::COMMAND_L | ModifierFlag::NONE
     </autogen>
   </item>
 
