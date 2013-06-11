@@ -239,6 +239,7 @@
       <appendix>- Use Space for Shift</appendix>
       <appendix>- Use M to copy</appendix>
       <appendix>- Use , to paste</appendix>
+      <appendix>- Use MM to copy current line</appendix>
       <appendix>- Use A+J/K for Page Down/Up</appendix>
       <appendix>- Use I/O to move left/right between tabs</appendix>
       <appendix>- Use U/P to go to the first/last tab (in most apps)</appendix>
@@ -282,11 +283,23 @@
 
       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SHIFT_L</autogen>
 
+      <block>
+        <lastpressedphysicalkey_only>KeyCode::M</lastpressedphysicalkey_only>
+        <elapsedtimesincelastpressed_lessthan>Millisecond::RawValue::200</elapsedtimesincelastpressed_lessthan>
+        <autogen>
+          __KeyToKey__
+          KeyCode::M,
+          KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L,
+          KeyCode::CURSOR_DOWN, ModifierFlag::SHIFT_L,
+          KeyCode::C, ModifierFlag::COMMAND_L
+        </autogen>
+      </block>
       <autogen>
         __KeyToKey__
         KeyCode::M,
         KeyCode::C, ModifierFlag::COMMAND_L
       </autogen>
+
       <autogen>
         __KeyToKey__
         KeyCode::COMMA,
