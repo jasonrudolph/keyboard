@@ -71,9 +71,9 @@
       KeyCode::ESCAPE
     </autogen>
   </item>
-  
+
   <item>
-    <name>Double tap on shift for caps lock</name>
+    <name>Double-tap Left Shift for CapsLock</name>
     <identifier>private.double_lshift_to_caps</identifier>
     <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
   </item>
