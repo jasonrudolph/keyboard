@@ -99,6 +99,14 @@ ln -s $PWD/keyremap4macbook/private.xml \
    **control**.)
    [[screenshot][keyremap4macbook-key-repeat-screenshot]]
 
+#### Goals
+
+- Double tap **left shift** for **caps lock** (à la iOS)
+
+#### Making it happen
+1. Launch KeyRemap4MacBook.
+2. In the "Change Key" tab, enable the "Double tap on shift for caps lock".
+
 ### Unleash (S)uper (D)uper mode
 
 #### Goals
