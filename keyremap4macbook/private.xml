@@ -74,7 +74,7 @@
 
   <item>
     <name>Double-tap Left Shift for CapsLock</name>
-    <identifier>private.double_lshift_to_caps</identifier>
+    <identifier>com.jasonrudolph.double_lshift_to_caps</identifier>
     <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
   </item>
 
