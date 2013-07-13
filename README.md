@@ -82,6 +82,7 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 - Tap **caps lock** for **escape**
 - Hold **caps lock** for **control**
+- Access the default **caps lock** behavior in those rare cases where it's helpful
 
 #### Making it happen
 
@@ -93,19 +94,12 @@ ln -s $PWD/keyremap4macbook/private.xml \
 3. Launch KeyRemap4MacBook.
 4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
    [[screenshot][keyremap4macbook-change-key-screenshot]]
-5. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
+5. In the "Change Key" tab, enable the "Double-tap Left Shift for CapsLock" option.
+6. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
    300ms. (As [recommended][modern-space-cadet-key-repeat] by Steve Losh, I find
    that this avoids accidentally triggering **escape** when you meant to trigger
    **control**.)
    [[screenshot][keyremap4macbook-key-repeat-screenshot]]
-
-#### Goals
-
-- Double tap **left shift** for **caps lock** (à la iOS)
-
-#### Making it happen
-1. Launch KeyRemap4MacBook.
-2. In the "Change Key" tab, enable the "Double tap on shift for caps lock".
 
 ### Unleash (S)uper (D)uper mode
 
