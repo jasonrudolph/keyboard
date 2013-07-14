@@ -1,35 +1,5 @@
 <?xml version="1.0"?>
 <root>
-  <appdef>
-    <appname>ITERM</appname>
-    <equal>com.googlecode.iterm2</equal>
-  </appdef>
-
-  <!--
-    KeyRemap4MacBook defines a list of apps to ignore when using any of the
-    "Emacs Mode" key mappings. That list includes "TERMINAL" (as well as other
-    apps).
-    See: https://github.com/tekezo/KeyRemap4MacBook/blob/953717f78c/src/core/server/Resources/replacementdef.xml#L46
-
-    By default "TERMINAL" includes Terminal.app *and* iTerm2. When we define
-    "ITERM" above, it seems to remove iTerm2 from the definition of "TERMINAL".
-
-    So, we need to redefine the list of "EMACS_MODE_IGNORE_APPS" to include
-    all of the original apps *and* "ITERM".
-  -->
-  <!-- ============================================================ -->
-  <replacementdef>
-    <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
-    <replacementvalue>
-      EMACS,
-      ITERM,
-      TERMINAL,
-      VI,
-      VIRTUALMACHINE,
-      X11
-    </replacementvalue>
-  </replacementdef>
-
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
     <url>file:///Applications/Google%20Chrome.app</url>
@@ -164,7 +134,7 @@
   <item>
     <name>Option+H/L to delete previous/next word in iTerm 2 (and Terminal)</name>
     <identifier>com.jasonrudolph.terminal.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
-    <only>ITERM, TERMINAL</only>
+    <only>TERMINAL</only>
 
     <!--
       "ModifierFlag::OPTION_L | ModifierFlag::NONE" causes this remapping to
@@ -210,7 +180,7 @@
   <item>
     <name>Control+dash/pipe to split iTerm2 panes horizontally/vertically</name>
     <identifier>com.jasonrudolph.iterm.control_with_dash_or_pipe_to_split_pane</identifier>
-    <only>ITERM</only>
+    <only>TERMINAL</only>
     <autogen>
       __KeyToKey__
       KeyCode::MINUS, ModifierFlag::CONTROL_L,
@@ -254,7 +224,7 @@
       <autogen>__KeyToKey__ KeyCode::A, KeyCode::OPTION_L</autogen>
 
       <block>
-        <only>ITERM, TERMINAL</only>
+        <only>TERMINAL</only>
         <autogen>
           --KeyToKey--
           {{VI_H}}, VK_OPTION,
