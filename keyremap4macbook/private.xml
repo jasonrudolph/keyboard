@@ -22,7 +22,7 @@
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
-    <url>file:///Applications/Sublime%20Text%202.app</url>
+    <url>file:///Applications/Sublime%20Text%203.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
