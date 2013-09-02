@@ -246,13 +246,13 @@
         <only>TERMINAL</only>
         <autogen>
           --KeyToKey--
-          {{VI_H}}, VK_OPTION,
+          {{VI_H}}, VK_OPTION | ModifierFlag::NONE,
           KeyCode::ESCAPE,
           KeyCode::B
         </autogen>
         <autogen>
           --KeyToKey--
-          {{VI_L}}, VK_OPTION,
+          {{VI_L}}, VK_OPTION | ModifierFlag::NONE,
           KeyCode::ESCAPE,
           KeyCode::F
         </autogen>
