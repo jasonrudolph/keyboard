@@ -260,12 +260,12 @@
 
       <autogen>
         __KeyToKey__
-        {{VI_J}}, VK_OPTION,
+        {{VI_J}}, VK_OPTION | ModifierFlag::NONE,
         KeyCode::PAGEDOWN
       </autogen>
       <autogen>
         __KeyToKey__
-        {{VI_K}}, VK_OPTION,
+        {{VI_K}}, VK_OPTION | ModifierFlag::NONE,
         KeyCode::PAGEUP
       </autogen>
 
