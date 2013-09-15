@@ -58,6 +58,7 @@ This setup is honed and tested with the following dependencies.
 - OS X Mountain Lion, 10.8.4
 - [PCKeyboardHack 9.0][pckeyboardhack]
 - [KeyRemap4MacBook 8.3][keyremap4macbook]
+- [SizeUp 1.5][sizeup] (optional)
 
 ## The Setup
 
@@ -79,6 +80,7 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 - Install [PCKeyboardHack][pckeyboardhack]
 - Install [KeyRemap4MacBook][keyremap4macbook]
+- Install [SizeUp][sizeup] (optional)
 
 ### Put _control_ and _escape_ on the home row
 
@@ -119,6 +121,19 @@ ln -s $PWD/keyremap4macbook/private.xml \
 2. In the "Change Key" tab, enable the "(S)uper (D)uper Mode" option.
    [[screenshot][keyremap4macbook-change-key-screenshot-02]]
 
+### Control SizeUp from the home row
+
+#### Goals
+
+- Quickly arrange and resize windows in common configurations, using keyboard
+  shortcuts that are on or near the home row
+
+#### Making it happen
+
+1. Launch KeyRemap4MacBook.
+2. In the "Change Key" tab, enable the "SizeUp Mode" option.
+   [[screenshot][keyremap4macbook-change-key-screenshot-03]]
+
 ## TODO
 
 - Document usage of "Hyper" key
@@ -133,8 +148,10 @@ ln -s $PWD/keyremap4macbook/private.xml \
 [keyremap4macbook]: http://pqrs.org/macosx/keyremap4macbook/
 [keyremap4macbook-change-key-screenshot-01]: screenshots/keyremap4macbook-change-key-config-01.png
 [keyremap4macbook-change-key-screenshot-02]: screenshots/keyremap4macbook-change-key-config-02.png
+[keyremap4macbook-change-key-screenshot-03]: screenshots/keyremap4macbook-change-key-config-03.png
 [keyremap4macbook-key-repeat-screenshot]: screenshots/keyremap4macbook-key-repeat-config.png
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
 [pckeyboardhack]: http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
 [pckeyboardhack-screenshot]: screenshots/pckeyboardhack-config.png
+[sizeup]: http://www.irradiatedsoftware.com/sizeup/
