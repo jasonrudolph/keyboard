@@ -45,7 +45,11 @@ I find it to be a very useful fraction, but I don't consider it complete by any 
 
 Here's what it provides so far:
 
-![KeyRemap4MacBook Change Key Configuration](screenshots/keyremap4macbook-change-key-config.png)
+![KeyRemap4MacBook Change Key Configuration - 01](screenshots/keyremap4macbook-change-key-config-01.png)
+
+![KeyRemap4MacBook Change Key Configuration - 02](screenshots/keyremap4macbook-change-key-config-02.png)
+
+![KeyRemap4MacBook Change Key Configuration - 03](screenshots/keyremap4macbook-change-key-config-03.png)
 
 ## Dependencies
 
@@ -93,7 +97,7 @@ ln -s $PWD/keyremap4macbook/private.xml \
    [[screenshot][pckeyboardhack-screenshot]]
 3. Launch KeyRemap4MacBook.
 4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
-   [[screenshot][keyremap4macbook-change-key-screenshot]]
+   [[screenshot][keyremap4macbook-change-key-screenshot-01]]
 5. In the "Change Key" tab, enable the "Double-tap Left Shift for CapsLock" option.
 6. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
    300ms. (As [recommended][modern-space-cadet-key-repeat] by Steve Losh, I find
@@ -113,7 +117,7 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 1. Launch KeyRemap4MacBook.
 2. In the "Change Key" tab, enable the "(S)uper (D)uper Mode" option.
-   [[screenshot][keyremap4macbook-change-key-screenshot]]
+   [[screenshot][keyremap4macbook-change-key-screenshot-02]]
 
 ## TODO
 
@@ -127,7 +131,8 @@ ln -s $PWD/keyremap4macbook/private.xml \
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
 [keyboard-maestro]: http://keyboardmaestro.com
 [keyremap4macbook]: http://pqrs.org/macosx/keyremap4macbook/
-[keyremap4macbook-change-key-screenshot]: screenshots/keyremap4macbook-change-key-config.png
+[keyremap4macbook-change-key-screenshot-01]: screenshots/keyremap4macbook-change-key-config-01.png
+[keyremap4macbook-change-key-screenshot-02]: screenshots/keyremap4macbook-change-key-config-02.png
 [keyremap4macbook-key-repeat-screenshot]: screenshots/keyremap4macbook-key-repeat-config.png
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
