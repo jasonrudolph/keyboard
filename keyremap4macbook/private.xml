@@ -333,4 +333,115 @@
       </autogen>
     </item>
   </item>
+
+  <item>
+    <name>SizeUp Mode</name>
+    <item>
+      <name>Control SizeUp using keyboard shortcuts that are on the home row, or very close to it.</name>
+      <appendix>Use Control+S to turn on SizeUp mode. Then, use any shortcut below to perform a SizeUp action.</appendix>
+      <appendix>For example, to send the window left, hit Control+S, and then H.</appendix>
+      <appendix>---</appendix>
+      <appendix>Note: These settings assume that SizeUp is configured with its default keyboard shortcuts.</appendix>
+      <appendix>Before enabling this mode, you should click "Restore Defaults" in SizeUp's Shortcuts tab.</appendix>
+      <appendix>---</appendix>
+      <identifier vk_config="true">notsave.com_jasonrudolph_sizeup_prefix_mode_core</identifier>
+      <autogen>__ShowStatusMessage__ SizeUp Mode (Control-s)</autogen>
+
+      <appendix>- Use H/J/K/L to send window left/down/up/right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::H, ModifierFlag::NONE,
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::J, ModifierFlag::NONE,
+        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::K, ModifierFlag::NONE,
+        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::L, ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use U to send window upper right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U, ModifierFlag::NONE,
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use I to send window upper right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::I, ModifierFlag::NONE,
+        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use M to send window lower left</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::M, ModifierFlag::NONE,
+        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use , to send window lower right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::COMMA, ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use Space to send window center</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::SPACE, ModifierFlag::NONE,
+        KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use Return to make window full screen</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::RETURN, ModifierFlag::NONE,
+        KeyCode::M, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use Control+H to send window to the previous monitor</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::H, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core,
+        Option::NOREPEAT
+      </autogen>
+
+      <appendix>- Use Control+L to send window to the next monitor</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core,
+        Option::NOREPEAT
+      </autogen>
+
+      <appendix>- Use Control+S to turn off SizeUp Mode</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+    </item>
+    <item>
+      <name>Control+S turns on SizeUp mode</name>
+      <identifier>option.com_jasonrudolph_sizeup_prefix_mode</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+    </item>
+  </item>
 </root>
