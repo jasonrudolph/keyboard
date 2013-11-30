@@ -55,9 +55,9 @@ Here's what it provides so far:
 
 This setup is honed and tested with the following dependencies.
 
-- OS X Mountain Lion, 10.8.4
-- [PCKeyboardHack 9.0][pckeyboardhack]
-- [KeyRemap4MacBook 8.3][keyremap4macbook]
+- OS X Mavericks, 10.9
+- [PCKeyboardHack 10.4][pckeyboardhack]
+- [KeyRemap4MacBook 9.2][keyremap4macbook]
 - [SizeUp 1.5][sizeup] (optional)
 
 ## The Setup
