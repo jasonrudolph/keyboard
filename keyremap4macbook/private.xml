@@ -151,6 +151,37 @@
   </item>
 
   <item>
+    <!--
+      I prefer to use Control+H/J/K/L to move left/up/down/right by one pane in
+      all multi-pane apps (e.g., iTerm, various editors). That's convenient and
+      consistent, but it conflicts with the default binding for deleting to the
+      end of the line (i.e., Control+K). To maintain that very useful
+      functionality, and to keep it on the home row, this item binds Control+;
+      to delete to the end of the line.
+    -->
+    <name>Control+; to delete to end of line</name>
+    <identifier>com.jasonrudolph.control_with_semicolon_to_delete_to_end_of_line</identifier>
+    <block>
+      <not>TERMINAL</not>
+      <autogen>
+        __KeyToKey__
+        KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::DELETE,
+        Option::NOREPEAT
+      </autogen>
+    </block>
+    <block>
+      <only>TERMINAL</only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::K, ModifierFlag::CONTROL_L,
+        Option::NOREPEAT
+      </autogen>
+    </block>
+  </item>
+
+  <item>
     <name>Option+H/L to delete previous/next word in iTerm 2 (and Terminal)</name>
     <identifier>com.jasonrudolph.terminal.option_with_h_or_l_to_delete_previous_word_or_next_word</identifier>
     <only>TERMINAL</only>
