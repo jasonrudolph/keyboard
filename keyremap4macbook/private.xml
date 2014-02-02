@@ -426,31 +426,31 @@
         KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
       </autogen>
 
-      <appendix>- Use U to send window upper right</appendix>
-      <autogen>
-        __KeyToKey__
-        KeyCode::U, ModifierFlag::NONE,
-        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
-      </autogen>
-
       <appendix>- Use I to send window upper right</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::I, ModifierFlag::NONE,
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use O to send window upper right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::O, ModifierFlag::NONE,
         KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
       </autogen>
 
-      <appendix>- Use M to send window lower left</appendix>
-      <autogen>
-        __KeyToKey__
-        KeyCode::M, ModifierFlag::NONE,
-        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
-      </autogen>
-
-      <appendix>- Use , to send window lower right</appendix>
+      <appendix>- Use , to send window lower left</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::COMMA, ModifierFlag::NONE,
+        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use . to send window lower right</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::DOT, ModifierFlag::NONE,
         KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
       </autogen>
 
