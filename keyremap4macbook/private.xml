@@ -1,32 +1,33 @@
 <?xml version="1.0"?>
 <root>
+  <!-- Application URLs -->
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
-    <url>file:///Applications/Google%20Chrome.app</url>
+    <url type="file">/Applications/Google Chrome.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
-    <url>file:///Applications/iTerm.app</url>
+    <url type="file">/Applications/iTerm.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Mailplane</name>
-    <url>file:///Applications/Mailplane%203.app</url>
+    <url type="file">/Applications/Mailplane 3.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Propane</name>
-    <url>file:///Applications/Propane.app</url>
+    <url type="file">/Applications/Propane.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Rdio</name>
-    <url>file:///Applications/Rdio.app</url>
+    <url type="file">/Applications/Rdio.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
-    <url>file:///Applications/Sublime%20Text%203.app</url>
+    <url type="file">/Applications/Sublime Text 3.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
-    <url>file:///Applications/TaskPaper.app</url>
+    <url type="file">/Applications/TaskPaper.app</url>
   </vkopenurldef>
 
   <item>
