@@ -2,6 +2,10 @@
 <root>
   <!-- Application URLs -->
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Atom</name>
+    <url type="file">/Applications/Atom.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
     <url type="file">/Applications/Google Chrome.app</url>
   </vkopenurldef>
@@ -20,10 +24,6 @@
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Rdio</name>
     <url type="file">/Applications/Rdio.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
-    <url type="file">/Applications/Sublime Text 3.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
@@ -111,12 +111,12 @@
     </item>
 
     <item>
-      <name>Hyper+E to open Sublime Text ("E" for "Editor")</name>
+      <name>Hyper+E to open Atom ("E" for "Editor")</name>
       <identifier>com.jasonrudolph.hyper_e</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Sublime_Text,
+        KeyCode::VK_OPEN_URL_APP_Atom,
       </autogen>
     </item>
 
