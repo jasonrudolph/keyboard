@@ -45,11 +45,11 @@ I find it to be a very useful fraction, but I don't consider it complete by any 
 
 Here's what it provides so far:
 
-![KeyRemap4MacBook Change Key Configuration - 01](screenshots/keyremap4macbook-change-key-config-01.png)
+![Karabiner Change Key Configuration - 01](screenshots/karabiner-change-key-config-01.png)
 
-![KeyRemap4MacBook Change Key Configuration - 02](screenshots/keyremap4macbook-change-key-config-02.png)
+![Karabiner Change Key Configuration - 02](screenshots/karabiner-change-key-config-02.png)
 
-![KeyRemap4MacBook Change Key Configuration - 03](screenshots/keyremap4macbook-change-key-config-03.png)
+![Karabiner Change Key Configuration - 03](screenshots/karabiner-change-key-config-03.png)
 
 ## Dependencies
 
@@ -57,7 +57,7 @@ This setup is honed and tested with the following dependencies.
 
 - OS X Mavericks, 10.9
 - [PCKeyboardHack 10.7][pckeyboardhack]
-- [KeyRemap4MacBook 9.2][keyremap4macbook]
+- [Karabiner 9.99][karabiner]
 - [SizeUp 1.5][sizeup] (optional)
 
 ## The Setup
@@ -69,17 +69,17 @@ git clone https://github.com/jasonrudolph/keyboard.git
 
 cd keyboard
 
-mkdir -p ~/Library/Application\ Support/KeyRemap4MacBook
+mkdir -p ~/Library/Application\ Support/Karabiner
 
-# Prepare custom settings for KeyRemap4MacBook
-ln -s $PWD/keyremap4macbook/private.xml \
-  ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+# Prepare custom settings for Karabiner
+ln -s $PWD/karabiner/private.xml \
+  ~/Library/Application\ Support/Karabiner/private.xml
 ```
 
 ### Install the apps
 
 - Install [PCKeyboardHack][pckeyboardhack]
-- Install [KeyRemap4MacBook][keyremap4macbook]
+- Install [Karabiner][karabiner]
 - Install [SizeUp][sizeup] (optional)
 
 ### Put _control_ and _escape_ on the home row
@@ -97,15 +97,15 @@ ln -s $PWD/keyremap4macbook/private.xml \
    (80 is **F19**. I don't have a physical **F19** key, so this setting will not
    conflict with any existing keys.)
    [[screenshot][pckeyboardhack-screenshot]]
-3. Launch KeyRemap4MacBook.
+3. Launch Karabiner.
 4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
-   [[screenshot][keyremap4macbook-change-key-screenshot-01]]
+   [[screenshot][karabiner-change-key-screenshot-01]]
 5. In the "Change Key" tab, enable the "Double-tap Left Shift for CapsLock" option.
 6. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
    300ms. (As [recommended][modern-space-cadet-key-repeat] by Steve Losh, I find
    that this avoids accidentally triggering **escape** when you meant to trigger
    **control**.)
-   [[screenshot][keyremap4macbook-key-repeat-screenshot]]
+   [[screenshot][karabiner-key-repeat-screenshot]]
 
 ### Unleash (S)uper (D)uper mode
 
@@ -117,9 +117,9 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 #### Making it happen
 
-1. Launch KeyRemap4MacBook.
+1. Launch Karabiner.
 2. In the "Change Key" tab, enable the "(S)uper (D)uper Mode" option.
-   [[screenshot][keyremap4macbook-change-key-screenshot-02]]
+   [[screenshot][karabiner-change-key-screenshot-02]]
 
 ### Control SizeUp from the home row
 
@@ -130,9 +130,9 @@ ln -s $PWD/keyremap4macbook/private.xml \
 
 #### Making it happen
 
-1. Launch KeyRemap4MacBook.
+1. Launch Karabiner.
 2. In the "Change Key" tab, enable the "SizeUp Mode" option.
-   [[screenshot][keyremap4macbook-change-key-screenshot-03]]
+   [[screenshot][karabiner-change-key-screenshot-03]]
 
 ## TODO
 
@@ -145,13 +145,13 @@ ln -s $PWD/keyremap4macbook/private.xml \
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
 [keyboard-maestro]: http://keyboardmaestro.com
-[keyremap4macbook]: http://pqrs.org/macosx/keyremap4macbook/
-[keyremap4macbook-change-key-screenshot-01]: screenshots/keyremap4macbook-change-key-config-01.png
-[keyremap4macbook-change-key-screenshot-02]: screenshots/keyremap4macbook-change-key-config-02.png
-[keyremap4macbook-change-key-screenshot-03]: screenshots/keyremap4macbook-change-key-config-03.png
-[keyremap4macbook-key-repeat-screenshot]: screenshots/keyremap4macbook-key-repeat-config.png
+[karabiner]: http://pqrs.org/macosx/karabiner/
+[karabiner-change-key-screenshot-01]: screenshots/karabiner-change-key-config-01.png
+[karabiner-change-key-screenshot-02]: screenshots/karabiner-change-key-config-02.png
+[karabiner-change-key-screenshot-03]: screenshots/karabiner-change-key-config-03.png
+[karabiner-key-repeat-screenshot]: screenshots/karabiner-key-repeat-config.png
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
-[pckeyboardhack]: http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
+[pckeyboardhack]: http://pqrs.org/macosx/karabiner/pckeyboardhack.html.en
 [pckeyboardhack-screenshot]: screenshots/pckeyboardhack-config.png
 [sizeup]: http://www.irradiatedsoftware.com/sizeup/
