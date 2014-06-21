@@ -1,0 +1,85 @@
+#!/bin/sh
+
+cli=/Applications/Karabiner.app/Contents/Library/bin/karabiner
+
+$cli set com.jasonrudolph.hyper_m 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_g 1
+/bin/echo -n .
+$cli set private.remap.simultaneouskeypresses_vimode_sd 1
+/bin/echo -n .
+$cli set option.jasonrudolph_sizeup_prefix_mode 1
+/bin/echo -n .
+$cli set remap.simultaneouskeypresses_custom_vimode_sd 1
+/bin/echo -n .
+$cli set private.double_lshift_to_caps 1
+/bin/echo -n .
+$cli set com.jasonrudolph.simultaneouskeypresses_vimode.terminal.previous_next_word 1
+/bin/echo -n .
+$cli set com.jasonrudolph.iterm.control_with_dash_or_pipe_to_split_pane 1
+/bin/echo -n .
+$cli set option.emacsmode_ex_controlU_forwarddelete 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_r 1
+/bin/echo -n .
+$cli set private.appdef 1
+/bin/echo -n .
+$cli set passthrough.escapetab 1
+/bin/echo -n .
+$cli set private.right_command_d 1
+/bin/echo -n .
+$cli set remap.com_jasonrudolph_simultaneouskeypresses_vimode_sd 1
+/bin/echo -n .
+$cli set parameter.keyoverlaidmodifier_timeout 300
+/bin/echo -n .
+$cli set com.jasonrudolph.option_with_h_or_l_to_delete_previous_word_or_next_word 1
+/bin/echo -n .
+$cli set repeat.wait 40
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_e 1
+/bin/echo -n .
+$cli set com.jasonrudolph.terminal.option_with_h_or_l_to_delete_previous_word_or_next_word 1
+/bin/echo -n .
+$cli set private.f192f19_escape_or_control 1
+/bin/echo -n .
+$cli set com.jasonrudolph.control_with_semicolon_to_delete_to_end_of_line 1
+/bin/echo -n .
+$cli set com.jasonrudolph.option_up_down_to_pageup_pagedown 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_d 1
+/bin/echo -n .
+$cli set remap.launchpad2dashboard 1
+/bin/echo -n .
+$cli set com.jasonrudolph.right_option_hyper 1
+/bin/echo -n .
+$cli set com.jasonrudolph.size_up.left 1
+/bin/echo -n .
+$cli set com.jasonrudolph.double_lshift_to_caps 1
+/bin/echo -n .
+$cli set option.simultaneouskeypresses_jvimode_commadot_to_optionleftright 1
+/bin/echo -n .
+$cli set private.option.simultaneouskeypresses_vimode_commadot_to_optionleftright 1
+/bin/echo -n .
+$cli set private.optionDtoescapeD_term 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_c 1
+/bin/echo -n .
+$cli set com.jasonrudolph.f192f19_escape_or_control 1
+/bin/echo -n .
+$cli set remap.simultaneouskeypresses_jvimode_sd 1
+/bin/echo -n .
+$cli set option.jremacsmode_ex_controlX 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_t 1
+/bin/echo -n .
+$cli set com.jasonrudolph.hyper_b 1
+/bin/echo -n .
+$cli set com.jasonrudolph.simultaneouskeypresses_vimode.previous_next_work_in_terminal 1
+/bin/echo -n .
+$cli set option.com_jasonrudolph_sizeup_prefix_mode 1
+/bin/echo -n .
+$cli set space_cadet.fix_opt_arrows 1
+/bin/echo -n .
+$cli set com.jasonrudolph.iterm.control_with_h_or_j_or_k_or_l_to_move_between_panes 1
+/bin/echo -n .
+/bin/echo
