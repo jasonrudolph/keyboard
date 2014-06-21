@@ -56,7 +56,7 @@ Here's what it provides so far:
 This setup is honed and tested with the following dependencies.
 
 - OS X Mavericks, 10.9
-- [PCKeyboardHack 10.7][pckeyboardhack]
+- [Seil 10.8][seil]
 - [Karabiner 9.99][karabiner]
 - [SizeUp 1.5][sizeup] (optional)
 
@@ -78,7 +78,7 @@ ln -s $PWD/karabiner/private.xml \
 
 ### Install the apps
 
-- Install [PCKeyboardHack][pckeyboardhack]
+- Install [Seil][seil]
 - Install [Karabiner][karabiner]
 - Install [SizeUp][sizeup] (optional)
 
@@ -92,11 +92,11 @@ ln -s $PWD/karabiner/private.xml \
 
 #### Making it happen
 
-1. Launch PCKeyboardHack.
+1. Launch Seil.
 2. Enable the "Change Caps Lock" option, and map **caps lock** to keycode 80.
    (80 is **F19**. I don't have a physical **F19** key, so this setting will not
    conflict with any existing keys.)
-   [[screenshot][pckeyboardhack-screenshot]]
+   [[screenshot][seil-screenshot]]
 3. Launch Karabiner.
 4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
    [[screenshot][karabiner-change-key-screenshot-01]]
@@ -152,6 +152,6 @@ ln -s $PWD/karabiner/private.xml \
 [karabiner-key-repeat-screenshot]: screenshots/karabiner-key-repeat-config.png
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
-[pckeyboardhack]: http://pqrs.org/macosx/karabiner/pckeyboardhack.html.en
-[pckeyboardhack-screenshot]: screenshots/pckeyboardhack-config.png
+[seil]: https://pqrs.org/macosx/keyremap4macbook/seil.html.en
+[seil-screenshot]: screenshots/seil-config.png
 [sizeup]: http://www.irradiatedsoftware.com/sizeup/
