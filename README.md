@@ -57,7 +57,7 @@ This setup is honed and tested with the following dependencies.
 
 - OS X Mavericks, 10.9
 - [Seil 10.8][seil]
-- [Karabiner 9.99][karabiner]
+- [Karabiner 10.0][karabiner]
 - [SizeUp 1.5][sizeup] (optional)
 
 ## The Setup
