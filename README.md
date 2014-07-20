@@ -138,10 +138,9 @@ ln -s $PWD/karabiner/private.xml \
 
 - Document usage of "Hyper" key
 - Incorporate [Keyboard Maestro][keyboard-maestro] configuration
-- Automate with [Boxen][boxen]
+- Add `./script/setup` command to automate the manual setup steps
 
 
-[boxen]: http://boxen.github.com/
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
 [keyboard-maestro]: http://keyboardmaestro.com
