@@ -1,0 +1,15 @@
+#!/bin/sh
+
+WRAP_CHARACTERS=$1
+
+ORIGINAL_CLIPBOARD=`/usr/bin/pbpaste`
+
+# Copy currently-selected text
+osascript -e 'tell application "System Events" to keystroke "c" using command down'
+TEXT=`/usr/bin/pbpaste`
+
+# Construct the formatted output and paste it over top of the currently-selected text
+/bin/echo -n "${WRAP_CHARACTERS}${TEXT}${WRAP_CHARACTERS}" | /usr/bin/pbcopy
+osascript -e 'tell application "System Events" to keystroke "v" using command down'
+
+echo $ORIGINAL_CLIPBOARD | /usr/bin/pbcopy

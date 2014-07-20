@@ -1,0 +1,26 @@
+#!/bin/sh
+
+LINK_LABEL=$1
+
+# Get URL from clipboard
+LINK_URL=`/usr/bin/pbpaste`
+
+# Copy currently-selected text to use as the link text
+osascript -e 'tell application "System Events" to keystroke "c" using command down'
+LINK_TEXT=`/usr/bin/pbpaste`
+
+# Construct the formatted link and paste it over top of the currently-selected text
+/bin/echo -n "[${LINK_TEXT}][${LINK_LABEL}]" | /usr/bin/pbcopy
+osascript -e 'tell application "System Events" to keystroke "v" using command down'
+
+# Construct the link definition and paste it at the bottom of the document
+/bin/echo -n "[${LINK_LABEL}]: ${LINK_URL}" | /usr/bin/pbcopy
+osascript                                                  \
+  -e 'tell application "System Events"'                    \
+  -e   'keystroke (ASCII character 31) using command down' \
+  -e   'keystroke return'                                  \
+  -e   'keystroke "v" using command down'                  \
+  -e 'end tell'
+
+# Restore the clipboard to its original state
+echo $LINK_URL | /usr/bin/pbcopy

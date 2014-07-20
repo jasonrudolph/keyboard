@@ -30,6 +30,11 @@
     <url type="file">/Applications/TaskPaper.app</url>
   </vkopenurldef>
 
+  <replacementdef>
+    <replacementname>KEYBOARD_KARABINER_EXT_PATH</replacementname>
+    <replacementvalue>{{ ENV_HOME }}/Library/Application\ Support/Karabiner/ext</replacementvalue>
+  </replacementdef>
+
   <item>
     <!--
       Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:
@@ -501,4 +506,163 @@
       </autogen>
     </item>
   </item>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_em</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "*"
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_strong</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "**"
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_strikethrough</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "~~"
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_inline_link</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_inline_link
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_1</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "1"
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_2</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "2"
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_3</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "3"
+      ]]>
+      ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_4</name>
+    <url type="shell">
+      <![CDATA[
+        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "4"
+      ]]>
+    </url>
+  </vkopenurldef>
+
+  <item>
+    <name>Markdown Mode</name>
+    <item>
+      <name>Perform common Markdown-formatting tasks anywhere that you're editing text.</name>
+      <appendix>Use Control+M to turn on Markdown mode. Then, use any shortcut to perform an action.</appendix>
+      <appendix>For example, to wrap the selected text in double asterisks, hit Control+M, and then B.</appendix>
+      <appendix>---</appendix>
+      <identifier vk_config="true">notsave.com_jasonrudolph_markdown_prefix_mode_core</identifier>
+      <autogen>__ShowStatusMessage__ Markdown Mode (Control-m)</autogen>
+
+      <appendix>- Use I to wrap the currently-selected text in single asterisks ("I" for "Italic")</appendix>
+      <appendix>:    Example => *selection*</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::I, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_em,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+
+      <appendix>- Use B to wrap the currently-selected text in double asterisks ("B" for "Bold")</appendix>
+      <appendix>:    Example => **selection**</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::B, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_strong,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+
+      <appendix>- Use S to wrap the currently-selected text in double tildas ("S" for "Strikethrough")</appendix>
+      <appendix>:    Example => ~~selection~~</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::S, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_strikethrough,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+
+      <appendix>- Use L to convert the currently-selected text to an inline link, using a URL from the clipboard</appendix>
+      <appendix>:    Example => [selection](clipboard)</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::L, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_inline_link,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+
+      <appendix>- Use 1 to convert the currently-selected text to a reference link, using a URL from the clipboard</appendix>
+      <appendix>:    Also works with 2, 3, or 4</appendix>
+      <appendix>:    Example => [selection][1]</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::KEY_1, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_1,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::KEY_2, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_2,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::KEY_3, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_3,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::KEY_4, ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_4,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
+      </autogen>
+
+      <appendix>- Use Control+M to turn off Markdown Mode</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core
+      </autogen>
+    </item>
+    <item>
+      <name>Control+M turns on Markdown mode</name>
+      <identifier>option.com_jasonrudolph_markdown_prefix_mode</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_com_jasonrudolph_markdown_prefix_mode_core
+      </autogen>
+    </item>
+  </item>
+
 </root>
