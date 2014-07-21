@@ -34,6 +34,31 @@
     <replacementname>KEYBOARD_KARABINER_EXT_PATH</replacementname>
     <replacementvalue>{{ ENV_HOME }}/Library/Application\ Support/Karabiner/ext</replacementvalue>
   </replacementdef>
+  <replacementdef>
+    <replacementname>VERIFY_AND_EXECUTE_EXTENSION</replacementname>
+    <replacementvalue>
+      <![CDATA[
+        function verify_extension_exists {
+            if [ ! -x "$1" ]; then
+                osascript -e "display notification \"Please verify that the symlinks are set up as described in the README.\" with title \"Karabiner extention not found\" sound name \"Sosumi\""
+                exit 1
+            fi
+        }
+
+        function verify_and_execute_extension {
+            EXTENSION="$1"
+            EXTENSION_ARG=$2
+
+            # verify
+            verify_extension_exists "$EXTENSION"
+
+            # execute
+            "$EXTENSION" "$EXTENSION_ARG"
+        }
+
+        verify_and_execute_extension \]]>
+    </replacementvalue>
+  </replacementdef>
 
   <item>
     <!--
@@ -511,7 +536,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_em</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "*"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "*"
       ]]>
     </url>
   </vkopenurldef>
@@ -519,7 +544,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_strong</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "**"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "**"
       ]]>
     </url>
   </vkopenurldef>
@@ -527,7 +552,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_strikethrough</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "~~"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/wrap_selected_text "~~"
       ]]>
     </url>
   </vkopenurldef>
@@ -535,7 +560,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_inline_link</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_inline_link
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_inline_link
       ]]>
     </url>
   </vkopenurldef>
@@ -543,7 +568,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_1</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "1"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "1"
       ]]>
     </url>
   </vkopenurldef>
@@ -551,7 +576,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_2</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "2"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "2"
       ]]>
     </url>
   </vkopenurldef>
@@ -559,8 +584,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_3</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "3"
-      ]]>
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "3"
       ]]>
     </url>
   </vkopenurldef>
@@ -568,7 +592,7 @@
     <name>KeyCode::VK_OPEN_URL_SHELL_markdown_reference_link_label_4</name>
     <url type="shell">
       <![CDATA[
-        {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "4"
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/markdown_reference_link "4"
       ]]>
     </url>
   </vkopenurldef>
