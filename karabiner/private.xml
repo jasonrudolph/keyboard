@@ -40,7 +40,7 @@
       <![CDATA[
         function verify_extension_exists {
             if [ ! -x "$1" ]; then
-                osascript -e "display notification \"Please verify that the symlinks are set up as described in the README.\" with title \"Karabiner extention not found\" sound name \"Sosumi\""
+                osascript -e "display alert \"Karabiner extension not found\" message \"Please verify that the symlinks are set up as described in the README:\n\nhttps://github.com/jasonrudolph/keyboard/blob/master/README.md\" as critical"
                 exit 1
             fi
         }
