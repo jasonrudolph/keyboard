@@ -51,6 +51,8 @@ Here's what it provides so far:
 
 ![Karabiner Change Key Configuration - 03](screenshots/karabiner-change-key-config-03.png)
 
+![Karabiner Change Key Configuration - 04](screenshots/karabiner-change-key-config-04.png)
+
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
@@ -74,6 +76,9 @@ mkdir -p ~/Library/Application\ Support/Karabiner
 # Prepare custom settings for Karabiner
 ln -s $PWD/karabiner/private.xml \
   ~/Library/Application\ Support/Karabiner/private.xml
+
+ln -s $PWD/karabiner/ext \
+  ~/Library/Application\ Support/Karabiner/ext
 ```
 
 ### Install the apps
@@ -134,6 +139,19 @@ ln -s $PWD/karabiner/private.xml \
 2. In the "Change Key" tab, enable the "SizeUp Mode" option.
    [[screenshot][karabiner-change-key-screenshot-03]]
 
+### Format text as Markdown
+
+#### Goals
+
+- Perform common Markdown-formatting tasks anywhere that you're editing text
+  (e.g. in a GitHub comment, in your editor, in your email client)
+
+#### Making it happen
+
+1. Launch Karabiner.
+2. In the "Change Key" tab, enable the "Markdown Mode" option.
+   [[screenshot][karabiner-change-key-screenshot-04]]
+
 ## TODO
 
 - Document usage of "Hyper" key
@@ -148,6 +166,7 @@ ln -s $PWD/karabiner/private.xml \
 [karabiner-change-key-screenshot-01]: screenshots/karabiner-change-key-config-01.png
 [karabiner-change-key-screenshot-02]: screenshots/karabiner-change-key-config-02.png
 [karabiner-change-key-screenshot-03]: screenshots/karabiner-change-key-config-03.png
+[karabiner-change-key-screenshot-04]: screenshots/karabiner-change-key-config-04.png
 [karabiner-key-repeat-screenshot]: screenshots/karabiner-key-repeat-config.png
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
