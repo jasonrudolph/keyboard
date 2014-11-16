@@ -151,6 +151,16 @@
     </item>
 
     <item>
+      <name>Hyper+F to open Finder ("F" for "Finder")</name>
+      <identifier>com.jasonrudolph.hyper_f</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Finder,
+      </autogen>
+    </item>
+
+    <item>
       <name>Hyper+G to open Mailplane ("G" for "Gmail")</name>
       <identifier>com.jasonrudolph.hyper_g</identifier>
       <autogen>
