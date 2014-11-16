@@ -10,6 +10,8 @@ $cli set private.remap.simultaneouskeypresses_vimode_sd 1
 /bin/echo -n .
 $cli set option.jasonrudolph_sizeup_prefix_mode 1
 /bin/echo -n .
+$cli set com.jasonrudolph.todo.20140125095447 1
+/bin/echo -n .
 $cli set remap.simultaneouskeypresses_custom_vimode_sd 1
 /bin/echo -n .
 $cli set private.double_lshift_to_caps 1
@@ -26,9 +28,13 @@ $cli set private.appdef 1
 /bin/echo -n .
 $cli set passthrough.escapetab 1
 /bin/echo -n .
-$cli set private.right_command_d 1
+$cli set com.jasonrudolph.hyper_f 1
+/bin/echo -n .
+$cli set option.com_jasonrudolph_markdown_prefix_mode 1
 /bin/echo -n .
 $cli set remap.com_jasonrudolph_simultaneouskeypresses_vimode_sd 1
+/bin/echo -n .
+$cli set private.right_command_d 1
 /bin/echo -n .
 $cli set parameter.keyoverlaidmodifier_timeout 300
 /bin/echo -n .
@@ -39,6 +45,8 @@ $cli set repeat.wait 40
 $cli set com.jasonrudolph.hyper_e 1
 /bin/echo -n .
 $cli set com.jasonrudolph.terminal.option_with_h_or_l_to_delete_previous_word_or_next_word 1
+/bin/echo -n .
+$cli set com.jasonrudolph.20140201205047 1
 /bin/echo -n .
 $cli set private.f192f19_escape_or_control 1
 /bin/echo -n .
@@ -70,7 +78,11 @@ $cli set remap.simultaneouskeypresses_jvimode_sd 1
 /bin/echo -n .
 $cli set option.jremacsmode_ex_controlX 1
 /bin/echo -n .
+$cli set com.jasonrudolph.20140202092447 1
+/bin/echo -n .
 $cli set com.jasonrudolph.hyper_t 1
+/bin/echo -n .
+$cli set com.jasonrudolph.20140202085225 1
 /bin/echo -n .
 $cli set com.jasonrudolph.hyper_b 1
 /bin/echo -n .
