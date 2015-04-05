@@ -57,10 +57,10 @@ Here's what it provides so far:
 
 This setup is honed and tested with the following dependencies.
 
-- OS X Mavericks, 10.9
-- [Seil 10.8][seil]
-- [Karabiner 10.0][karabiner]
-- [SizeUp 1.5][sizeup] (optional)
+- OS X Yosemite, 10.10
+- [Seil 11.0][seil]
+- [Karabiner 10.6][karabiner]
+- [SizeUp 1.6][sizeup] (optional)
 
 ## The Setup
 
