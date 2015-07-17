@@ -111,6 +111,16 @@
     </item>
 
     <item>
+      <name>Hyper+A to open iTunes ("A" for "Apple Music")</name>
+      <identifier>com.jasonrudolph.hyper_a</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::A, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_iTunes,
+      </autogen>
+    </item>
+
+    <item>
       <name>Hyper+B to open Chrome ("B" for "Browser")</name>
       <identifier>com.jasonrudolph.hyper_b</identifier>
       <autogen>
