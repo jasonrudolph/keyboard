@@ -22,10 +22,6 @@
     <url type="file">/Applications/Propane.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Rdio</name>
-    <url type="file">/Applications/Rdio.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
     <url type="file">/Applications/TaskPaper.app</url>
   </vkopenurldef>
@@ -177,16 +173,6 @@
         __KeyToKey__
         KeyCode::G, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_OPEN_URL_APP_Mailplane,
-      </autogen>
-    </item>
-
-    <item>
-      <name>Hyper+R to open Rdio ("R" for "Rdio")</name>
-      <identifier>com.jasonrudolph.hyper_r</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::R, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Rdio,
       </autogen>
     </item>
 
