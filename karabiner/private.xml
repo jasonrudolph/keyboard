@@ -197,7 +197,7 @@
   </vkopenurldef>
 
   <item>
-    <name>Option+O to open currently-selected URL</name>
+    <name>Option+O to open currently-selected text as URL</name>
     <identifier>com.jasonrudolph.option_with_o_to_open_selected_url</identifier>
     <autogen>
       __KeyToKey__
