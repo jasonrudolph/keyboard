@@ -187,6 +187,25 @@
     </item>
   </item>
 
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_open_selected_url</name>
+    <url type="shell">yy
+      <![CDATA[
+        {{ VERIFY_AND_EXECUTE_EXTENSION }} {{ KEYBOARD_KARABINER_EXT_PATH }}/open_selected_url
+      ]]>
+    </url>
+  </vkopenurldef>
+
+  <item>
+    <name>Option+O to open currently-selected URL</name>
+    <identifier>com.jasonrudolph.option_with_o_to_open_selected_url</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::O, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::VK_OPEN_URL_SHELL_open_selected_url
+    </autogen>
+  </item>
+
   <item>
     <!--
       I prefer to use Control+H/J/K/L to move left/up/down/right by one pane in
