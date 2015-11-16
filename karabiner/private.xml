@@ -22,6 +22,10 @@
     <url type="file">/Applications/Propane.app</url>
   </vkopenurldef>
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
+    <url type="file">/Applications/Slack.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
     <url type="file">/Applications/TaskPaper.app</url>
   </vkopenurldef>
@@ -127,12 +131,12 @@
     </item>
 
     <item>
-      <name>Hyper+C to open Propane ("C" for "Chat")</name>
+      <name>Hyper+C to open Slack ("C" for "Chat")</name>
       <identifier>com.jasonrudolph.hyper_c</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::C, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Propane,
+        KeyCode::VK_OPEN_URL_APP_Slack,
       </autogen>
     </item>
 
