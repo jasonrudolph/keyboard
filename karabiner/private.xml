@@ -374,6 +374,26 @@
         </autogen>
       </block>
 
+      <!--
+        In (S)uper (D)uper Mode, you can use I/O to move left/right between
+        tabs. Teach I/O to move to the previous/next channel in Slack. (That
+        feels more useful and natural to me than the default behavior of using
+        I/O to go to the previous/next team in Slack.)
+      -->
+      <block>
+        <only>Slack</only>
+        <autogen>
+          __KeyToKey__
+          KeyCode::I,
+          KeyCode::CURSOR_UP, ModifierFlag::OPTION_L,
+        </autogen>
+        <autogen>
+          --KeyToKey--
+          KeyCode::O,
+          KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L,
+        </autogen>
+      </block>
+
       <autogen>
         __KeyToKey__
         {{VI_J}}, VK_OPTION | ModifierFlag::NONE,
