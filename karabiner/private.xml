@@ -376,11 +376,13 @@
 
       <!--
         In (S)uper (D)uper Mode, you can use I/O to move left/right between
-        tabs. Teach I/O to move to the previous/next channel in Slack. (That
-        feels more useful and natural to me than the default behavior of using
-        I/O to go to the previous/next team in Slack.)
+        tabs. Provide a configuration option to use I/O to move to the
+        previous/next channel in Slack. (That feels more useful and natural to
+        me than the default behavior of using I/O to go to the previous/next
+        team in Slack.)
       -->
       <block>
+        <config_only>com.jasonrudolph.simultaneouskeypresses_vimode.option.slack_io</config_only>
         <only>Slack</only>
         <autogen>
           __KeyToKey__
@@ -467,6 +469,11 @@
         KeyCode::D, KeyCode::S,
         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_com_jasonrudolph_simultaneouskeypresses_vimode
       </autogen>
+    </item>
+    <item><name>──────────────────────────────</name></item>
+    <item>
+      <name>[Option] Use I/O to move to previous/next channel in Slack</name>
+      <identifier>com.jasonrudolph.simultaneouskeypresses_vimode.option.slack_io</identifier>
     </item>
   </item>
 
