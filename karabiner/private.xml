@@ -18,10 +18,6 @@
     <url type="file">/Applications/Mailplane 3.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Propane</name>
-    <url type="file">/Applications/Propane.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
     <url type="file">/Applications/Slack.app</url>
   </vkopenurldef>
