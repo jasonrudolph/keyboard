@@ -22,8 +22,8 @@
     <url type="file">/Applications/Slack.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
-    <url type="file">/Applications/TaskPaper.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Remember_The_Milk</name>
+    <url type="file">/Applications/Remember The Milk.app</url>
   </vkopenurldef>
 
   <replacementdef>
@@ -137,12 +137,12 @@
     </item>
 
     <item>
-      <name>Hyper+D to open TaskPaper ("D" for "Do!" ... or Done!")</name>
+      <name>Hyper+D to open Remember The Milk ("D" for "Do!" ... or Done!")</name>
       <identifier>com.jasonrudolph.hyper_d</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_TaskPaper,
+        KeyCode::VK_OPEN_URL_APP_Remember_The_Milk,
       </autogen>
     </item>
 
