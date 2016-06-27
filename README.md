@@ -58,9 +58,9 @@ Here's what it provides so far:
 This setup is honed and tested with the following dependencies.
 
 - OS X El Capitan, 10.11
-- [Seil 12.0][seil]
-- [Karabiner 10.14][karabiner]
-- [SizeUp 1.6][sizeup] (optional)
+- [Seil 12.1][seil]
+- [Karabiner 10.20][karabiner]
+- [SizeUp 1.7][sizeup] (optional)
 
 ## The Setup
 
