@@ -8,8 +8,6 @@ $cli set com.jasonrudolph.simultaneouskeypresses_vimode.terminal.previous_next_w
 /bin/echo -n .
 $cli set com.jasonrudolph.iterm.control_with_h_or_j_or_k_or_l_to_move_between_panes 1
 /bin/echo -n .
-$cli set com.jasonrudolph.todo.20140125095447 1
-/bin/echo -n .
 $cli set com.jasonrudolph.hyper_g 1
 /bin/echo -n .
 $cli set parameter.keyoverlaidmodifier_timeout 300
@@ -75,8 +73,6 @@ $cli set com.jasonrudolph.option_with_h_or_l_to_delete_previous_word_or_next_wor
 $cli set option.emacsmode_ex_controlU_forwarddelete 1
 /bin/echo -n .
 $cli set private.optionDtoescapeD_term 1
-/bin/echo -n .
-$cli set com.jasonrudolph.todo 1
 /bin/echo -n .
 $cli set private.right_command_d 1
 /bin/echo -n .
