@@ -59,7 +59,7 @@ This setup is honed and tested with the following dependencies.
 
 - OS X El Capitan, 10.11
 - [Seil 12.1][seil]
-- [Karabiner 10.20][karabiner]
+- [Karabiner 10.21][karabiner]
 - [SizeUp 1.7][sizeup] (optional)
 
 ## The Setup
