@@ -40,28 +40,31 @@ require('windows')
 
 windowLayoutMode = hs.hotkey.modal.new({}, 'F16')
 
-windowLayoutMode:bind({}, 'return', function()
-  windowLayoutMode:exit()
+-- Bind the given key to call the given function and exit WindowLayout mode
+function windowLayoutMode.bindWithAutomaticExit(mode, key, fn)
+  mode:bind({}, key, function()
+    mode:exit()
+    fn()
+  end)
+end
+
+windowLayoutMode:bindWithAutomaticExit('return', function()
   hs.window.focusedWindow():maximize()
 end)
 
-windowLayoutMode:bind({}, 'h', function()
-  windowLayoutMode:exit()
+windowLayoutMode:bindWithAutomaticExit('h', function()
   hs.window.focusedWindow():left()
 end)
 
-windowLayoutMode:bind({}, 'j', function()
-  windowLayoutMode:exit()
+windowLayoutMode:bindWithAutomaticExit('j', function()
   hs.window.focusedWindow():down()
 end)
 
-windowLayoutMode:bind({}, 'k', function()
-  windowLayoutMode:exit()
+windowLayoutMode:bindWithAutomaticExit('k', function()
   hs.window.focusedWindow():up()
 end)
 
-windowLayoutMode:bind({}, 'l', function()
-  windowLayoutMode:exit()
+windowLayoutMode:bindWithAutomaticExit('l', function()
   hs.window.focusedWindow():right()
 end)
 
