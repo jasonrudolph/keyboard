@@ -67,27 +67,3 @@ function hs.window.down(win)
   f.h = max.h / 2
   win:setFrame(f)
 end
-
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'left', function()
-  local win = hs.window.focusedWindow()
-  win:left()
-end)
-
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'right', function()
-  local win = hs.window.focusedWindow()
-  win:right()
-end)
-
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'up', function()
-  local win = hs.window.focusedWindow()
-  win:up()
-end)
-
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'down', function()
-  local win = hs.window.focusedWindow()
-  win:down()
-end)
-
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'return', function()
-  hs.window.focusedWindow():maximize()
-end)
