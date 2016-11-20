@@ -38,7 +38,7 @@ releasedF19 = function()
 end
 
 -- Bind the BetterCapsLock key
-hs.hotkey.bind({}, 'F19', pressedF19, releasedF19)
+f19 = hs.hotkey.bind({}, 'F19', pressedF19, releasedF19)
 
 --------------------------------------------------------------------------------
 -- Hyper Mode
@@ -76,4 +76,4 @@ releasedF17 = function()
 end
 
 -- Bind the Hyper key
-hs.hotkey.bind({}, 'F17', pressedF17, releasedF17)
+f17 = hs.hotkey.bind({}, 'F17', pressedF17, releasedF17)
