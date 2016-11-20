@@ -11,13 +11,13 @@ for _, key in ipairs({ 'space', 'a', 'b', 'd', 'e', 'f', 'h', 'l', 'n', 'o', 'p'
   end)
 end
 
--- Enter BetterCapsLock Mode when F19 (caps lock) is pressed
+-- Enter BetterCapsLock Mode when F19 (caps lock) is pressed.
 pressedF19 = function()
   betterCapsLockMode.triggered = false
   betterCapsLockMode:enter()
 end
 
--- Leave BetterCapsLock Mode when F19 (caps lock) is pressed.
+-- Leave BetterCapsLock Mode when F19 (caps lock) is released.
 --   Send ESCAPE if no other keys are pressed.
 releasedF19 = function()
   betterCapsLockMode:exit()
