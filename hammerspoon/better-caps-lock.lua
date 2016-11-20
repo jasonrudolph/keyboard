@@ -8,15 +8,15 @@ betterCapsLockMode = hs.hotkey.modal.new({}, 'F20')
 -- When caps lock is pressed in combination with another normal key, translate
 -- it to control plus that other normal key. For example, translate
 -- "caps lock + e" to "control + e" to go to the end of the line.
-for _, key in ipairs({ 'space', 'a', 'b', 'd', 'e', 'f', 'h', 'l', 'n', 'o', 'p', 't' }) do
+for _, key in ipairs({ 'space', 'a', 'b', 'd', 'e', 'f', 'h', 'l', 'n', 'o', 'p', 'r', 't' }) do
   betterCapsLockMode:bind({}, key, nil, function()
     hs.eventtap.keyStroke({'⌃'}, key)
     betterCapsLockMode.triggered = true
   end)
 end
 
--- Use BetterCapsLock+r to reload Hammerspoon config
-betterCapsLockMode:bind({}, 'r', nil, function()
+-- Use BetterCapsLock+` to reload Hammerspoon config
+betterCapsLockMode:bind({}, '`', nil, function()
   hs.reload()
 end)
 
