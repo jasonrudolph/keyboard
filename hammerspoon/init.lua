@@ -1,3 +1,5 @@
+hs.notify.new({title="Hammerspoon", informativeText="Ready to rock 🤘"}):send()
+
 --------------------------------------------------------------------------------
 -- BetterCapsLock Mode
 --------------------------------------------------------------------------------
@@ -14,6 +16,11 @@ for _, key in ipairs({ 'space', 'a', 'b', 'd', 'e', 'f', 'h', 'l', 'n', 'o', 'p'
     betterCapsLockMode.triggered = true
   end)
 end
+
+-- Use BetterCapsLock+r to reload Hammerspoon config
+betterCapsLockMode:bind({}, 'r', nil, function()
+  hs.reload()
+end)
 
 -- Enter BetterCapsLock Mode when F19 (caps lock) is pressed.
 pressedF19 = function()
