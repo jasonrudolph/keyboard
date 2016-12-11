@@ -67,3 +67,39 @@ function hs.window.down(win)
   f.h = max.h / 2
   win:setFrame(f)
 end
+
+-- +-----------------+
+-- |  HERE  |        |
+-- +--------+        |
+-- |                 |
+-- +-----------------+
+function hs.window.upLeft(win)
+  -- TODO
+end
+
+-- +-----------------+
+-- |                 |
+-- +--------+        |
+-- |  HERE  |        |
+-- +-----------------+
+function hs.window.downLeft(win)
+  -- TODO
+end
+
+-- +-----------------+
+-- |                 |
+-- |        +--------|
+-- |        |  HERE  |
+-- +-----------------+
+function hs.window.downRight(win)
+  -- TODO
+end
+
+-- +-----------------+
+-- |        |  HERE  |
+-- |        +--------|
+-- |                 |
+-- +-----------------+
+function hs.window.upRight(win)
+  -- TODO
+end
