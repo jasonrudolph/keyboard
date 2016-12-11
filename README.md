@@ -102,7 +102,7 @@ ln -s $PWD/hammerspoon ~/.hammerspoon
     1. Install it
     2. Launch it
     3. Configure it to launch at login
-    4. Enable accessibility to allow Hammerspoon to do its thing
+    4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/hammerspoon-accessibility-permissions.png)
 
 ### Put _control_ and _escape_ on the home row
 
