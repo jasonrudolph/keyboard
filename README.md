@@ -43,24 +43,39 @@ While I find that these customizations yield a more-useful keyboard for me, they
 These customizations currently provide a fraction of what I want from my more-useful keyboard.
 I find it to be a very useful fraction, but I don't consider it complete by any means.
 
+<a name="sierra-port"></a>:construction: **Work in progress to port to macOS Sierra** :construction: This customization previously relied heavily on [Karabiner](https://pqrs.org/osx/karabiner/). Karabiner does not currently work on macOS Sierra. Simply put, the tools available on Sierra lack the power and flexibility available in Karabiner. This branch represents an attempt to port my [pre-Sierra customizations](https://github.com/jasonrudolph/keyboard/blob/e19948b26cc569e41637d60a5357d1d2e46669eb/README.md#more-useful-for-me) to Sierra. Given the lack of Karabiner's power and flexibility, porting the previous functionality to Sierra will likely involve compromises. It's unlikely to be an exact port.
+
 Here's what it provides so far:
 
-![Karabiner Change Key Configuration - 01](screenshots/karabiner-change-key-config-01.png)
-
-![Karabiner Change Key Configuration - 02](screenshots/karabiner-change-key-config-02.png)
-
-![Karabiner Change Key Configuration - 03](screenshots/karabiner-change-key-config-03.png)
-
-![Karabiner Change Key Configuration - 04](screenshots/karabiner-change-key-config-04.png)
+- Tap **caps lock** for **escape**
+- Hold **caps lock** for **control**
+- Hold **caps lock** to use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively.
+    - While holding **caps lock**, press **a** for **option** (e.g., **caps lock** plus **a** plus **h** translates to **option** plus **left**)
+    - While holding **caps lock**, press **s** for **command** (e.g., **caps lock** plus **s** plus **h** translates to **command** plus **left**)
+- Basic window management
+    - **caps lock** + **w**, **h**: Send window left (left half of screen)
+    - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
+    - **caps lock** + **w**, **k**: Send window up (top half of screen)
+    - **caps lock** + **w**, **l**: Send window right (right half of screen)
+    - **caps lock** + **w**, **enter**: Resize window to fill the screen
+- Hyper key for quickly launching apps
+    - Use **right option** key as **hyper** key
+    - **hyper** + **a** to open iTunes ("A" for "Apple Music")
+    - **hyper** + **b** to open Google Chrome ("B" for "Browser")
+    - **hyper** + **c** to open Slack ("C for "Chat")
+    - **hyper** + **d** to open Remember The Milk ("D" for "Do!" ... or "Done!")
+    - **hyper** + **e** to open Atom Beta ("E" for "Editor")
+    - **hyper** + **f** to open Finder ("F" for "Finder")
+    - **hyper** + **g** to open Mailplane 3 ("G" for "Gmail")
+    - **hyper** + **t** to open iTerm ("T" for "Terminal")
 
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
 
-- OS X El Capitan, 10.11
-- [Seil 12.1][seil]
-- [Karabiner 10.21][karabiner]
-- [SizeUp 1.7][sizeup] (optional)
+- macOS Sierra, 10.12
+- [Karabiner-Elements 0.90.68][karabiner]
+- [Hammerspoon 0.9.50][hammerspoon]
 
 ## The Setup
 
@@ -71,21 +86,23 @@ git clone https://github.com/jasonrudolph/keyboard.git
 
 cd keyboard
 
-mkdir -p ~/Library/Application\ Support/Karabiner
+git checkout sierra
 
-# Prepare custom settings for Karabiner
-ln -s $PWD/karabiner/private.xml \
-  ~/Library/Application\ Support/Karabiner/private.xml
+# Prepare custom settings for Karabiner-Elements
+ln -s $PWD/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
 
-ln -s $PWD/karabiner/ext \
-  ~/Library/Application\ Support/Karabiner/ext
+# Prepare custom settings for Hammerspoon
+ln -s $PWD/hammerspoon ~/.hammerspoon
 ```
 
 ### Install the apps
 
-- Install [Seil][seil]
-- Install [Karabiner][karabiner]
-- Install [SizeUp][sizeup] (optional)
+- Install [Karabiner-Elements][karabiner]
+- Install [Hammerspoon][hammerspoon-releases]
+    1. Install it
+    2. Launch it
+    3. Configure it to launch at login
+    4. Enable accessibility to allow Hammerspoon to do its thing
 
 ### Put _control_ and _escape_ on the home row
 
@@ -97,22 +114,9 @@ ln -s $PWD/karabiner/ext \
 
 #### Making it happen
 
-1. Launch Seil.
-2. Enable the "Change Caps Lock" option, and map **caps lock** to keycode 80.
-   (80 is **F19**. I don't have a physical **F19** key, so this setting will not
-   conflict with any existing keys.)
-   [[screenshot][seil-screenshot]]
-3. Launch Karabiner.
-4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
-   [[screenshot][karabiner-change-key-screenshot-01]]
-5. In the "Change Key" tab, enable the "Double-tap Left Shift for CapsLock" option.
-6. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
-   300ms. (As [recommended][modern-space-cadet-key-repeat] by Steve Losh, I find
-   that this avoids accidentally triggering **escape** when you meant to trigger
-   **control**.)
-   [[screenshot][karabiner-key-repeat-screenshot]]
+_TODO_: Update this section for macOS Sierra port.
 
-### Unleash (S)uper (D)uper mode
+### Make navigation accessible via the the home row
 
 #### Goals
 
@@ -122,11 +126,9 @@ ln -s $PWD/karabiner/ext \
 
 #### Making it happen
 
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "(S)uper (D)uper Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-02]]
+_TODO_: Update this section for macOS Sierra port.
 
-### Control SizeUp from the home row
+### Control window management from the home row
 
 #### Goals
 
@@ -135,9 +137,7 @@ ln -s $PWD/karabiner/ext \
 
 #### Making it happen
 
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "SizeUp Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-03]]
+_TODO_: Update this section for macOS Sierra port.
 
 ### Format text as Markdown
 
@@ -148,28 +148,17 @@ ln -s $PWD/karabiner/ext \
 
 #### Making it happen
 
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "Markdown Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-04]]
+_TODO_: Port this functionality to macOS Sierra.
 
 ## TODO
 
-- Document usage of "Hyper" key
-- Incorporate [Keyboard Maestro][keyboard-maestro] configuration
+- Add "goals" section for "Hyper" key
 - Add `./script/setup` command to automate the manual setup steps
-
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
-[keyboard-maestro]: http://keyboardmaestro.com
-[karabiner]: http://pqrs.org/macosx/karabiner/
-[karabiner-change-key-screenshot-01]: screenshots/karabiner-change-key-config-01.png
-[karabiner-change-key-screenshot-02]: screenshots/karabiner-change-key-config-02.png
-[karabiner-change-key-screenshot-03]: screenshots/karabiner-change-key-config-03.png
-[karabiner-change-key-screenshot-04]: screenshots/karabiner-change-key-config-04.png
-[karabiner-key-repeat-screenshot]: screenshots/karabiner-key-repeat-config.png
+[karabiner]: https://github.com/tekezo/Karabiner-Elements
+[hammerspoon]: http://www.hammerspoon.org
+[hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
-[seil]: https://pqrs.org/macosx/keyremap4macbook/seil.html.en
-[seil-screenshot]: screenshots/seil-config.png
-[sizeup]: http://www.irradiatedsoftware.com/sizeup/
