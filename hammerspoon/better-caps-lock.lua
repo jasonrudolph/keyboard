@@ -111,6 +111,30 @@ betterCapsLockModeArrowKeyListener = eventtap.new({ eventTypes.keyDown }, functi
 end):start()
 
 --------------------------------------------------------------------------------
+-- Watch for i/o key down events in BetterCapsLock Mode, and trigger the
+-- corresponding key events to navigate to the previous/next tab respectively
+--------------------------------------------------------------------------------
+betterCapsLockModeTabNavKeyListener = eventtap.new({ eventTypes.keyDown }, function(event)
+  if not betterCapsLockMode.active then
+    return false
+  end
+
+  local modifiers = {'cmd', 'shift'}
+  local charactersToKeystrokes = {
+    i = '[',
+    o = ']',
+  }
+  local keystroke = charactersToKeystrokes[event:getCharacters()]
+
+  if keystroke then
+    eventtap.event.newKeyEvent(modifiers, keystroke, true):post()
+    eventtap.event.newKeyEvent(modifiers, keystroke, false):post()
+    betterCapsLockMode.triggered = true
+    return true
+  end
+end):start()
+
+--------------------------------------------------------------------------------
 -- Watch for caps lock used in combination with another "normal" key, and
 -- translate it to control plus that other normal key. For example, translate
 -- "caps lock + e" to "control + e" to go to the end of the line.

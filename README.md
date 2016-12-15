@@ -52,6 +52,7 @@ Here's what it provides so far:
 - Hold **caps lock** to use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively.
     - While holding **caps lock**, press **a** for **option** (e.g., **caps lock** plus **a** plus **h** translates to **option** plus **left**)
     - While holding **caps lock**, press **s** for **command** (e.g., **caps lock** plus **s** plus **h** translates to **command** plus **left**)
+- Hold **caps lock** to use **i**/**o** to move to the previous/next tab
 - Basic window management
     - **caps lock** + **w**, **h**: Send window left (left half of screen)
     - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
