@@ -73,7 +73,7 @@ betterCapsLockModeModifierKeyListener = eventtap.new({ eventTypes.keyDown, event
 end):start()
 
 --------------------------------------------------------------------------------
--- Watch for h/j/k/l key down/up events in BetterCapsLock Mode, and trigger the
+-- Watch for h/j/k/l key down events in BetterCapsLock Mode, and trigger the
 -- corresponding arrow key events
 --------------------------------------------------------------------------------
 betterCapsLockModeArrowKeyListener = eventtap.new({ eventTypes.keyDown }, function(event)
