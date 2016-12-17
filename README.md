@@ -47,18 +47,31 @@ I find it to be a very useful fraction, but I don't consider it complete by any 
 
 Here's what it provides so far:
 
-- Tap **caps lock** for **escape**
-- Hold **caps lock** for **control**
-- Hold **caps lock** to use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively.
-    - While holding **caps lock**, press **a** for **option** (e.g., **caps lock** plus **a** plus **h** translates to **option** plus **left**)
-    - While holding **caps lock**, press **s** for **command** (e.g., **caps lock** plus **s** plus **h** translates to **command** plus **left**)
+- A more useful caps lock key
+    - Tap **caps lock** for **escape**
+    - Hold **caps lock** for **control**
+
+- (S)uper (D)uper Mode
+
+  To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
+
+    - Use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively
+    - Use **a** for **option** (AKA **alt**)
+    - Use **f** for **command**
+    - Use **space** for **shift**
+    - Use **a** + **j**/**k** for **page up**/**page down**
+    - Use **i**/**o** to move to the previous/next tab
+    - Use **a** + **h**/**l** to move to previous/next word in most apps (but not yet in iTerm2)
+
 - Hold **caps lock** to use **i**/**o** to move to the previous/next tab
+
 - Basic window management
     - **caps lock** + **w**, **h**: Send window left (left half of screen)
     - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
     - **caps lock** + **w**, **k**: Send window up (top half of screen)
     - **caps lock** + **w**, **l**: Send window right (right half of screen)
     - **caps lock** + **w**, **enter**: Resize window to fill the screen
+
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key
     - **hyper** + **a** to open iTunes ("A" for "Apple Music")
@@ -94,6 +107,10 @@ ln -s $PWD/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
 
 # Prepare custom settings for Hammerspoon
 ln -s $PWD/hammerspoon ~/.hammerspoon
+
+luarocks install luasocket --local
+
+brew install lua
 ```
 
 ### Install the apps
@@ -163,3 +180,30 @@ _TODO_: Port this functionality to macOS Sierra.
 [hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
+
+---
+
+# Notes
+
+- Problem: Inside a *modal* keybinding, Hammerspoon won't trigger another keystroke until you *release* the current keybinding. That makes things feel slow and unresponsive. When I hold down capslock and hit 'e', I want it to go to the end of the line as soon as I press 'e'. I don't want it to wait for me to *release* 'e'.
+
+# Needs
+
+## Native
+
+- go to beginning of line (ctrl-a)
+    - IDEA: hold down control and hit h (left) twice
+- go to end of line (ctrl-e)
+    - IDEA: hold down control and hit l (right) twice
+- delete to beginning of line (ctrl-u)
+- delete to end of line (ctrl-k)
+
+## Custom
+
+- previous/next tab
+- split pane
+
+## NEXT
+
+- [ ] In iTerm, teach **caps lock + a + h/l** to go to previous/next word
+- [ ] Add ability to split panes with control+| and control+-
