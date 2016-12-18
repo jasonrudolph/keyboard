@@ -81,6 +81,8 @@ Here's what it provides so far:
     - **hyper** + **g** to open Mailplane 3 ("G" for "Gmail")
     - **hyper** + **t** to open iTerm ("T" for "Terminal")
 
+- Use **option** + **h**/**l** to delete previous/next word
+
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
