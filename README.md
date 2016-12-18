@@ -178,30 +178,3 @@ _TODO_: Port this functionality to macOS Sierra.
 [hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
-
----
-
-# Notes
-
-- Problem: Inside a *modal* keybinding, Hammerspoon won't trigger another keystroke until you *release* the current keybinding. That makes things feel slow and unresponsive. When I hold down capslock and hit 'e', I want it to go to the end of the line as soon as I press 'e'. I don't want it to wait for me to *release* 'e'.
-
-# Needs
-
-## Native
-
-- go to beginning of line (ctrl-a)
-    - IDEA: hold down control and hit h (left) twice
-- go to end of line (ctrl-e)
-    - IDEA: hold down control and hit l (right) twice
-- delete to beginning of line (ctrl-u)
-- delete to end of line (ctrl-k)
-
-## Custom
-
-- previous/next tab
-- split pane
-
-## NEXT
-
-- [ ] In iTerm, teach **caps lock + a + h/l** to go to previous/next word
-- [ ] Add ability to split panes with control+| and control+-
