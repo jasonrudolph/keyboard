@@ -3,6 +3,12 @@ local eventTypes = hs.eventtap.event.types
 
 local log = hs.logger.new('superDuperMode', 'debug')
 
+keyUpDown = function(modifiers, key)
+  log.d('Sending keystroke: {', modifiers[1], modifiers[2], modifiers[3], '}', keystroke)
+  eventtap.event.newKeyEvent(modifiers, key, true):post()
+  eventtap.event.newKeyEvent(modifiers, key, false):post()
+end
+
 -- If 's' and 'd' are *both* pressed within this time period, consider this to
 -- mean that they've been pressed simultaneously, and therefore we should enter
 -- Super Duper Mode.
@@ -41,8 +47,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
         superDuperMode.active = true
       else
         superDuperMode.ignoreS = true
-        eventtap.event.newKeyEvent({}, 's', true):post()
-        eventtap.event.newKeyEvent({}, 's', false):post()
+        keyUpDown({}, 's')
         return false
       end
     end)
@@ -63,8 +68,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
         superDuperMode.active = true
       else
         superDuperMode.ignoreD = true
-        eventtap.event.newKeyEvent({}, 'd', true):post()
-        eventtap.event.newKeyEvent({}, 'd', false):post()
+        keyUpDown({}, 'd')
         return false
       end
     end)
@@ -133,9 +137,7 @@ superDuperModeNavListener = eventtap.new({ eventTypes.keyDown }, function(event)
       modifiers[n] = k
     end
 
-    log.d('Sending keystroke: {', modifiers[1], modifiers[2], '}', keystroke)
-    eventtap.event.newKeyEvent(modifiers, keystroke, true):post()
-    eventtap.event.newKeyEvent(modifiers, keystroke, false):post()
+    keyUpDown(modifiers, keystroke)
     return true
   end
 end):start()
@@ -156,9 +158,7 @@ superDuperModeTabNavKeyListener = eventtap.new({ eventTypes.keyDown }, function(
   local keystroke = charactersToKeystrokes[event:getCharacters()]
 
   if keystroke then
-    local modifiers = {'cmd', 'shift'}
-    eventtap.event.newKeyEvent(modifiers, keystroke, true):post()
-    eventtap.event.newKeyEvent(modifiers, keystroke, false):post()
+    keyUpDown({'cmd', 'shift'}, keystroke)
     superDuperMode.triggered = true
     return true
   end
