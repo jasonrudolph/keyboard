@@ -68,7 +68,10 @@ betterCapsLockModeFIXMEKeyListener = eventtap.new({ eventTypes.keyDown }, functi
     e = 'e',
     f = 'f',
     g = 'g',
+    h = 'h',
+    j = 'j',
     k = 'k',
+    l = 'l',
     r = 'r',
     u = 'u',
   }
