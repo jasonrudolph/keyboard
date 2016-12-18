@@ -105,10 +105,6 @@ ln -s $PWD/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
 
 # Prepare custom settings for Hammerspoon
 ln -s $PWD/hammerspoon ~/.hammerspoon
-
-luarocks install luasocket --local
-
-brew install lua
 ```
 
 ### Install the apps
