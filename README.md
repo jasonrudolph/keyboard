@@ -61,7 +61,7 @@ Here's what it provides so far:
     - Use **space** for **shift**
     - Use **a** + **j**/**k** for **page up**/**page down**
     - Use **i**/**o** to move to the previous/next tab
-    - Use **a** + **h**/**l** to move to previous/next word in most apps (but not yet in iTerm2)
+    - Use **a** + **h**/**l** to move to previous/next word in most apps
 
 - Basic window management
     - **caps lock** + **w**, **h**: Send window left (left half of screen)
@@ -105,6 +105,9 @@ ln -s $PWD/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
 
 # Prepare custom settings for Hammerspoon
 ln -s $PWD/hammerspoon ~/.hammerspoon
+
+# Prepare custom settings for navigating between words in iTerm2
+cat $PWD/inputrc >> ~/.inputrc
 ```
 
 ### Install the apps

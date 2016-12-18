@@ -1,0 +1,5 @@
+# Configure option + right arrow to move forward one word in iTerm2
+"\e\e[C": forward-word
+
+# Configure option + left arrow to move backward one word in iTerm2
+"\e\e[D": backward-word
