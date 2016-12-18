@@ -57,17 +57,20 @@ betterCapsLockModeFIXMEKeyListener = eventtap.new({ eventTypes.keyDown }, functi
 
   -- TODO We probably need to do this for *every* key that isn't explicitly used
   -- for another purpose in BetterCapsLock Mode. For example, we don't want to
-  -- do this for 'j', because we map 'j' to 'down' in BetterCapsLock Mode.
-  -- However, for any key that isn't used for another purpose in BetterCapsLock
-  -- Mode, that key ought to "Just Work" as if the user had pressed control plus
-  -- that other key.
+  -- do this for 'w', because we use 'w' to enter WindowLayout Mode. However,
+  -- for any key that isn't used for another purpose in BetterCapsLock Mode,
+  -- that key ought to "Just Work" as if the user had pressed control plus that
+  -- other key.
   local charactersToKeystrokes = {
+    a = 'a',
     c = 'c',
     d = 'd',
     e = 'e',
     f = 'f',
     g = 'g',
+    k = 'k',
     r = 'r',
+    u = 'u',
   }
   charactersToKeystrokes[' '] = 'space'
 
