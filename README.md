@@ -63,8 +63,6 @@ Here's what it provides so far:
     - Use **i**/**o** to move to the previous/next tab
     - Use **a** + **h**/**l** to move to previous/next word in most apps (but not yet in iTerm2)
 
-- Hold **caps lock** to use **i**/**o** to move to the previous/next tab
-
 - Basic window management
     - **caps lock** + **w**, **h**: Send window left (left half of screen)
     - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
