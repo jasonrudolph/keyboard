@@ -4,7 +4,7 @@ local eventTypes = hs.eventtap.event.types
 local log = hs.logger.new('superDuperMode', 'debug')
 
 keyUpDown = function(modifiers, key)
-  log.d('Sending keystroke: {', modifiers[1], modifiers[2], modifiers[3], '}', keystroke)
+  log.d('Sending keystroke:', hs.inspect(modifiers), keystroke)
   eventtap.event.newKeyEvent(modifiers, key, true):post()
   eventtap.event.newKeyEvent(modifiers, key, false):post()
 end
