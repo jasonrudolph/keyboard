@@ -10,8 +10,8 @@ local superDuperMode = {}
 superDuperMode.active = false
 superDuperMode.isSDown = false
 superDuperMode.isDDown = false
-superDuperMode.ignoreS = false
-superDuperMode.ignoreD = false
+superDuperMode.ignoreNextS = false
+superDuperMode.ignoreNextD = false
 superDuperMode.modifiers = {}
 
 superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function(event)
@@ -24,8 +24,8 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
   local characters = event:getCharacters()
 
   if characters == 's' then
-    if superDuperMode.ignoreS then
-      superDuperMode.ignoreS = false
+    if superDuperMode.ignoreNextS then
+      superDuperMode.ignoreNextS = false
       return false
     end
     -- Temporarily suppress this 's' keystroke. At this point, we're not sure if
@@ -38,15 +38,15 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       if superDuperMode.isDDown then
         superDuperMode.active = true
       else
-        superDuperMode.ignoreS = true
+        superDuperMode.ignoreNextS = true
         keyUpDown({}, 's')
         return false
       end
     end)
     return true
   elseif characters == 'd' then
-    if superDuperMode.ignoreD then
-      superDuperMode.ignoreD = false
+    if superDuperMode.ignoreNextD then
+      superDuperMode.ignoreNextD = false
       return false
     end
     -- Temporarily suppress this 'd' keystroke. At this point, we're not sure if
@@ -59,7 +59,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       if superDuperMode.isSDown then
         superDuperMode.active = true
       else
-        superDuperMode.ignoreD = true
+        superDuperMode.ignoreNextD = true
         keyUpDown({}, 'd')
         return false
       end
@@ -75,8 +75,8 @@ superDuperModeDeactivationListener = eventtap.new({ eventTypes.keyUp }, function
     superDuperMode.active = false
     superDuperMode.isSDown = false
     superDuperMode.isDDown = false
-    superDuperMode.ignoreS = false
-    superDuperMode.ignoreD = false
+    superDuperMode.ignoreNextS = false
+    superDuperMode.ignoreNextD = false
   end
 end):start()
 
