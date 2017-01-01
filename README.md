@@ -74,6 +74,7 @@ Here's what it provides so far:
     - **caps lock** + **w**, **.**: Send window to lower right quarter of screen
     - **caps lock** + **w**, **space**: Send window to center of screen
     - **caps lock** + **w**, **enter**: Resize window to fill the screen
+    - **caps lock** + **w**, **n**: Send window to next screen (when using multiple monitors)
 
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key

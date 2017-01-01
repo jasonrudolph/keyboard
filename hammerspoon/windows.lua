@@ -153,3 +153,16 @@ function hs.window.centerWithFullHeight(win)
   f.h = max.h
   win:setFrame(f)
 end
+
+function hs.window.nextScreen(win)
+  local currentScreen = win:screen()
+  local allScreens = hs.screen.allScreens()
+  currentScreenIndex = hs.fnutils.indexOf(allScreens, currentScreen)
+  nextScreenIndex = currentScreenIndex + 1
+
+  if allScreens[nextScreenIndex] then
+    win:moveToScreen(allScreens[nextScreenIndex])
+  else
+    win:moveToScreen(allScreens[1])
+  end
+end

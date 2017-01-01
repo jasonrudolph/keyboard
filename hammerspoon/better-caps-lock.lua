@@ -107,6 +107,7 @@ end)
 --   , => send window to the lower left quarter of the screen
 --   . => send window to the lower right quarter of the screen
 --   return => make window full screen
+--   n => send window to the next screen
 --------------------------------------------------------------------------------
 
 require('windows')
@@ -159,6 +160,10 @@ end)
 
 windowLayoutMode:bindWithAutomaticExit('.', function()
   hs.window.focusedWindow():downRight()
+end)
+
+windowLayoutMode:bindWithAutomaticExit('n', function()
+  hs.window.focusedWindow():nextScreen()
 end)
 
 pressedW = function()
