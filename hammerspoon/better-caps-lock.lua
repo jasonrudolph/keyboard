@@ -125,6 +125,10 @@ windowLayoutMode:bindWithAutomaticExit('return', function()
   hs.window.focusedWindow():maximize()
 end)
 
+windowLayoutMode:bindWithAutomaticExit('space', function()
+  hs.window.focusedWindow():centerWithFullHeight()
+end)
+
 windowLayoutMode:bindWithAutomaticExit('h', function()
   hs.window.focusedWindow():left()
 end)

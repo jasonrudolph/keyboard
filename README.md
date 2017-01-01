@@ -64,7 +64,6 @@ Here's what it provides so far:
     - Use **a** + **h**/**l** to move to previous/next word in most apps
 
 - Basic window management
-    - **caps lock** + **w**, **enter**: Resize window to fill the screen
     - **caps lock** + **w**, **h**: Send window left (left half of screen)
     - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
     - **caps lock** + **w**, **k**: Send window up (top half of screen)
@@ -73,6 +72,8 @@ Here's what it provides so far:
     - **caps lock** + **w**, **o**: Send window to upper right quarter of screen
     - **caps lock** + **w**, **,**: Send window to lower left quarter of screen
     - **caps lock** + **w**, **.**: Send window to lower right quarter of screen
+    - **caps lock** + **w**, **space**: Send window to center of screen
+    - **caps lock** + **w**, **enter**: Resize window to fill the screen
 
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key
