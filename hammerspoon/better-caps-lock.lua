@@ -107,7 +107,7 @@ end)
 --   , => send window to the lower left quarter of the screen
 --   . => send window to the lower right quarter of the screen
 --   return => make window full screen
---   n => send window to the next screen
+--   n => send window to the next monitor
 --------------------------------------------------------------------------------
 
 require('windows')
