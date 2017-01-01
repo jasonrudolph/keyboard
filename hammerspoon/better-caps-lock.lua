@@ -101,11 +101,15 @@ end)
 -- action. For example, to send the window left, press and release
 -- BetterCapsLock+w, and then press h.
 --
+--   return => make window full screen
 --   h => send window to the left half of the screen
 --   j => send window to the bottom half of the screen
 --   k => send window to the top half of the screen
 --   l => send window to the right half of the screen
---   return => make window full screen
+--   i => send window to the upper left quarter of the screen
+--   o => send window to the upper right quarter of the screen
+--   , => send window to the lower left quarter of the screen
+--   . => send window to the lower right quarter of the screen
 --------------------------------------------------------------------------------
 
 require('windows')
@@ -138,6 +142,22 @@ end)
 
 windowLayoutMode:bindWithAutomaticExit('l', function()
   hs.window.focusedWindow():right()
+end)
+
+windowLayoutMode:bindWithAutomaticExit('i', function()
+  hs.window.focusedWindow():upLeft()
+end)
+
+windowLayoutMode:bindWithAutomaticExit('o', function()
+  hs.window.focusedWindow():upRight()
+end)
+
+windowLayoutMode:bindWithAutomaticExit(',', function()
+  hs.window.focusedWindow():downLeft()
+end)
+
+windowLayoutMode:bindWithAutomaticExit('.', function()
+  hs.window.focusedWindow():downRight()
 end)
 
 pressedW = function()

@@ -74,7 +74,15 @@ end
 -- |                 |
 -- +-----------------+
 function hs.window.upLeft(win)
-  -- TODO
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = 0
+  f.y = 0
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
 end
 
 -- +-----------------+
@@ -83,7 +91,15 @@ end
 -- |  HERE  |        |
 -- +-----------------+
 function hs.window.downLeft(win)
-  -- TODO
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = 0
+  f.y = max.h/2
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
 end
 
 -- +-----------------+
@@ -92,7 +108,16 @@ end
 -- |        |  HERE  |
 -- +-----------------+
 function hs.window.downRight(win)
-  -- TODO
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.w/2
+  f.y = max.h/2
+  f.w = max.w/2
+  f.h = max.h/2
+
+  win:setFrame(f)
 end
 
 -- +-----------------+
@@ -101,5 +126,13 @@ end
 -- |                 |
 -- +-----------------+
 function hs.window.upRight(win)
-  -- TODO
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.w/2
+  f.y = 0
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
 end
