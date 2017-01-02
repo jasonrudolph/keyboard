@@ -150,7 +150,6 @@ superDuperModeTabNavKeyListener = eventtap.new({ eventTypes.keyDown }, function(
 
   if keystroke then
     keyUpDown({'cmd', 'shift'}, keystroke)
-    superDuperMode.triggered = true
     return true
   end
 end):start()
