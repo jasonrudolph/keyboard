@@ -61,6 +61,7 @@ Here's what it provides so far:
     - Use **space** for **shift**
     - Use **a** + **j**/**k** for **page up**/**page down**
     - Use **i**/**o** to move to the previous/next tab
+    - Use **u**/**p** to go to the first/last tab (in most apps)
     - Use **a** + **h**/**l** to move to previous/next word in most apps
 
 - Basic window management

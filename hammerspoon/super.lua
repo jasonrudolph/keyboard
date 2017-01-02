@@ -143,13 +143,15 @@ superDuperModeTabNavKeyListener = eventtap.new({ eventTypes.keyDown }, function(
   end
 
   local charactersToKeystrokes = {
-    i = '[',
-    o = ']',
+    u = { {'cmd'}, '1' },          -- go to first tab
+    i = { {'cmd', 'shift'}, '[' }, -- go to previous tab
+    o = { {'cmd', 'shift'}, ']' }, -- go to next tab
+    p = { {'cmd'}, '9' },          -- go to last tab
   }
   local keystroke = charactersToKeystrokes[event:getCharacters()]
 
   if keystroke then
-    keyUpDown({'cmd', 'shift'}, keystroke)
+    keyUpDown(table.unpack(keystroke))
     return true
   end
 end):start()
