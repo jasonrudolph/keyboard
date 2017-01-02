@@ -6,13 +6,17 @@ local eventTypes = hs.eventtap.event.types
 -- Super Duper Mode.
 local MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES = 0.02 -- 20 milliseconds
 
-local superDuperMode = {}
-superDuperMode.active = false
-superDuperMode.isSDown = false
-superDuperMode.isDDown = false
-superDuperMode.ignoreNextS = false
-superDuperMode.ignoreNextD = false
-superDuperMode.modifiers = {}
+local superDuperMode = {
+  reset = function(self)
+    self.active = false
+    self.isSDown = false
+    self.isDDown = false
+    self.ignoreNextS = false
+    self.ignoreNextD = false
+    self.modifiers = {}
+  end,
+}
+superDuperMode:reset()
 
 superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function(event)
   -- If 's' or 'd' is pressed in conjuction with any modifier keys
@@ -71,13 +75,7 @@ end):start()
 superDuperModeDeactivationListener = eventtap.new({ eventTypes.keyUp }, function(event)
   local characters = event:getCharacters()
   if characters == 's' or characters == 'd' then
-    -- TODO Refactor: Extract this into a 'reset' function (or similar)
-    superDuperMode.active = false
-    superDuperMode.isSDown = false
-    superDuperMode.isDDown = false
-    superDuperMode.ignoreNextS = false
-    superDuperMode.ignoreNextD = false
-    superDuperMode.modifiers = {}
+    superDuperMode:reset()
   end
 end):start()
 
