@@ -19,7 +19,7 @@
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "f19",
+                "caps_lock": "left_control",
                 "right_option": "f17"
             },
             "virtual_hid_keyboard": {

@@ -6,7 +6,7 @@ keyUpDown = function(modifiers, key)
   hs.eventtap.event.newKeyEvent(modifiers, key, false):post()
 end
 
-require('better-caps-lock')
+require('control-escape')
 require('delete-words')
 require('hyper')
 require('super')
