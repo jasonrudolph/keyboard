@@ -21,6 +21,9 @@
             "simple_modifications": {
                 "caps_lock": "f19",
                 "right_option": "f17"
+            },
+            "virtual_hid_keyboard": {
+                "keyboard_type": "ansi"
             }
         }
     ]

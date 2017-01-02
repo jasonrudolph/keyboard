@@ -95,7 +95,7 @@ Here's what it provides so far:
 This setup is honed and tested with the following dependencies.
 
 - macOS Sierra, 10.12
-- [Karabiner-Elements 0.90.68][karabiner]
+- [Karabiner-Elements 0.90.72][karabiner]
 - [Hammerspoon 0.9.50][hammerspoon]
 
 ## The Setup
@@ -110,7 +110,7 @@ cd keyboard
 git checkout sierra
 
 # Prepare custom settings for Karabiner-Elements
-ln -s $PWD/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
+ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
 # Prepare custom settings for Hammerspoon
 ln -s $PWD/hammerspoon ~/.hammerspoon
