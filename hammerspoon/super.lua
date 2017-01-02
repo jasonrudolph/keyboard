@@ -77,6 +77,7 @@ superDuperModeDeactivationListener = eventtap.new({ eventTypes.keyUp }, function
     superDuperMode.isDDown = false
     superDuperMode.ignoreNextS = false
     superDuperMode.ignoreNextD = false
+    superDuperMode.modifiers = {}
   end
 end):start()
 
