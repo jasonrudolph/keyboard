@@ -65,17 +65,17 @@ Here's what it provides so far:
     - Use **a** + **h**/**l** to move to previous/next word in most apps
 
 - Basic window management
-    - **caps lock** + **w**, **h**: Send window left (left half of screen)
-    - **caps lock** + **w**, **j**: Send window down (bottom half of screen)
-    - **caps lock** + **w**, **k**: Send window up (top half of screen)
-    - **caps lock** + **w**, **l**: Send window right (right half of screen)
-    - **caps lock** + **w**, **i**: Send window to upper left quarter of screen
-    - **caps lock** + **w**, **o**: Send window to upper right quarter of screen
-    - **caps lock** + **w**, **,**: Send window to lower left quarter of screen
-    - **caps lock** + **w**, **.**: Send window to lower right quarter of screen
-    - **caps lock** + **w**, **space**: Send window to center of screen
-    - **caps lock** + **w**, **enter**: Resize window to fill the screen
-    - **caps lock** + **w**, **n**: Send window to next monitor
+    - **control** + **w**, **h**: Send window left (left half of screen)
+    - **control** + **w**, **j**: Send window down (bottom half of screen)
+    - **control** + **w**, **k**: Send window up (top half of screen)
+    - **control** + **w**, **l**: Send window right (right half of screen)
+    - **control** + **w**, **i**: Send window to upper left quarter of screen
+    - **control** + **w**, **o**: Send window to upper right quarter of screen
+    - **control** + **w**, **,**: Send window to lower left quarter of screen
+    - **control** + **w**, **.**: Send window to lower right quarter of screen
+    - **control** + **w**, **space**: Send window to center of screen
+    - **control** + **w**, **enter**: Resize window to fill the screen
+    - **control** + **w**, **n**: Send window to next monitor
 
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key
