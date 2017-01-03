@@ -77,6 +77,11 @@ Here's what it provides so far:
     - **control** + **w**, **enter**: Resize window to fill the screen
     - **control** + **w**, **n**: Send window to next monitor
 
+- Markdown formatting
+    - **control** + **m**, **b**: Wrap selected text in double asterisks ("B" for "Bold")
+    - **control** + **m**, **i**: Wrap selected text in single asterisks ("I" for "Italic")
+    - **control** + **m**, **s**: Wrap selected text in double tildes ("S" for "Strikethrough")
+
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key
     - **hyper** + **a** to open iTunes ("A" for "Apple Music")

@@ -9,6 +9,7 @@ end
 require('control-escape')
 require('delete-words')
 require('hyper')
+require('markdown')
 require('super')
 require('windows')
 
