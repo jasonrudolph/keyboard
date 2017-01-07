@@ -98,6 +98,8 @@ Here's what it provides so far:
 
 - Use **control** + **-**/**|** to split iTerm2 panes horizontally/vertically
 
+- Use **control** + **h**/**j**/**k**/**l** to move left/down/up/right by one pane in iTerm2
+
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
