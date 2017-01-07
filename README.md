@@ -96,6 +96,8 @@ Here's what it provides so far:
 
 - Use **option** + **h**/**l** to delete previous/next word
 
+- Use **control** + **-**/**|** to split iTerm 2 panes horizontally/vertically
+
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
