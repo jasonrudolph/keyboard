@@ -14,9 +14,9 @@ require('panes')
 require('super')
 require('windows')
 
-hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send()
-
 -- Use Control+` to reload Hammerspoon config
 hs.hotkey.bind({'ctrl'}, '`', nil, function()
   hs.reload()
 end)
+
+hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send()
