@@ -81,6 +81,7 @@ Here's what it provides so far:
     - **control** + **m**, **b**: Wrap selected text in double asterisks ("B" for "Bold")
     - **control** + **m**, **i**: Wrap selected text in single asterisks ("I" for "Italic")
     - **control** + **m**, **s**: Wrap selected text in double tildes ("S" for "Strikethrough")
+    - **control** + **m**, **l**: Convert the currently-selected text to an inline link, using a URL from the clipboard ("L" for "Link")
 
 - Hyper key for quickly launching apps
     - Use **right option** key as **hyper** key

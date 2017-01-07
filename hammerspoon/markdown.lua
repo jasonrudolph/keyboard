@@ -23,6 +23,31 @@ function wrapSelectedText(wrapCharacters)
   end)
 end
 
+function inlineLink()
+  -- Fetch URL from the system clipboard
+  local linkUrl = hs.pasteboard.getContents()
+
+  -- Copy the currently-selected text to use as the link text
+  keyUpDown('cmd', 'c')
+
+  -- Allow some time for the command+c keystroke to fire asynchronously before
+  -- we try to read from the clipboard
+  hs.timer.doAfter(0.1, function()
+    -- Construct the formatted output and paste it over top of the
+    -- currently-selected text
+    local linkText = hs.pasteboard.getContents()
+    local markdown = '[' .. linkText .. '](' .. linkUrl .. ')'
+    hs.pasteboard.setContents(markdown)
+    keyUpDown('cmd', 'v')
+
+    -- Allow some time for the command+v keystroke to fire asynchronously before
+    -- we restore the original clipboard
+    hs.timer.doAfter(0.1, function()
+      hs.pasteboard.setContents(originalClipboardContents)
+    end)
+  end)
+end
+
 --------------------------------------------------------------------------------
 -- Define Markdown Mode
 --
@@ -34,6 +59,8 @@ end
 --   b => wrap the selected text in double asterisks ("b" for "bold")
 --   i => wrap the selected text in single asterisks ("i" for "italic")
 --   s => wrap the selected text in double tildes ("s" for "strikethrough")
+--   l => convert the currently-selected text to an inline link, using a URL
+--        from the clipboard ("l" for "link")
 --------------------------------------------------------------------------------
 
 markdownMode = hs.hotkey.modal.new({}, 'F20')
@@ -56,6 +83,10 @@ end)
 
 markdownMode:bindWithAutomaticExit('s', function()
   wrapSelectedText('~~')
+end)
+
+markdownMode:bindWithAutomaticExit('l', function()
+  inlineLink()
 end)
 
 -- Use Control+m to enter Markdown Mode
