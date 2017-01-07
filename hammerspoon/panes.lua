@@ -5,7 +5,7 @@ local splitHorizontalHotkey = hs.hotkey.new({'ctrl'}, '-', function()
   keyUpDown({'cmd', 'shift'}, 'd')
 end)
 
--- Use control + pipe to split panes vertically in the terminal
+-- Use control + pipe to split panes vertically in iTerm2
 local splitVerticalHotkey = hs.hotkey.new({'ctrl', 'shift'}, '\\', function()
   keyUpDown({'cmd'}, 'd')
 end)

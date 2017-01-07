@@ -92,11 +92,11 @@ Here's what it provides so far:
     - **hyper** + **e** to open Atom Beta ("E" for "Editor")
     - **hyper** + **f** to open Finder ("F" for "Finder")
     - **hyper** + **g** to open Mailplane 3 ("G" for "Gmail")
-    - **hyper** + **t** to open iTerm ("T" for "Terminal")
+    - **hyper** + **t** to open iTerm2 ("T" for "Terminal")
 
 - Use **option** + **h**/**l** to delete previous/next word
 
-- Use **control** + **-**/**|** to split iTerm 2 panes horizontally/vertically
+- Use **control** + **-**/**|** to split iTerm2 panes horizontally/vertically
 
 ## Dependencies
 
