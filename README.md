@@ -65,17 +65,17 @@ Here's what it provides so far:
     - Use **a** + **h**/**l** to move to previous/next word in most apps
 
 - Basic window management
-    - **control** + **w**, **h**: Send window left (left half of screen)
-    - **control** + **w**, **j**: Send window down (bottom half of screen)
-    - **control** + **w**, **k**: Send window up (top half of screen)
-    - **control** + **w**, **l**: Send window right (right half of screen)
-    - **control** + **w**, **i**: Send window to upper left quarter of screen
-    - **control** + **w**, **o**: Send window to upper right quarter of screen
-    - **control** + **w**, **,**: Send window to lower left quarter of screen
-    - **control** + **w**, **.**: Send window to lower right quarter of screen
-    - **control** + **w**, **space**: Send window to center of screen
-    - **control** + **w**, **enter**: Resize window to fill the screen
-    - **control** + **w**, **n**: Send window to next monitor
+    - **control** + **s**, **h**: Send window left (left half of screen)
+    - **control** + **s**, **j**: Send window down (bottom half of screen)
+    - **control** + **s**, **k**: Send window up (top half of screen)
+    - **control** + **s**, **l**: Send window right (right half of screen)
+    - **control** + **s**, **i**: Send window to upper left quarter of screen
+    - **control** + **s**, **o**: Send window to upper right quarter of screen
+    - **control** + **s**, **,**: Send window to lower left quarter of screen
+    - **control** + **s**, **.**: Send window to lower right quarter of screen
+    - **control** + **s**, **space**: Send window to center of screen
+    - **control** + **s**, **enter**: Resize window to fill the screen
+    - **control** + **s**, **n**: Send window to next monitor
 
 - Markdown formatting
     - **control** + **m**, **b**: Wrap selected text in double asterisks ("B" for "Bold")
