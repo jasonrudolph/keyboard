@@ -120,6 +120,7 @@ cd keyboard
 git checkout sierra
 
 # Prepare custom settings for Karabiner-Elements
+mkdir -p ~/.config/karabiner/
 ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
 # Prepare custom settings for Hammerspoon
