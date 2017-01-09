@@ -105,7 +105,7 @@ Here's what it provides so far:
 This setup is honed and tested with the following dependencies.
 
 - macOS Sierra, 10.12
-- [Karabiner-Elements 0.90.73][karabiner]
+- [Karabiner-Elements 0.90.75][karabiner]
 - [Hammerspoon 0.9.52][hammerspoon]
 
 ## The Setup
