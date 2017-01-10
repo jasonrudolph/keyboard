@@ -100,6 +100,8 @@ Here's what it provides so far:
 
 - Use **control** + **h**/**j**/**k**/**l** to move left/down/up/right by one pane in iTerm2
 
+- Use **control** + **u** to delete to the start of the line
+
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
