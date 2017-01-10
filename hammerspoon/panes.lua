@@ -11,7 +11,7 @@ local itermHotkeyMappings = {
     to   = {{'cmd'}, 'd'}
   },
 
-  -- Use control + h/j/k/l to move left/down/up/right by one pane in iTerm2
+  -- Use control + h/j/k/l to move left/down/up/right by one pane
   {
     from = {{'ctrl'}, 'h'},
     to   = {{'cmd', 'alt'}, 'left'}
