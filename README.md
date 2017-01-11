@@ -62,7 +62,7 @@ Here's what it provides so far:
     - Use **a** + **j**/**k** for **page up**/**page down**
     - Use **i**/**o** to move to the previous/next tab
     - Use **u**/**p** to go to the first/last tab (in most apps)
-    - Use **a** + **h**/**l** to move to previous/next word in most apps
+    - Use **a** + **h**/**l** to move to previous/next word (in most apps)
 
 - Basic window management
     - **control** + **s**, **h**: Send window left (left half of screen)
@@ -94,13 +94,13 @@ Here's what it provides so far:
     - **hyper** + **g** to open Mailplane 3 ("G" for "Gmail")
     - **hyper** + **t** to open iTerm2 ("T" for "Terminal")
 
-- Use **option** + **h**/**l** to delete previous/next word
-
 - Use **control** + **-**/**|** to split iTerm2 panes horizontally/vertically
 
 - Use **control** + **h**/**j**/**k**/**l** to move left/down/up/right by one pane in iTerm2
 
 - Use **control** + **u** to delete to the start of the line
+
+- Use **option** + **h**/**l** to delete previous/next word
 
 ## Dependencies
 
