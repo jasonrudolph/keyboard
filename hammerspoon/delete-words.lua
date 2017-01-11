@@ -32,6 +32,5 @@ end)
 -- Therefore, we only enable this hotkey for non-terminal apps.
 local wf = hs.window.filter.new():setFilters({iTerm2 = false, Terminal = false})
 enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'u', function()
-  keyUpDown({'cmd', 'shift'}, 'left')
-  keyUpDown({}, 'forwarddelete')
+  keyUpDown({'cmd'}, 'delete')
 end))
