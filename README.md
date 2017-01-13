@@ -100,6 +100,8 @@ Here's what it provides so far:
 
 - Use **control** + **u** to delete to the start of the line
 
+- Use **control** + **;** to delete to the end of the line
+
 - Use **option** + **h**/**l** to delete previous/next word
 
 ## Dependencies
