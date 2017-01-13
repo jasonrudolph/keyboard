@@ -7,7 +7,7 @@ function wrapSelectedText(wrapCharacters)
 
   -- Allow some time for the command+c keystroke to fire asynchronously before
   -- we try to read from the clipboard
-  hs.timer.doAfter(0.1, function()
+  hs.timer.doAfter(0.2, function()
     -- Construct the formatted output and paste it over top of the
     -- currently-selected text
     local selectedText = hs.pasteboard.getContents()
@@ -17,7 +17,7 @@ function wrapSelectedText(wrapCharacters)
 
     -- Allow some time for the command+v keystroke to fire asynchronously before
     -- we restore the original clipboard
-    hs.timer.doAfter(0.1, function()
+    hs.timer.doAfter(0.2, function()
       hs.pasteboard.setContents(originalClipboardContents)
     end)
   end)
@@ -32,7 +32,7 @@ function inlineLink()
 
   -- Allow some time for the command+c keystroke to fire asynchronously before
   -- we try to read from the clipboard
-  hs.timer.doAfter(0.1, function()
+  hs.timer.doAfter(0.2, function()
     -- Construct the formatted output and paste it over top of the
     -- currently-selected text
     local linkText = hs.pasteboard.getContents()
@@ -42,7 +42,7 @@ function inlineLink()
 
     -- Allow some time for the command+v keystroke to fire asynchronously before
     -- we restore the original clipboard
-    hs.timer.doAfter(0.1, function()
+    hs.timer.doAfter(0.2, function()
       hs.pasteboard.setContents(originalClipboardContents)
     end)
   end)
