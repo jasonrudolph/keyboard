@@ -187,6 +187,15 @@ end
 
 windowLayoutMode = hs.hotkey.modal.new({}, 'F16')
 
+local message = require('status-message')
+windowLayoutMode.statusMessage = message.new('Window Layout Mode (control-s)')
+windowLayoutMode.entered = function()
+  windowLayoutMode.statusMessage:show()
+end
+windowLayoutMode.exited = function()
+  windowLayoutMode.statusMessage:hide()
+end
+
 -- Bind the given key to call the given function and exit WindowLayout mode
 function windowLayoutMode.bindWithAutomaticExit(mode, key, fn)
   mode:bind({}, key, function()
