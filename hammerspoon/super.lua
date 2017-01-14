@@ -1,5 +1,6 @@
 local eventtap = hs.eventtap
 local eventTypes = hs.eventtap.event.types
+local message = require('status-message')
 
 -- If 's' and 'd' are *both* pressed within this time period, consider this to
 -- mean that they've been pressed simultaneously, and therefore we should enter
@@ -7,6 +8,11 @@ local eventTypes = hs.eventtap.event.types
 local MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES = 0.02 -- 20 milliseconds
 
 local superDuperMode = {
+  statusMessage = message.new('(S)uper (D)uper Mode'),
+  enter = function(self)
+    if not self.active then self.statusMessage:show() end
+    self.active = true
+  end,
   reset = function(self)
     self.active = false
     self.isSDown = false
@@ -14,6 +20,7 @@ local superDuperMode = {
     self.ignoreNextS = false
     self.ignoreNextD = false
     self.modifiers = {}
+    self.statusMessage:hide()
   end,
 }
 superDuperMode:reset()
@@ -40,7 +47,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
     superDuperMode.isSDown = true
     hs.timer.doAfter(MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES, function()
       if superDuperMode.isDDown then
-        superDuperMode.active = true
+        superDuperMode:enter()
       else
         superDuperMode.ignoreNextS = true
         keyUpDown({}, 's')
@@ -61,7 +68,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
     superDuperMode.isDDown = true
     hs.timer.doAfter(MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES, function()
       if superDuperMode.isSDown then
-        superDuperMode.active = true
+        superDuperMode:enter()
       else
         superDuperMode.ignoreNextD = true
         keyUpDown({}, 'd')
