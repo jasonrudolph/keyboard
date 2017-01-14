@@ -34,22 +34,27 @@ statusmessage.new = function(messageText)
     background:setRoundedRectRadii(10, 10)
     background:setFillColor({ red = 0, green = 0, blue = 0, alpha=0.6 })
 
-    return { background = background, text = text }
+    return background, text
   end
 
   return {
     _buildParts = buildParts,
     show = function(self)
-      local parts = self._buildParts(messageText)
-      self.background = parts.background
-      self.text = parts.text
+      self:hide()
 
+      self.background, self.text = self._buildParts(messageText)
       self.background:show()
       self.text:show()
     end,
     hide = function(self)
-      if self.background then self.background:delete() end
-      if self.text then self.text:delete() end
+      if self.background then
+        self.background:delete()
+        self.background = nil
+      end
+      if self.text then
+        self.text:delete()
+        self.text = nil
+      end
     end
   }
 end
