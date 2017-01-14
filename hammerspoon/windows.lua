@@ -248,7 +248,11 @@ windowLayoutMode:bindWithAutomaticExit('n', function()
   hs.window.focusedWindow():nextScreen()
 end)
 
--- Use Control+s to enter WindowLayout Mode
+-- Use Control+s to toggle WindowLayout Mode
 hs.hotkey.bind({'ctrl'}, 's', function()
+  windowLayoutMode:bind({'ctrl'}, 's', function()
+    windowLayoutMode:exit()
+  end)
+
   windowLayoutMode:enter()
 end)
