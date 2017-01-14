@@ -65,6 +65,15 @@ end
 
 markdownMode = hs.hotkey.modal.new({}, 'F20')
 
+local message = require('status-message')
+markdownMode.statusMessage = message.new('Markdown Mode (control-m)')
+markdownMode.entered = function()
+  markdownMode.statusMessage:show()
+end
+markdownMode.exited = function()
+  markdownMode.statusMessage:hide()
+end
+
 -- Bind the given key to call the given function and exit Markdown mode
 function markdownMode.bindWithAutomaticExit(mode, key, fn)
   mode:bind({}, key, function()
