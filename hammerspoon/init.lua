@@ -6,7 +6,8 @@ hs.hotkey.bind({'ctrl'}, '`', nil, function()
 end)
 
 keyUpDown = function(modifiers, key)
-  log.d('Sending keystroke:', hs.inspect(modifiers), key)
+  -- Un-comment & reload config to log each keystroke that we're triggering
+  -- log.d('Sending keystroke:', hs.inspect(modifiers), key)
   hs.eventtap.event.newKeyEvent(modifiers, key, true):post()
   hs.eventtap.event.newKeyEvent(modifiers, key, false):post()
 end
