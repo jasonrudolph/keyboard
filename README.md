@@ -137,10 +137,13 @@ cat $PWD/inputrc >> ~/.inputrc
 ### Install the apps
 
 - Install [Karabiner-Elements][karabiner]
+    1. Install it
+    2. Launch it
+    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
 - Install [Hammerspoon][hammerspoon-releases]
     1. Install it
     2. Launch it
-    3. Configure it to launch at login
+    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
     4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
 ### Put _control_ and _escape_ on the home row
