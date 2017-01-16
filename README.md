@@ -141,7 +141,7 @@ cat $PWD/inputrc >> ~/.inputrc
     1. Install it
     2. Launch it
     3. Configure it to launch at login
-    4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/hammerspoon-accessibility-permissions.png)
+    4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
 ### Put _control_ and _escape_ on the home row
 
