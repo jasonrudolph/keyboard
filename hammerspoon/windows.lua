@@ -250,9 +250,8 @@ end)
 
 -- Use Control+s to toggle WindowLayout Mode
 hs.hotkey.bind({'ctrl'}, 's', function()
-  windowLayoutMode:bind({'ctrl'}, 's', function()
-    windowLayoutMode:exit()
-  end)
-
   windowLayoutMode:enter()
+end)
+windowLayoutMode:bind({'ctrl'}, 's', function()
+  windowLayoutMode:exit()
 end)
