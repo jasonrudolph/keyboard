@@ -8,8 +8,7 @@ end)
 keyUpDown = function(modifiers, key)
   -- Un-comment & reload config to log each keystroke that we're triggering
   -- log.d('Sending keystroke:', hs.inspect(modifiers), key)
-  hs.eventtap.event.newKeyEvent(modifiers, key, true):post()
-  hs.eventtap.event.newKeyEvent(modifiers, key, false):post()
+  hs.eventtap.keyStroke(modifiers, key, 0)
 end
 
 -- Subscribe to the necessary events on the given window filter such that the
