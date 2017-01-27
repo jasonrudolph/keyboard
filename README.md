@@ -48,7 +48,7 @@ I find it to be a very useful fraction, but I don't consider it complete by any 
 - [Access **control** and **escape** on the home row](#a-more-useful-caps-lock-key)
 - [Navigate (up/down/left/right) via the home row](#super-duper-mode)
 - [Navigate to previous/next word via the home row](#super-duper-mode)
-- [Arrange windows via the home row](#window-management-mode)
+- [Arrange windows via the home row](#window-layout-mode)
 - [Enable other commonly-used actions on or near the home row](#miscellaneous-goodness)
 - [Format text as Markdown](#markdown-mode)
 - [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
@@ -74,11 +74,11 @@ To activate, push the **s** and **d** keys simultaneously and hold them down. No
 - Use **u**/**p** to go to the first/last tab (in most apps)
 - Use **a** + **h**/**l** to move to previous/next word (in most apps)
 
-### Window Management Mode
+### Window Layout Mode
 
 Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row.
 
-Use **control** + **s** to turn on Window Management Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit **control** + **s**, and then hit **h**.
+Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit **control** + **s**, and then hit **h**.
 
 - Use **h** to send window left (left half of screen)
 - Use **j** to send window down (bottom half of screen)
@@ -91,7 +91,7 @@ Use **control** + **s** to turn on Window Management Mode. Then, use any shortcu
 - Use **space** to send window to center of screen
 - Use **enter**: Resize window to fill the screen
 - Use **n** to send window to next monitor
-- Use **control** + **s** to exit Window Management Mode without moving any windows
+- Use **control** + **s** to exit Window Layout Mode without moving any windows
 
 ### Markdown Mode
 
