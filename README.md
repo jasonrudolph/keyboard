@@ -43,66 +43,105 @@ While I find that these customizations yield a more-useful keyboard for me, they
 These customizations currently provide a fraction of what I want from my more-useful keyboard.
 I find it to be a very useful fraction, but I don't consider it complete by any means.
 
-<a name="sierra-port"></a>:construction: **Work in progress to port to macOS Sierra** :construction: This customization previously relied heavily on [Karabiner](https://pqrs.org/osx/karabiner/). Karabiner does not currently work on macOS Sierra. Simply put, the tools available on Sierra lack the power and flexibility available in Karabiner. This branch represents an attempt to port my [pre-Sierra customizations](https://github.com/jasonrudolph/keyboard/blob/e19948b26cc569e41637d60a5357d1d2e46669eb/README.md#more-useful-for-me) to Sierra. Given the lack of Karabiner's power and flexibility, porting the previous functionality to Sierra will likely involve compromises. It's unlikely to be an exact port.
+## Features
 
-Here's what it provides so far:
+- [Access **control** and **escape** on the home row](#a-more-useful-caps-lock-key)
+- [Navigate (up/down/left/right) via the home row](#super-duper-mode)
+- [Navigate to previous/next word via the home row](#super-duper-mode)
+- [Arrange windows via the home row](#window-management-mode)
+- [Enable other commonly-used actions on or near the home row](#miscellaneous-goodness)
+- [Format text as Markdown](#markdown-mode)
+- [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
+- [And more...](#miscellaneous-goodness)
 
-- A more useful caps lock key
-    - Tap **caps lock** for **escape**
-    - Hold **caps lock** for **control**
+### A more useful caps lock key
 
-- (S)uper (D)uper Mode
+By repurposing the anachronistic **caps lock** key, we can make **control** and **escape** accessible via the home row.
 
-  To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
+- Tap **caps lock** for **escape**
+- Hold **caps lock** for **control**
 
-    - Use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively
-    - Use **a** for **option** (AKA **alt**)
-    - Use **f** for **command**
-    - Use **space** for **shift**
-    - Use **a** + **j**/**k** for **page up**/**page down**
-    - Use **i**/**o** to move to the previous/next tab
-    - Use **u**/**p** to go to the first/last tab (in most apps)
-    - Use **a** + **h**/**l** to move to previous/next word (in most apps)
+### (S)uper (D)uper Mode
 
-- Basic window management
-    - **control** + **s**, **h**: Send window left (left half of screen)
-    - **control** + **s**, **j**: Send window down (bottom half of screen)
-    - **control** + **s**, **k**: Send window up (top half of screen)
-    - **control** + **s**, **l**: Send window right (right half of screen)
-    - **control** + **s**, **i**: Send window to upper left quarter of screen
-    - **control** + **s**, **o**: Send window to upper right quarter of screen
-    - **control** + **s**, **,**: Send window to lower left quarter of screen
-    - **control** + **s**, **.**: Send window to lower right quarter of screen
-    - **control** + **s**, **space**: Send window to center of screen
-    - **control** + **s**, **enter**: Resize window to fill the screen
-    - **control** + **s**, **n**: Send window to next monitor
+To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
 
-- Markdown formatting
-    - **control** + **m**, **b**: Wrap selected text in double asterisks ("B" for "Bold")
-    - **control** + **m**, **i**: Wrap selected text in single asterisks ("I" for "Italic")
-    - **control** + **m**, **s**: Wrap selected text in double tildes ("S" for "Strikethrough")
-    - **control** + **m**, **l**: Convert the currently-selected text to an inline link, using a URL from the clipboard ("L" for "Link")
+- Use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively
+- Use **a** for **option** (AKA **alt**)
+- Use **f** for **command**
+- Use **space** for **shift**
+- Use **a** + **j**/**k** for **page down**/**page up**
+- Use **i**/**o** to move to the previous/next tab
+- Use **u**/**p** to go to the first/last tab (in most apps)
+- Use **a** + **h**/**l** to move to previous/next word (in most apps)
 
-- Hyper key for quickly launching apps
-    - Use **right option** key as **hyper** key
-    - **hyper** + **a** to open iTunes ("A" for "Apple Music")
-    - **hyper** + **b** to open Google Chrome ("B" for "Browser")
-    - **hyper** + **c** to open Slack ("C for "Chat")
-    - **hyper** + **d** to open Remember The Milk ("D" for "Do!" ... or "Done!")
-    - **hyper** + **e** to open Atom Beta ("E" for "Editor")
-    - **hyper** + **f** to open Finder ("F" for "Finder")
-    - **hyper** + **g** to open Mailplane 3 ("G" for "Gmail")
-    - **hyper** + **t** to open iTerm2 ("T" for "Terminal")
+### Window Management Mode
 
-- Use **control** + **-**/**|** to split iTerm2 panes horizontally/vertically
+Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row.
 
+Use **control** + **s** to turn on Window Management Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit **control** + **s**, and then hit **h**.
+
+- Use **h** to send window left (left half of screen)
+- Use **j** to send window down (bottom half of screen)
+- Use **k** to send window up (top half of screen)
+- Use **l** to send window right (right half of screen)
+- Use **i** to send window to upper left quarter of screen
+- Use **o** to send window to upper right quarter of screen
+- Use **,** to send window to lower left quarter of screen
+- Use **.** to send window to lower right quarter of screen
+- Use **space** to send window to center of screen
+- Use **enter**: Resize window to fill the screen
+- Use **n** to send window to next monitor
+- Use **control** + **s** to exit Window Management Mode without moving any windows
+
+### Markdown Mode
+
+Perform common Markdown-formatting tasks anywhere that you're editing text (e.g. in a GitHub comment, in your editor, in your email client).
+
+Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below to perform an action. For example, to wrap the selected text in double asterisks, hit **control** + **m**, and then **b**.
+
+- Use **b** to wrap the currently-selected text in double asterisks ("B" for "Bold")
+
+    Example: `**selection**`
+
+- Use **i** to wrap the currently-selected text in single asterisks ("I" for "Italic")
+
+    Example: `**selection**`
+
+- Use **s** to wrap the currently-selected text in double tildes ("S" for "Strikethrough")
+
+    Example: `~~selection~~`
+
+- Use **l** to convert the currently-selected text to an inline link, using a URL from the clipboard ("L" for "Link")
+
+    Example: `[selection](clipboard)`
+
+- Use **control** + **m** to exit Markdown Mode without performing any actions
+
+### Hyper key for quickly launching apps
+
+macOS doesn't have a native **hyper** key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json).
+
+In this setup, we'll use the **right option** key as our **hyper** key. With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps:
+
+- **hyper** + **a** to open iTunes ("A" for "Apple Music")
+- **hyper** + **b** to open Google Chrome ("B" for "Browser")
+- **hyper** + **c** to open [Hackable Slack Client](https://github.com/bhuga/hackable-slack-client) ("C for "Chat")
+- **hyper** + **d** to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
+- **hyper** + **e** to open [Atom Beta](https://atom.io/beta) ("E" for "Editor")
+- **hyper** + **f** to open Finder ("F" for "Finder")
+- **hyper** + **g** to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
+- **hyper** + **t** to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
+
+Edit [`hammerspoon/hyper.lua`](hammerspoon/hyper.lua) to configure shortcuts to launch your most commonly-used apps.
+
+### Miscellaneous goodness
+
+- Use **control** + **-** (dash) to split iTerm2 panes horizontally
+- Use **control** + **|** (pipe) split iTerm2 panes vertically
 - Use **control** + **h**/**j**/**k**/**l** to move left/down/up/right by one pane in iTerm2
-
 - Use **control** + **u** to delete to the start of the line
-
 - Use **control** + **;** to delete to the end of the line
-
-- Use **option** + **h**/**l** to delete previous/next word
+- Use **option** + **h**/**l** to delete the previous/next word
 
 ## Dependencies
 
@@ -112,90 +151,42 @@ This setup is honed and tested with the following dependencies.
 - [Karabiner-Elements 0.90.83][karabiner]
 - [Hammerspoon 0.9.52][hammerspoon]
 
-## The Setup
+## Installation
 
-### Grab the bits
+1. Grab the bits
 
-```sh
-git clone https://github.com/jasonrudolph/keyboard.git
+    ```sh
+    git clone https://github.com/jasonrudolph/keyboard.git
 
-cd keyboard
+    cd keyboard
 
-git checkout sierra
+    # Prepare custom settings for Karabiner-Elements
+    mkdir -p ~/.config/karabiner/
+    ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
-# Prepare custom settings for Karabiner-Elements
-mkdir -p ~/.config/karabiner/
-ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+    # Prepare custom settings for Hammerspoon
+    ln -s $PWD/hammerspoon ~/.hammerspoon
 
-# Prepare custom settings for Hammerspoon
-ln -s $PWD/hammerspoon ~/.hammerspoon
+    # Prepare custom settings for navigating between words in iTerm2
+    cat $PWD/inputrc >> ~/.inputrc
+    ```
 
-# Prepare custom settings for navigating between words in iTerm2
-cat $PWD/inputrc >> ~/.inputrc
-```
+2. Install [Karabiner-Elements][karabiner]
 
-### Install the apps
-
-- Install [Karabiner-Elements][karabiner]
     1. Install it
     2. Launch it
     3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
-- Install [Hammerspoon][hammerspoon-releases]
+
+3. Install [Hammerspoon][hammerspoon-releases]
+
     1. Install it
     2. Launch it
     3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
     4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
-### Put _control_ and _escape_ on the home row
-
-#### Goals
-
-- Tap **caps lock** for **escape**
-- Hold **caps lock** for **control**
-- Access the default **caps lock** behavior in those rare cases where it's helpful
-
-#### Making it happen
-
-_TODO_: Update this section for macOS Sierra port.
-
-### Make navigation accessible via the the home row
-
-#### Goals
-
-- Enable navigation (up/down/left/right) via the home row
-- Enable word navigation (option+left/right) via the home row
-- Enable other commonly-used actions on or near the home row
-
-#### Making it happen
-
-_TODO_: Update this section for macOS Sierra port.
-
-### Control window management from the home row
-
-#### Goals
-
-- Quickly arrange and resize windows in common configurations, using keyboard
-  shortcuts that are on or near the home row
-
-#### Making it happen
-
-_TODO_: Update this section for macOS Sierra port.
-
-### Format text as Markdown
-
-#### Goals
-
-- Perform common Markdown-formatting tasks anywhere that you're editing text
-  (e.g. in a GitHub comment, in your editor, in your email client)
-
-#### Making it happen
-
-_TODO_: Port this functionality to macOS Sierra.
-
 ## TODO
 
-- Add "goals" section for "Hyper" key
-- Add `./script/setup` command to automate the manual setup steps
+- [ ] Add `./script/setup` command to automate the manual setup steps
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
