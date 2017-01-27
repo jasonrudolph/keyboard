@@ -93,6 +93,8 @@ Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut be
 - Use **n** to send window to next monitor
 - Use **control** + **s** to exit Window Layout Mode without moving any windows
 
+[<img src="screenshots/keyboard-window-layout-mode-1.jpeg" alt="Window Layout Mode Keybindings (1)" width="300"/>](screenshots/keyboard-window-layout-mode-1.jpeg) [<img src="screenshots/keyboard-window-layout-mode-2.jpeg" alt="Window Layout Mode Keybindings (2)" width="300"/>](screenshots/keyboard-window-layout-mode-2.jpeg)
+
 ### Markdown Mode
 
 Perform common Markdown-formatting tasks anywhere that you're editing text (e.g. in a GitHub comment, in your editor, in your email client).
