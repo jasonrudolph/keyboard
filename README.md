@@ -65,7 +65,7 @@ By repurposing the anachronistic **caps lock** key, we can make **control** and 
 
 To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
 
-- Use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively
+- Use **h**/**j**/**k**/**l** for **left**/**down**/**up**/**right** respectively
 - Use **a** for **option** (AKA **alt**)
 - Use **f** for **command**
 - Use **space** for **shift**
