@@ -109,7 +109,7 @@ Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below t
 
 - Use **i** to wrap the currently-selected text in single asterisks ("I" for "Italic")
 
-    Example: `**selection**`
+    Example: `*selection*`
 
 - Use **s** to wrap the currently-selected text in double tildes ("S" for "Strikethrough")
 
