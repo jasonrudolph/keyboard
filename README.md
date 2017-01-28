@@ -43,133 +43,159 @@ While I find that these customizations yield a more-useful keyboard for me, they
 These customizations currently provide a fraction of what I want from my more-useful keyboard.
 I find it to be a very useful fraction, but I don't consider it complete by any means.
 
-Here's what it provides so far:
+## Features
 
-![Karabiner Change Key Configuration - 01](screenshots/karabiner-change-key-config-01.png)
+- [Access **control** and **escape** on the home row](#a-more-useful-caps-lock-key)
+- [Navigate (up/down/left/right) via the home row](#super-duper-mode)
+- [Navigate to previous/next word via the home row](#super-duper-mode)
+- [Arrange windows via the home row](#window-layout-mode)
+- [Enable other commonly-used actions on or near the home row](#miscellaneous-goodness)
+- [Format text as Markdown](#markdown-mode)
+- [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
+- [And more...](#miscellaneous-goodness)
 
-![Karabiner Change Key Configuration - 02](screenshots/karabiner-change-key-config-02.png)
+### A more useful caps lock key
 
-![Karabiner Change Key Configuration - 03](screenshots/karabiner-change-key-config-03.png)
+By repurposing the anachronistic **caps lock** key, we can make **control** and **escape** accessible via the home row.
 
-![Karabiner Change Key Configuration - 04](screenshots/karabiner-change-key-config-04.png)
+- Tap **caps lock** for **escape**
+- Hold **caps lock** for **control**
+
+### (S)uper (D)uper Mode
+
+To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
+
+- Use **h**/**j**/**k**/**l** for **up**/**down**/**left**/**right** respectively
+- Use **a** for **option** (AKA **alt**)
+- Use **f** for **command**
+- Use **space** for **shift**
+- Use **a** + **j**/**k** for **page down**/**page up**
+- Use **i**/**o** to move to the previous/next tab
+- Use **u**/**p** to go to the first/last tab (in most apps)
+- Use **a** + **h**/**l** to move to previous/next word (in most apps)
+
+[<img width="400" alt="(S)uper (D)uper Mode Keybindings" src="https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png">](https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png)
+
+### Window Layout Mode
+
+Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row.
+
+Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit **control** + **s**, and then hit **h**.
+
+- Use **h** to send window left (left half of screen)
+- Use **j** to send window down (bottom half of screen)
+- Use **k** to send window up (top half of screen)
+- Use **l** to send window right (right half of screen)
+- Use **i** to send window to upper left quarter of screen
+- Use **o** to send window to upper right quarter of screen
+- Use **,** to send window to lower left quarter of screen
+- Use **.** to send window to lower right quarter of screen
+- Use **space** to send window to center of screen
+- Use **enter**: Resize window to fill the screen
+- Use **n** to send window to next monitor
+- Use **control** + **s** to exit Window Layout Mode without moving any windows
+
+[<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
+
+### Markdown Mode
+
+Perform common Markdown-formatting tasks anywhere that you're editing text (e.g. in a GitHub comment, in your editor, in your email client).
+
+Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below to perform an action. For example, to wrap the selected text in double asterisks, hit **control** + **m**, and then **b**.
+
+- Use **b** to wrap the currently-selected text in double asterisks ("B" for "Bold")
+
+    Example: `**selection**`
+
+- Use **i** to wrap the currently-selected text in single asterisks ("I" for "Italic")
+
+    Example: `**selection**`
+
+- Use **s** to wrap the currently-selected text in double tildes ("S" for "Strikethrough")
+
+    Example: `~~selection~~`
+
+- Use **l** to convert the currently-selected text to an inline link, using a URL from the clipboard ("L" for "Link")
+
+    Example: `[selection](clipboard)`
+
+- Use **control** + **m** to exit Markdown Mode without performing any actions
+
+### Hyper key for quickly launching apps
+
+macOS doesn't have a native **hyper** key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json).
+
+In this setup, we'll use the **right option** key as our **hyper** key. With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps:
+
+- **hyper** + **a** to open iTunes ("A" for "Apple Music")
+- **hyper** + **b** to open Google Chrome ("B" for "Browser")
+- **hyper** + **c** to open [Hackable Slack Client](https://github.com/bhuga/hackable-slack-client) ("C for "Chat")
+- **hyper** + **d** to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
+- **hyper** + **e** to open [Atom Beta](https://atom.io/beta) ("E" for "Editor")
+- **hyper** + **f** to open Finder ("F" for "Finder")
+- **hyper** + **g** to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
+- **hyper** + **t** to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
+
+Edit [`hammerspoon/hyper.lua`](hammerspoon/hyper.lua) to configure shortcuts to launch your most commonly-used apps.
+
+### Miscellaneous goodness
+
+- Use **control** + **-** (dash) to split iTerm2 panes horizontally
+- Use **control** + **|** (pipe) split iTerm2 panes vertically
+- Use **control** + **h**/**j**/**k**/**l** to move left/down/up/right by one pane in iTerm2
+- Use **control** + **u** to delete to the start of the line
+- Use **control** + **;** to delete to the end of the line
+- Use **option** + **h**/**l** to delete the previous/next word
 
 ## Dependencies
 
 This setup is honed and tested with the following dependencies.
 
-- OS X El Capitan, 10.11
-- [Seil 12.1][seil]
-- [Karabiner 10.21][karabiner]
-- [SizeUp 1.7][sizeup] (optional)
+- macOS Sierra, 10.12
+- [Karabiner-Elements 0.90.83][karabiner]
+- [Hammerspoon 0.9.52][hammerspoon]
 
-## The Setup
+## Installation
 
-### Grab the bits
+1. Grab the bits
 
-```sh
-git clone https://github.com/jasonrudolph/keyboard.git
+    ```sh
+    git clone https://github.com/jasonrudolph/keyboard.git
 
-cd keyboard
+    cd keyboard
 
-mkdir -p ~/Library/Application\ Support/Karabiner
+    # Prepare custom settings for Karabiner-Elements
+    mkdir -p ~/.config/karabiner/
+    ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
-# Prepare custom settings for Karabiner
-ln -s $PWD/karabiner/private.xml \
-  ~/Library/Application\ Support/Karabiner/private.xml
+    # Prepare custom settings for Hammerspoon
+    ln -s $PWD/hammerspoon ~/.hammerspoon
 
-ln -s $PWD/karabiner/ext \
-  ~/Library/Application\ Support/Karabiner/ext
-```
+    # Prepare custom settings for navigating between words in iTerm2
+    cat $PWD/inputrc >> ~/.inputrc
+    ```
 
-### Install the apps
+2. Install [Karabiner-Elements][karabiner]
 
-- Install [Seil][seil]
-- Install [Karabiner][karabiner]
-- Install [SizeUp][sizeup] (optional)
+    1. Install it
+    2. Launch it
+    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
 
-### Put _control_ and _escape_ on the home row
+3. Install [Hammerspoon][hammerspoon-releases]
 
-#### Goals
-
-- Tap **caps lock** for **escape**
-- Hold **caps lock** for **control**
-- Access the default **caps lock** behavior in those rare cases where it's helpful
-
-#### Making it happen
-
-1. Launch Seil.
-2. Enable the "Change Caps Lock" option, and map **caps lock** to keycode 80.
-   (80 is **F19**. I don't have a physical **F19** key, so this setting will not
-   conflict with any existing keys.)
-   [[screenshot][seil-screenshot]]
-3. Launch Karabiner.
-4. In the "Change Key" tab, enable the "F19 to Escape/Control" option.
-   [[screenshot][karabiner-change-key-screenshot-01]]
-5. In the "Change Key" tab, enable the "Double-tap Left Shift for CapsLock" option.
-6. In the "Key Repeat" tab, change the "[Key Overlaid Modifier] Timeout" to
-   300ms. (As [recommended][modern-space-cadet-key-repeat] by Steve Losh, I find
-   that this avoids accidentally triggering **escape** when you meant to trigger
-   **control**.)
-   [[screenshot][karabiner-key-repeat-screenshot]]
-
-### Unleash (S)uper (D)uper mode
-
-#### Goals
-
-- Enable navigation (up/down/left/right) via the home row
-- Enable word navigation (option+left/right) via the home row
-- Enable other commonly-used actions on or near the home row
-
-#### Making it happen
-
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "(S)uper (D)uper Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-02]]
-
-### Control SizeUp from the home row
-
-#### Goals
-
-- Quickly arrange and resize windows in common configurations, using keyboard
-  shortcuts that are on or near the home row
-
-#### Making it happen
-
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "SizeUp Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-03]]
-
-### Format text as Markdown
-
-#### Goals
-
-- Perform common Markdown-formatting tasks anywhere that you're editing text
-  (e.g. in a GitHub comment, in your editor, in your email client)
-
-#### Making it happen
-
-1. Launch Karabiner.
-2. In the "Change Key" tab, enable the "Markdown Mode" option.
-   [[screenshot][karabiner-change-key-screenshot-04]]
+    1. Install it
+    2. Launch it
+    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
+    4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
 ## TODO
 
-- Document usage of "Hyper" key
-- Incorporate [Keyboard Maestro][keyboard-maestro] configuration
-- Add `./script/setup` command to automate the manual setup steps
-
+- [ ] Add `./script/setup` command to automate the manual setup steps
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
-[keyboard-maestro]: http://keyboardmaestro.com
-[karabiner]: http://pqrs.org/macosx/karabiner/
-[karabiner-change-key-screenshot-01]: screenshots/karabiner-change-key-config-01.png
-[karabiner-change-key-screenshot-02]: screenshots/karabiner-change-key-config-02.png
-[karabiner-change-key-screenshot-03]: screenshots/karabiner-change-key-config-03.png
-[karabiner-change-key-screenshot-04]: screenshots/karabiner-change-key-config-04.png
-[karabiner-key-repeat-screenshot]: screenshots/karabiner-key-repeat-config.png
+[karabiner]: https://github.com/tekezo/Karabiner-Elements
+[hammerspoon]: http://www.hammerspoon.org
+[hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
 [modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
-[seil]: https://pqrs.org/macosx/keyremap4macbook/seil.html.en
-[seil-screenshot]: screenshots/seil-config.png
-[sizeup]: http://www.irradiatedsoftware.com/sizeup/
