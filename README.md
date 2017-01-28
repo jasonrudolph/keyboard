@@ -99,7 +99,7 @@ Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut be
 
 ### Markdown Mode
 
-Perform common Markdown-formatting tasks anywhere that you're editing text (e.g. in a GitHub comment, in your editor, in your email client).
+Perform common Markdown-formatting tasks anywhere that you're editing text (e.g., in a GitHub comment, in your editor, in your email client).
 
 Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below to perform an action. For example, to wrap the selected text in double asterisks, hit **control** + **m**, and then **b**.
 
