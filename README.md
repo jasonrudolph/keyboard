@@ -74,6 +74,8 @@ To activate, push the **s** and **d** keys simultaneously and hold them down. No
 - Use **u**/**p** to go to the first/last tab (in most apps)
 - Use **a** + **h**/**l** to move to previous/next word (in most apps)
 
+[<img width="300" alt="(S)uper (D)uper Mode Keybindings" src="https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png">](https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png)
+
 ### Window Layout Mode
 
 Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row.
