@@ -93,7 +93,7 @@ Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut be
 - Use **n** to send window to next monitor
 - Use **control** + **s** to exit Window Layout Mode without moving any windows
 
-[<img src="screenshots/keyboard-window-layout-mode-1.jpeg" alt="Window Layout Mode Keybindings (1)" width="300"/>](screenshots/keyboard-window-layout-mode-1.jpeg) [<img src="screenshots/keyboard-window-layout-mode-2.jpeg" alt="Window Layout Mode Keybindings (2)" width="300"/>](screenshots/keyboard-window-layout-mode-2.jpeg)
+[<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="300"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="300"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
 
 ### Markdown Mode
 
