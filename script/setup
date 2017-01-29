@@ -16,7 +16,7 @@ ln -sf $PWD/hammerspoon ~/.hammerspoon
 # Prepare custom settings for navigating between words in iTerm2
 grep -q forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
 
-# Disable Doc icon for Hammerspoon
+# Disable Dock icon for Hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool FALSE
 
 # Open Apps
