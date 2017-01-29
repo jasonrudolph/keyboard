@@ -11,7 +11,7 @@ mkdir -p ~/.config/karabiner/
 ln -sf $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 
 # Prepare custom settings for Hammerspoon
-ln -sf $PWD/hammerspoon ~/.hammerspoon
+ln -sfn $PWD/hammerspoon ~/.hammerspoon
 
 # Prepare custom settings for navigating between words in iTerm2
 grep -q forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
