@@ -24,7 +24,3 @@ open /Applications/Karabiner-Elements.app
 # Enable apps at startup
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Hammerspoon.app", hidden:true}'
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Karabiner-Elements.app", hidden:true}'
-
-# Enable accessibility - https://github.com/jacobsalmela/tccutil
-# FIXME Doesn't work with SIP https://github.com/jacobsalmela/tccutil/issues/18
-# sudo tccutil -e org.hammerspoon.Hammerspoon
