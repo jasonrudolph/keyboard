@@ -61,6 +61,8 @@ By repurposing the anachronistic **caps lock** key, we can make **control** and 
 - Tap **caps lock** for **escape**
 - Hold **caps lock** for **control**
 
+📣 Shout-out to [@arbelt](https://github.com/arbelt) and [@jasoncodes](https://github.com/jasoncodes) for [the implementation](https://github.com/jasonrudolph/keyboard/commit/01a7a5bd8a1e521756d1ec34769119ead5eee0b3). ⚡️🍻🌟
+
 ### (S)uper (D)uper Mode
 
 To activate, push the **s** and **d** keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
