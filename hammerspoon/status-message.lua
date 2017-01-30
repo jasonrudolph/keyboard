@@ -55,6 +55,11 @@ statusmessage.new = function(messageText)
         self.text:delete()
         self.text = nil
       end
+    end,
+    notify = function(self, seconds)
+      local seconds = seconds or 1
+      self:show()
+      hs.timer.delayed.new(seconds, function () return self:hide() end):start()
     end
   }
 end
