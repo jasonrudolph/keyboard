@@ -162,37 +162,15 @@ This setup is honed and tested with the following dependencies.
 1. Grab the bits
 
     ```sh
-    git clone https://github.com/jasonrudolph/keyboard.git
+    git clone https://github.com/jasonrudolph/keyboard.git ~/.keyboard
 
-    cd keyboard
+    cd ~/.keyboard
 
-    # Prepare custom settings for Karabiner-Elements
-    mkdir -p ~/.config/karabiner/
-    ln -s $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
-
-    # Prepare custom settings for Hammerspoon
-    ln -s $PWD/hammerspoon ~/.hammerspoon
-
-    # Prepare custom settings for navigating between words in iTerm2
-    cat $PWD/inputrc >> ~/.inputrc
+    script/setup
     ```
 
-2. Install [Karabiner-Elements][karabiner]
+2. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
-    1. Install it
-    2. Launch it
-    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
-
-3. Install [Hammerspoon][hammerspoon-releases]
-
-    1. Install it
-    2. Launch it
-    3. Configure it to launch at login [[screenshot](screenshots/login-items-for-karabiner-and-hammerspoon.png)]
-    4. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
-
-## TODO
-
-- [ ] Add `./script/setup` command to automate the manual setup steps
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+which -s brew || (echo "Homebrew is required: http://brew.sh/" && exit 1)
+
+brew bundle check || brew bundle
+
+# Prepare custom settings for Karabiner-Elements
+mkdir -p ~/.config/karabiner/
+ln -sf $PWD/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+
+# Prepare custom settings for Hammerspoon
+ln -sfn $PWD/hammerspoon ~/.hammerspoon
+
+# Prepare custom settings for navigating between words in iTerm2
+grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
+
+# Disable Dock icon for Hammerspoon
+defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool FALSE
+
+# Open Apps
+open /Applications/Hammerspoon.app
+open /Applications/Karabiner-Elements.app
+
+# Enable apps at startup
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Hammerspoon.app", hidden:true}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Karabiner-Elements.app", hidden:true}' > /dev/null
+
+echo "Done! Remember to enable Accessibility for Hammerspoon."
