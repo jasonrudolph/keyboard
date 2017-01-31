@@ -126,7 +126,7 @@ superDuperModeNavListener = eventtap.new({ eventTypes.keyDown }, function(event)
     l = 'right',
   }
 
-  local keystroke = charactersToKeystrokes[event:getCharacters(true)]
+  local keystroke = charactersToKeystrokes[event:getCharacters(true):lower()]
   if keystroke then
     local modifiers = {}
     n = 0
