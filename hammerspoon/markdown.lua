@@ -98,6 +98,10 @@ markdownMode:bindWithAutomaticExit('l', function()
   inlineLink()
 end)
 
+markdownMode:bindWithAutomaticExit('c', function()
+  wrapSelectedText('`')
+end)
+
 -- Use Control+m to toggle Markdown Mode
 hs.hotkey.bind({'ctrl'}, 'm', function()
   markdownMode:enter()
