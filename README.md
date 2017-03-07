@@ -160,7 +160,7 @@ Edit [`hammerspoon/hyper.lua`](hammerspoon/hyper.lua) to configure shortcuts to 
 This setup is honed and tested with the following dependencies.
 
 - macOS Sierra, 10.12
-- [Karabiner-Elements 0.90.86][karabiner]
+- [Karabiner-Elements 0.90.88][karabiner]
 - [Hammerspoon 0.9.52][hammerspoon]
 
 ## Installation
