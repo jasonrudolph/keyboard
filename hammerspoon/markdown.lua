@@ -57,6 +57,7 @@ end
 -- selected text in double asterisks, hit Control+m, and then b.
 --
 --   b => wrap the selected text in double asterisks ("b" for "bold")
+--   c => wrap the selected text in backticks ("c" for "code")
 --   i => wrap the selected text in single asterisks ("i" for "italic")
 --   s => wrap the selected text in double tildes ("s" for "strikethrough")
 --   l => convert the currently-selected text to an inline link, using a URL
