@@ -53,8 +53,8 @@ end
 --
 -- Markdown Mode allows you to perform common Markdown-formatting tasks anywhere
 -- that you're editing text. Use Control+m to turn on Markdown mode. Then, use
--- any shortcut below to perform a formatting action. For example, to wrap the
--- selected text in double asterisks, hit Control+m, and then b.
+-- any shortcut below to perform a formatting action. For example, to format the
+-- selected text as bold in Markdown, hit Control+m, and then b.
 --
 --   b => wrap the selected text in double asterisks ("b" for "bold")
 --   c => wrap the selected text in backticks ("c" for "code")
