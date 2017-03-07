@@ -111,6 +111,10 @@ Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below t
 
     Example: `**selection**`
 
+- Use **c** to wrap the currently-selected text in backticks ("C" for "Code")
+
+    Example: `` `selection` ``
+
 - Use **i** to wrap the currently-selected text in single asterisks ("I" for "Italic")
 
     Example: `*selection*`
