@@ -112,8 +112,8 @@ function hs.window.downRight(win)
   local screen = win:screen()
   local max = screen:fullFrame()
 
-  f.x = max.w/2
-  f.y = max.h/2
+  f.x = max.x + (max.w / 2)
+  f.y = max.y + (max.h / 2)
   f.w = max.w/2
   f.h = max.h/2
 
