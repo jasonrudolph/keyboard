@@ -59,7 +59,7 @@ statusmessage.new = function(messageText)
     notify = function(self, seconds)
       local seconds = seconds or 1
       self:show()
-      hs.timer.delayed.new(seconds, function () return self:hide() end):start()
+      hs.timer.delayed.new(seconds, function() self:hide() end):start()
     end
   }
 end
