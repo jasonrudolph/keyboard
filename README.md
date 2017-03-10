@@ -177,6 +177,11 @@ This setup is honed and tested with the following dependencies.
 
 2. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
+## TODO
+
+- Add #13 to [features](#features):
+    - Hold option for push-to-talk/push-to-mute
+    - Double-tap option to mute/unmute microphone
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
