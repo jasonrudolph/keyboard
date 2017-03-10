@@ -179,7 +179,7 @@ This setup is honed and tested with the following dependencies.
 
 ## TODO
 
-- Add #13 to [features](#features):
+- Add [#13](https://github.com/jasonrudolph/keyboard/pull/13) to [features](#features):
     - Hold option for push-to-talk/push-to-mute
     - Double-tap option to mute/unmute microphone
 
