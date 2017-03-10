@@ -142,6 +142,7 @@ In this setup, we'll use the **right option** key as our **hyper** key. With a n
 - **hyper** + **e** to open [Atom Beta](https://atom.io/beta) ("E" for "Editor")
 - **hyper** + **f** to open Finder ("F" for "Finder")
 - **hyper** + **g** to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
+- **hyper** + **s** to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
 - **hyper** + **t** to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
 
 Edit [`hammerspoon/hyper.lua`](hammerspoon/hyper.lua) to configure shortcuts to launch your most commonly-used apps.

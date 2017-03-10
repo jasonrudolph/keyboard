@@ -10,6 +10,7 @@ hyperModeAppMappings = {
   { 'e', 'Atom Beta' },             -- "E" for "Editor"
   { 'f', 'Finder' },                -- "F" for "Finder"
   { 'g', 'Mailplane 3' },           -- "G" for "Gmail"
+  { 's', 'Slack' },                 -- "S" for "Slack"
   { 't', 'iTerm' },                 -- "T" for "Terminal"
 }
 
