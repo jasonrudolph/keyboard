@@ -30,7 +30,7 @@ end
 
 controlKeyTimer = hs.timer.delayed.new(0.3, optionKeyHandler)
 
-option_handler = function(event)
+optionHandler = function(event)
   local device = hs.audiodevice.defaultInputDevice()
   local newMods = event:getFlags()
 
@@ -56,5 +56,5 @@ option_handler = function(event)
   lastMods = newMods
 end
 
-option_key = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, option_handler)
-option_key:start()
+optionKey = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, optionHandler)
+optionKey:start()
