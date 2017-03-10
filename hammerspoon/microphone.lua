@@ -16,7 +16,7 @@ displayStatus = function()
 end
 displayStatus()
 
-toggle = function (device)
+toggle = function(device)
   if device:muted() then
     device:setMuted(false)
   else
