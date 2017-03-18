@@ -96,7 +96,9 @@ Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut be
 - Use **.** to send window to lower right quarter of screen
 - Use **space** to send window to center of screen
 - Use **enter** to resize window to fill the screen
-- Use **n** to send window to next monitor
+- Use **n** to send window to the next monitor
+- Use **←** to send window to the monitor on the left (if there is one)
+- Use **→** to send window to the monitor on the right (if there is one)
 - Use **control** + **s** to exit Window Layout Mode without moving any windows
 
 [<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
