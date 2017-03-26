@@ -34,8 +34,8 @@ optionHandler = function(event)
   local device = hs.audiodevice.defaultInputDevice()
   local newMods = event:getFlags()
 
-  -- alt keyDown
-  if newMods['alt'] == true then
+  -- fn keyDown
+  if newMods['fn'] == true then
     toggle(device)
     if recentlyClicked == true then
       displayStatus()
@@ -44,8 +44,8 @@ optionHandler = function(event)
     recentlyClicked = true
     controlKeyTimer:start()
 
-  -- alt keyUp
-  elseif lastMods['alt'] == true and newMods['alt'] == nil then
+  -- fn keyUp
+elseif lastMods['fn'] == true and newMods['fn'] == nil then
     if secondClick then
       secondClick = false
     else
