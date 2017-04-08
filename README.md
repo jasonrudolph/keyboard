@@ -141,7 +141,7 @@ In this setup, we'll use the **right option** key as our **hyper** key. With a n
 - **hyper** + **b** to open Google Chrome ("B" for "Browser")
 - **hyper** + **c** to open [Hackable Slack Client](https://github.com/bhuga/hackable-slack-client) ("C for "Chat")
 - **hyper** + **d** to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
-- **hyper** + **e** to open [Atom Beta](https://atom.io/beta) ("E" for "Editor")
+- **hyper** + **e** to open [Atom](https://atom.io) ("E" for "Editor")
 - **hyper** + **f** to open Finder ("F" for "Finder")
 - **hyper** + **g** to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
 - **hyper** + **s** to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
