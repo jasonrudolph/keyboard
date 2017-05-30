@@ -1,6 +1,6 @@
 local eventtap = hs.eventtap
 local eventTypes = hs.eventtap.event.types
-local message = require('status-message')
+local message = require('keyboard.status-message')
 
 -- If 's' and 'd' are *both* pressed within this time period, consider this to
 -- mean that they've been pressed simultaneously, and therefore we should enter

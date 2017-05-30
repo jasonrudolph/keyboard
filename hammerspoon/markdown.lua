@@ -66,7 +66,7 @@ end
 
 markdownMode = hs.hotkey.modal.new({}, 'F20')
 
-local message = require('status-message')
+local message = require('keyboard.status-message')
 markdownMode.statusMessage = message.new('Markdown Mode (control-m)')
 markdownMode.entered = function()
   markdownMode.statusMessage:show()
