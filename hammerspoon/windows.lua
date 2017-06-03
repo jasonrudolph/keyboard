@@ -189,7 +189,7 @@ end
 
 windowLayoutMode = hs.hotkey.modal.new({}, 'F16')
 
-local message = require('status-message')
+local message = require('keyboard.status-message')
 windowLayoutMode.statusMessage = message.new('Window Layout Mode (control-s)')
 windowLayoutMode.entered = function()
   windowLayoutMode.statusMessage:show()
