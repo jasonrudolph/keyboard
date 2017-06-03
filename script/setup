@@ -12,10 +12,10 @@ ln -sfn $PWD/karabiner ~/.config/
 
 # Prepare custom settings for Hammerspoon
 mkdir -p ~/.hammerspoon
-ln -sfn $PWD/hammerspoon ~/.hammerspoon/keyboard
 if ! grep -sq "require('keyboard')" ~/.hammerspoon/init.lua; then
   echo "require('keyboard') -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard" >> ~/.hammerspoon/init.lua
 fi
+ln -sfn $PWD/hammerspoon ~/.hammerspoon/keyboard
 
 # Prepare custom settings for navigating between words in iTerm2
 grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
