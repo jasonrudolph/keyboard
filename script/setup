@@ -25,7 +25,7 @@ defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool FALSE
 
 # If Hammerspoon is already running, kill it so we can pick up the new config
 # when opening Hammerspoon below
-killall Hammerspoon
+killall Hammerspoon || true
 
 # Open Apps
 open /Applications/Hammerspoon.app
