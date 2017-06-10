@@ -233,72 +233,70 @@ windowLayoutMode.exited = function()
 end
 
 -- Bind the given key to call the given function and exit WindowLayout mode
-function windowLayoutMode.bindWithAutomaticExit(mode, key, fn)
-  mode:bind({}, key, function()
+function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
+  mode:bind(modifiers, key, function()
     mode:exit()
     fn()
   end)
 end
 
-windowLayoutMode:bind({'shift'}, 'h', function()
-  windowLayoutMode:exit()
-  hs.window.focusedWindow():left40()
-end)
-
-windowLayoutMode:bind({'shift'}, 'l', function()
-  windowLayoutMode:exit()
-  hs.window.focusedWindow():right60()
-end)
-
-windowLayoutMode:bindWithAutomaticExit('return', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'return', function()
   hs.window.focusedWindow():maximize()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('space', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'space', function()
   hs.window.focusedWindow():centerWithFullHeight()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('h', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'h', function()
   hs.window.focusedWindow():left()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('j', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'j', function()
   hs.window.focusedWindow():down()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('k', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'k', function()
   hs.window.focusedWindow():up()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('l', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'l', function()
   hs.window.focusedWindow():right()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('i', function()
+windowLayoutMode:bindWithAutomaticExit({'shift'}, 'h', function()
+  hs.window.focusedWindow():left40()
+end)
+
+windowLayoutMode:bindWithAutomaticExit({'shift'}, 'l', function()
+  hs.window.focusedWindow():right60()
+end)
+
+windowLayoutMode:bindWithAutomaticExit({}, 'i', function()
   hs.window.focusedWindow():upLeft()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('o', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'o', function()
   hs.window.focusedWindow():upRight()
 end)
 
-windowLayoutMode:bindWithAutomaticExit(',', function()
+windowLayoutMode:bindWithAutomaticExit({}, ',', function()
   hs.window.focusedWindow():downLeft()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('.', function()
+windowLayoutMode:bindWithAutomaticExit({}, '.', function()
   hs.window.focusedWindow():downRight()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('n', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'n', function()
   hs.window.focusedWindow():nextScreen()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('right', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'right', function()
   hs.window.focusedWindow():moveOneScreenEast()
 end)
 
-windowLayoutMode:bindWithAutomaticExit('left', function()
+windowLayoutMode:bindWithAutomaticExit({}, 'left', function()
   hs.window.focusedWindow():moveOneScreenWest()
 end)
 
