@@ -154,6 +154,40 @@ function hs.window.centerWithFullHeight(win)
   win:setFrame(f)
 end
 
+-- +-----------------+
+-- |      |          |
+-- | HERE |          |
+-- |      |          |
+-- +-----------------+
+function hs.window.left40(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w * 0.4
+  f.h = max.h
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- |      |          |
+-- |      |   HERE   |
+-- |      |          |
+-- +-----------------+
+function hs.window.right60(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.w * 0.4
+  f.y = max.y
+  f.w = max.w * 0.6
+  f.h = max.h
+  win:setFrame(f)
+end
+
 function hs.window.nextScreen(win)
   local currentScreen = win:screen()
   local allScreens = hs.screen.allScreens()
@@ -205,6 +239,16 @@ function windowLayoutMode.bindWithAutomaticExit(mode, key, fn)
     fn()
   end)
 end
+
+windowLayoutMode:bind({'shift'}, 'h', function()
+  windowLayoutMode:exit()
+  hs.window.focusedWindow():left40()
+end)
+
+windowLayoutMode:bind({'shift'}, 'l', function()
+  windowLayoutMode:exit()
+  hs.window.focusedWindow():right60()
+end)
 
 windowLayoutMode:bindWithAutomaticExit('return', function()
   hs.window.focusedWindow():maximize()
