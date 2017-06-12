@@ -25,23 +25,12 @@ How do I go to the top of the file/screen/page in this app?
 The same way I...
 Well, you get the point.
 
-## Some assembly required
-
-In its current state, my more-useful keyboard is built on top of a few tools, and some custom keymappings for those tools (all of which are described below).
-Where possible, this repo houses the configuration files that power my more-useful keyboard.
-In the places where the customization requires manual steps, I describe those steps.
-
-Below you'll find a step-by-step guide for building this more-useful keyboard from scratch.
-
 ## More useful (for me)
 
 > **cus·tom·ize** (_verb_): to modify or build according to individual or personal specifications or preference [[dictionary.com][customize]]
 
 Any customization is, by definition, personal.
 While I find that these customizations yield a more-useful keyboard for me, they might not feel like a win for you.
-
-These customizations currently provide a fraction of what I want from my more-useful keyboard.
-I find it to be a very useful fraction, but I don't consider it complete by any means.
 
 ## Features
 
