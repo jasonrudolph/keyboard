@@ -1,3 +1,6 @@
+local message = require('keyboard.status-message')
+statusMessage = message.new('Hyper Mode')
+
 -- A global variable for Hyper Mode
 hyperMode = hs.hotkey.modal.new({}, 'F18')
 
@@ -24,6 +27,7 @@ end
 pressedF17 = function()
   hyperMode:enter()
   hyperModeDeactivationListener:start()
+  statusMessage:show()
 end
 
 -- Leave Hyper Mode when F17 (right option key) is released.
@@ -31,6 +35,7 @@ hyperModeDeactivationListener = hs.eventtap.new({ hs.eventtap.event.types.keyUp 
   if event:getKeyCode() == hs.keycodes.map['F17'] then
     hyperMode:exit()
     hyperModeDeactivationListener:stop()
+    statusMessage:hide()
   end
 end)
 
