@@ -23,12 +23,16 @@ end
 -- Enter Hyper Mode when F17 (right option key) is pressed
 pressedF17 = function()
   hyperMode:enter()
+  hyperModeDeactivationListener:start()
 end
 
 -- Leave Hyper Mode when F17 (right option key) is released.
-releasedF17 = function()
-  hyperMode:exit()
-end
+hyperModeDeactivationListener = hs.eventtap.new({ hs.eventtap.event.types.keyUp }, function(event)
+  if event:getKeyCode() == hs.keycodes.map['F17'] then
+    hyperMode:exit()
+    hyperModeDeactivationListener:stop()
+  end
+end)
 
 -- Bind the Hyper key
-f17 = hs.hotkey.bind({}, 'F17', pressedF17, releasedF17)
+f17 = hs.hotkey.bind({}, 'F17', pressedF17)
