@@ -43,7 +43,7 @@ pressedF17 = function()
   --
   -- To reduce the likelihood of getting stuck in Hyper Mode, set a timer to
   -- automatically exit Hyper Mode after a short while.
-  local TIMEOUT_IN_SECONDS = 5
+  local TIMEOUT_IN_SECONDS = 10
   hs.timer.doAfter(TIMEOUT_IN_SECONDS, function()
     hyperMode:exit()
   end)
