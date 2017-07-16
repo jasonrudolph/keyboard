@@ -122,9 +122,15 @@ Use **control** + **m** to turn on Markdown Mode. Then, use any shortcut below t
 
 ### Hyper key for quickly launching apps
 
-macOS doesn't have a native **hyper** key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json).
+macOS doesn't have a native **hyper** key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json). In this setup, we'll use the **right option** key as our **hyper** key.
 
-In this setup, we'll use the **right option** key as our **hyper** key. With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps:
+With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps.
+
+#### Choose your own apps
+
+Hyper Mode ships with the default keybindings below, but you'll likely want to personalize this setup. Edit [`hammerspoon/hyper-apps.lua`](hammerspoon/hyper-apps.lua) to configure shortcuts to launch your most commonly-used apps.
+
+#### Default app keybindings
 
 - **hyper** + **a** to open iTunes ("A" for "Apple Music")
 - **hyper** + **b** to open Google Chrome ("B" for "Browser")
@@ -135,8 +141,6 @@ In this setup, we'll use the **right option** key as our **hyper** key. With a n
 - **hyper** + **g** to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
 - **hyper** + **s** to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
 - **hyper** + **t** to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
-
-Edit [`hammerspoon/hyper.lua`](hammerspoon/hyper.lua) to configure shortcuts to launch your most commonly-used apps.
 
 ### Miscellaneous goodness
 
