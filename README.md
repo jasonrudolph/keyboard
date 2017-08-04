@@ -134,7 +134,7 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 
 - **hyper** + **a** to open iTunes ("A" for "Apple Music")
 - **hyper** + **b** to open Google Chrome ("B" for "Browser")
-- **hyper** + **c** to open [Hackable Slack Client](https://github.com/bhuga/hackable-slack-client) ("C for "Chat")
+- **hyper** + **c** to open Slack ("C for "Chat")
 - **hyper** + **d** to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
 - **hyper** + **e** to open [Atom](https://atom.io) ("E" for "Editor")
 - **hyper** + **f** to open Finder ("F" for "Finder")
