@@ -1,6 +1,8 @@
--- Keybindings for launching apps in Hyper Mode
+-- Default keybindings for launching apps in Hyper Mode
 --
--- Edit this file to configure shortcuts to launch your most commonly-used apps.
+-- To launch _your_ most commonly-used apps via Hyper Mode, create a copy of
+-- this file, save it as `hyper-apps.lua`, and edit the table below to configure
+-- your preferred shortcuts.
 return {
   { 'a', 'iTunes' },                -- "A" for "Apple Music"
   { 'b', 'Google Chrome' },         -- "B" for "Browser"

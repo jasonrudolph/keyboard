@@ -128,7 +128,7 @@ With a new modifier key defined, we open a whole world of possibilities. I find 
 
 #### Choose your own apps
 
-Hyper Mode ships with the default keybindings below, but you'll likely want to personalize this setup. Edit [`hammerspoon/hyper-apps.lua`](hammerspoon/hyper-apps.lua) to configure shortcuts to launch your most commonly-used apps.
+Hyper Mode ships with the default keybindings below, but you'll likely want to personalize this setup. See [`hammerspoon/hyper-apps-defaults.lua`](hammerspoon/hyper-apps-defaults.lua) for instructions on configuring shortcuts to launch *your* most commonly-used apps.
 
 #### Default app keybindings
 
