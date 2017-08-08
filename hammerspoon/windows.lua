@@ -154,6 +154,23 @@ function hs.window.centerWithFullHeight(win)
   win:setFrame(f)
 end
 
+-- +--------------+
+-- |  |--------|  |
+-- |  |  HERE  |  |
+-- |  |--------|  |
+-- +---------------+
+function hs.window.middle(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.w = 1280
+  f.h = 1024
+  f.x = (max.w - f.w) / 2
+  f.y = (max.h - f.h) / 2
+  win:setFrame(f)
+end
+
 -- +-----------------+
 -- |      |          |
 -- | HERE |          |
@@ -246,6 +263,10 @@ end)
 
 windowLayoutMode:bindWithAutomaticExit({}, 'space', function()
   hs.window.focusedWindow():centerWithFullHeight()
+end)
+
+windowLayoutMode:bindWithAutomaticExit({}, 'm', function()
+  hs.window.focusedWindow():middle()
 end)
 
 windowLayoutMode:bindWithAutomaticExit({}, 'h', function()
