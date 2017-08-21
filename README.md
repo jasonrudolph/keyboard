@@ -173,6 +173,13 @@ This setup is honed and tested with the following dependencies.
 
 2. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
+## Common Issues
+
+If you see the error `ln: your/home/path/.config//karabiner: Operation not permitted`,
+then you probably have an existing configuration folder for karabiner.
+You will need to move, remove, or change the name of the folder and run `script/setup`
+again.
+
 ## TODO
 
 - Add [#13](https://github.com/jasonrudolph/keyboard/pull/13) to [features](#features):
