@@ -76,9 +76,11 @@ Quickly arrange and resize windows in common configurations, using keyboard shor
 Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit **control** + **s**, and then hit **h**.
 
 - Use **h** to send window left (left half of screen)
+- Use **shift** + **h** to send window left (left 40% of screen)
 - Use **j** to send window down (bottom half of screen)
 - Use **k** to send window up (top half of screen)
 - Use **l** to send window right (right half of screen)
+- Use **shift** + **l** to send window right (right 60% of screen)
 - Use **i** to send window to upper left quarter of screen
 - Use **o** to send window to upper right quarter of screen
 - Use **,** to send window to lower left quarter of screen
