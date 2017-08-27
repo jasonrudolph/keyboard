@@ -79,8 +79,8 @@ Use **control** + **s** to turn on Window Layout Mode. Then, use any shortcut be
 - Use **j** to send window down (bottom half of screen)
 - Use **k** to send window up (top half of screen)
 - Use **l** to send window right (right half of screen)
-- Use **shift** + **h** to send window left (left 40% of screen)
-- Use **shift** + **l** to send window right (right 60% of screen)
+- Use **shift** + **h** to send window to left 40% of screen
+- Use **shift** + **l** to send window to right 60% of screen
 - Use **i** to send window to upper left quarter of screen
 - Use **o** to send window to upper right quarter of screen
 - Use **,** to send window to lower left quarter of screen
