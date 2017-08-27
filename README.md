@@ -75,22 +75,24 @@ Quickly arrange and resize windows in common configurations, using keyboard shor
 
 Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>control</kbd> + <kbd>s</kbd>, and then hit <kbd>h</kbd>.
 
-- Use <kbd>h</kbd> to send window left (left half of screen)
-- Use <kbd>j</kbd> to send window down (bottom half of screen)
-- Use <kbd>k</kbd> to send window up (top half of screen)
-- Use <kbd>l</kbd> to send window right (right half of screen)
-- Use <kbd>shift</kbd> + <kbd>h</kbd> to send window to left 40% of screen
-- Use <kbd>shift</kbd> + <kbd>l</kbd> to send window to right 60% of screen
-- Use <kbd>i</kbd> to send window to upper left quarter of screen
-- Use <kbd>o</kbd> to send window to upper right quarter of screen
-- Use <kbd>,</kbd> to send window to lower left quarter of screen
-- Use <kbd>.</kbd> to send window to lower right quarter of screen
-- Use <kbd>space</kbd> to send window to center of screen
-- Use <kbd>enter</kbd> to resize window to fill the screen
-- Use <kbd>n</kbd> to send window to the next monitor
-- Use <kbd>←</kbd> to send window to the monitor on the left (if there is one)
-- Use <kbd>→</kbd> to send window to the monitor on the right (if there is one)
-- Use <kbd>control</kbd> + <kbd>s</kbd> to exit Window Layout Mode without moving any windows
+| Keystroke      | Effect                                 |
+| :------------- | :------------------------------------- |
+| <kbd>h</kbd>   | Send window to **left half** of screen |
+| <kbd>j</kbd>   | Send window to **bottom half** of screen |
+| <kbd>k</kbd>   | Send window to **top half** of screen |
+| <kbd>l</kbd>   | Send window to **right half** of screen |
+| <kbd>shift</kbd> + <kbd>h</kbd> | Send window to **left 40%** of screen |
+| <kbd>shift</kbd> + <kbd>l</kbd> | Send window to **right 60%** of screen |
+| <kbd>i</kbd> | Send window to **upper left quarter** of screen |
+| <kbd>o</kbd> | Send window to **upper right quarter** of screen |
+| <kbd>,</kbd> | Send window to **lower left quarter** of screen |
+| <kbd>.</kbd> | Send window to **lower right quarter** of screen |
+| <kbd>space</kbd> | Send window to **center** of screen |
+| <kbd>enter</kbd> | Resize window to **fill the screen** |
+| <kbd>n</kbd> | Send window to the **next monitor** |
+| <kbd>←</kbd> | Send window to the **monitor on the left** (if there is one) |
+| <kbd>→</kbd> | Send window to the **monitor on the right** (if there is one) |
+| <kbd>control</kbd> + <kbd>s</kbd> | **Exit** Window Layout Mode without moving any windows |
 
 [<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
 
