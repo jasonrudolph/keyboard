@@ -43,7 +43,7 @@ function inlineLink()
     -- Allow some time for the command+v keystroke to fire asynchronously before
     -- we restore the original clipboard
     hs.timer.doAfter(0.2, function()
-      hs.pasteboard.setContents(originalClipboardContents)
+      hs.pasteboard.setContents(linkUrl)
     end)
   end)
 end
