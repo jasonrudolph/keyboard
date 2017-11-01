@@ -86,6 +86,23 @@ function hs.window.upLeft(win)
 end
 
 -- +-----------------+
+-- |        |        |
+-- |  HERE  |        |
+-- +--------+        |
+-- +-----------------+
+function hs.window.upLeftTall(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w/2
+  f.h = max.h * 0.7
+  win:setFrame(f)
+end
+
+-- +-----------------+
 -- |                 |
 -- +--------+        |
 -- |  HERE  |        |
@@ -99,6 +116,23 @@ function hs.window.downLeft(win)
   f.y = max.y + (max.h / 2)
   f.w = max.w/2
   f.h = max.h/2
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- +--------+        |
+-- |  HERE  |        |
+-- |        |        |
+-- +-----------------+
+function hs.window.downLeftTall(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x
+  f.y = max.y + (max.h * 0.3)
+  f.w = max.w/2
+  f.h = max.h * 0.7
   win:setFrame(f)
 end
 
@@ -121,6 +155,23 @@ function hs.window.downRight(win)
 end
 
 -- +-----------------+
+-- |        +--------|
+-- |        |        |
+-- |        |  HERE  |
+-- +-----------------+
+function hs.window.downRightTall(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x + (max.w / 2)
+  f.y = max.y + (max.h * 0.3)
+  f.w = max.w/2
+  f.h = max.h * 0.7
+
+  win:setFrame(f)
+end
+-- +-----------------+
 -- |        |  HERE  |
 -- |        +--------|
 -- |                 |
@@ -136,7 +187,22 @@ function hs.window.upRight(win)
   f.h = max.h/2
   win:setFrame(f)
 end
+-- +-----------------+
+-- |        |  HERE  |
+-- |        |        |
+-- |        +--------|
+-- +-----------------+
+function hs.window.upRightTall(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
 
+  f.x = max.x + (max.w / 2)
+  f.y = max.y
+  f.w = max.w/2
+  f.h = max.h * 0.7
+  win:setFrame(f)
+end
 -- +--------------+
 -- |  |        |  |
 -- |  |  HERE  |  |
@@ -151,6 +217,23 @@ function hs.window.centerWithFullHeight(win)
   f.w = max.w * 3/5
   f.y = max.y
   f.h = max.h
+  win:setFrame(f)
+end
+
+-- +--------------+
+-- |   --------   |
+-- |  |  HERE  |  |
+-- |   --------   |
+-- +---------------+
+function hs.window.centerSmall(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x + (max.w / 5)
+  f.w = max.w * 3/5
+  f.y = max.y + (max.h / 5)
+  f.h = max.h * 3/5
   win:setFrame(f)
 end
 
@@ -272,20 +355,40 @@ windowLayoutMode:bindWithAutomaticExit({'shift'}, 'l', function()
   hs.window.focusedWindow():right60()
 end)
 
+windowLayoutMode:bindWithAutomaticExit({'shift'}, 'j', function()
+  hs.window.focusedWindow():centerSmall()
+end)
+
 windowLayoutMode:bindWithAutomaticExit({}, 'i', function()
   hs.window.focusedWindow():upLeft()
+end)
+
+windowLayoutMode:bindWithAutomaticExit({'shift'}, 'i', function()
+  hs.window.focusedWindow():upLeftTall()
 end)
 
 windowLayoutMode:bindWithAutomaticExit({}, 'o', function()
   hs.window.focusedWindow():upRight()
 end)
 
+windowLayoutMode:bindWithAutomaticExit({'Shift'}, 'o', function()
+  hs.window.focusedWindow():upRightTall()
+end)
+
 windowLayoutMode:bindWithAutomaticExit({}, ',', function()
   hs.window.focusedWindow():downLeft()
 end)
 
+windowLayoutMode:bindWithAutomaticExit({'shift'}, ',', function()
+  hs.window.focusedWindow():downLeftTall()
+end)
+
 windowLayoutMode:bindWithAutomaticExit({}, '.', function()
   hs.window.focusedWindow():downRight()
+end)
+
+windowLayoutMode:bindWithAutomaticExit({'shift'}, '.', function()
+  hs.window.focusedWindow():downRightTall()
 end)
 
 windowLayoutMode:bindWithAutomaticExit({}, 'n', function()
