@@ -201,7 +201,6 @@ function hs.window.nextScreen(win)
   end
 end
 
--- See windows-bindings-defaults.lua
 windowLayoutMode = hs.hotkey.modal.new({}, 'F16')
 
 windowLayoutMode.entered = function()
