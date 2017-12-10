@@ -226,6 +226,7 @@ if not status then
 end
 
 local modifiers = windowMappings.modifiers
+local showHelp  = windowMappings.showHelp
 local trigger   = windowMappings.trigger
 local mappings  = windowMappings.mappings
 
@@ -241,16 +242,18 @@ function getModifiersStr(modifiers)
 end
 
 local msgStr = getModifiersStr(modifiers)
-msgStr = 'Window Layout Mode (' .. msgStr .. (string.len(msgStr) > 0 and '+' or '') .. trigger .. ')\n'
+msgStr = 'Window Layout Mode (' .. msgStr .. (string.len(msgStr) > 0 and '+' or '') .. trigger .. ')'
 
 for i, mapping in ipairs(mappings) do
   local modifiers, trigger, winFunction = table.unpack(mapping)
   local hotKeyStr = getModifiersStr(modifiers)
 
-  if string.len(hotKeyStr) > 0 then
-    msgStr = msgStr .. (string.format('%10s+%s => %s\n', hotKeyStr, trigger, winFunction))
-  else
-    msgStr = msgStr .. (string.format('%11s => %s\n', trigger, winFunction))
+  if showHelp == true then
+    if string.len(hotKeyStr) > 0 then
+      msgStr = msgStr .. (string.format('\n%10s+%s => %s', hotKeyStr, trigger, winFunction))
+    else
+      msgStr = msgStr .. (string.format('\n%11s => %s', trigger, winFunction))
+    end
   end
 
   windowLayoutMode:bindWithAutomaticExit(modifiers, trigger, function()
