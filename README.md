@@ -71,7 +71,9 @@ To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold
 
 ### Window Layout Mode
 
-Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row.
+Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row. (Or, feel free to [choose your own keyboard shortcuts](#choose-your-own-keybindings).)
+
+#### Default keybindings
 
 Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>control</kbd> + <kbd>s</kbd>, and then hit <kbd>h</kbd>.
 
@@ -93,6 +95,10 @@ Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use a
 - Use <kbd>control</kbd> + <kbd>s</kbd> to exit Window Layout Mode without moving any windows
 
 [<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
+
+#### Choose your own keybindings
+
+Window Layout Mode ships with the default keybindings above, but you're welcome to personalize this setup. See [`hammerspoon/windows-bindings-defaults.lua`](hammerspoon/windows-bindings-defaults.lua) for instructions on configuring shortcuts to your personal taste.
 
 ### Markdown Mode
 
