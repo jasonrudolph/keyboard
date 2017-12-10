@@ -157,7 +157,7 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 
 This setup is honed and tested with the following dependencies.
 
-- macOS Sierra, 10.12
+- macOS High Sierra, 10.13
 - [Karabiner-Elements 11.4.0][karabiner]
 - [Hammerspoon 0.9.52][hammerspoon]
 
