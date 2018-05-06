@@ -16,8 +16,9 @@ modal.new = function(modifier)
 
     modalKeybindings = {},
 
+    inModalState = false,
+
     reset = function(self)
-      self.inModalState = false
       self.modifierDownHappened = false
 
       return self
@@ -58,6 +59,7 @@ modal.new = function(modifier)
     exit = function(self)
       if not self.inModalState then return end
 
+      self.inModalState = false
       self:reset()
       self:exited()
     end,
