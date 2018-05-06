@@ -88,10 +88,14 @@ modal.new = function(modifier)
   end
 
   isOnlyModifier = function(flagsChangedEvent)
-    return hs.fnutils.every(flagsChangedEvent:getFlags(), function(isDown, modifierName)
-      return (isDown and modifierName == modifier) or
-        (not isDown and not modifierName == modifier)
+    local flags = flagsChangedEvent:getFlags()
+
+    isPrimaryModiferDown = flags[modifier]
+    areOtherModifiersDown = hs.fnutils.some(flags, function(isDown, modifierName)
+      return isDown and not modifierName == modifier
     end)
+
+    return isPrimaryModiferDown and not areOtherModifiersDown
   end
 
   onModifierChange = function(event)
