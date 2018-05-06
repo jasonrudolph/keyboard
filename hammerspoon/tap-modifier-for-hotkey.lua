@@ -103,7 +103,6 @@ modal.new = function(modifier)
     -- If it's only the modifier that we care about, then this could be the
     -- start of a tap, so start watching for the modifier to be released.
     if isOnlyModifier(event) and not instance.modifierDownHappened then
-
       instance.modifierDownHappened = true
 
       -- If the modifier isn't released before the timeout, then it doesn't seem
@@ -135,7 +134,16 @@ modal.new = function(modifier)
   onKeyDown = function(event)
     if instance.inModalState then
       local fn = instance.modalKeybindings[event:getCharacters():lower()]
-      if fn then fn() end
+
+      -- Some actions may take a while to perform (e.g., opening Slack when it's
+      -- not yet running). We don't want to keep the modal state active while we
+      -- wait for a long-running action to complete. So, we schedule the action
+      -- to run in the background so that we can exit the modal state and let
+      -- the user go on about their business.
+      local delayInSeconds = 0.001 -- 1 millisecond
+      hs.timer.doAfter(delayInSeconds, function()
+        if fn then fn() end
+      end)
 
       instance:exit()
 
