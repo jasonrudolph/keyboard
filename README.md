@@ -183,6 +183,8 @@ This setup is honed and tested with the following dependencies.
 
 2. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
 
+3. Give yourself a [more useful <kbd>caps lock</kbd> key](#a-more-useful-caps-lock-key): Open *System Preferences*, navigate to *Keyboard > Modifier Keys*, and set the <kbd>caps lock</kbd> key to <kbd>control</kbd> [[screenshot]](https://user-images.githubusercontent.com/2988/27111039-7f620442-507b-11e7-9bcf-93d46e14af13.png)
+
 ## TODO
 
 - Add [#13](https://github.com/jasonrudolph/keyboard/pull/13) to [features](#features):
