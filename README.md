@@ -40,7 +40,7 @@ While I find that these customizations yield a more-useful keyboard for me, they
 - [Arrange windows via the home row](#window-layout-mode)
 - [Enable other commonly-used actions on or near the home row](#miscellaneous-goodness)
 - [Format text as Markdown](#markdown-mode)
-- [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
+- [Launch commonly-used apps via global keyboard shortcuts](#hyper-mode-for-quickly-launching-apps)
 - [And more...](#miscellaneous-goodness)
 
 ### A more useful caps lock key
@@ -128,11 +128,14 @@ Use <kbd>control</kbd> + <kbd>m</kbd> to turn on Markdown Mode. Then, use any sh
 
 - Use <kbd>control</kbd> + <kbd>m</kbd> to exit Markdown Mode without performing any actions
 
-### Hyper key for quickly launching apps
+### Hyper Mode for quickly launching apps
 
-macOS doesn't have a native <kbd>hyper</kbd> key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json). In this setup, we'll use the <kbd>right option</kbd> key as our <kbd>hyper</kbd> key.
+Launch your favorite apps with global shortcuts, and do so without interfering with existing macOS shortcuts or application-specific shortcuts. 😅
 
-With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps.
+Tap <kbd>option</kbd> (AKA <kbd>alt</kbd>) to enter Hyper Mode and then press any shortcut to focus the associated application. For example, if you're using the default keybindings shown below to open the Finder, you would:
+
+1. Tap the <kbd>option</kbd> key (i.e., press and then release it in quick succession) to enter Hyper Mode
+2. Then, press <kbd>f</kbd> for Finder
 
 #### Choose your own apps
 
@@ -140,15 +143,15 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 
 #### Default app keybindings
 
-- <kbd>hyper</kbd> + <kbd>a</kbd> to open iTunes ("A" for "Apple Music")
-- <kbd>hyper</kbd> + <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
-- <kbd>hyper</kbd> + <kbd>c</kbd> to open Slack ("C for "Chat")
-- <kbd>hyper</kbd> + <kbd>d</kbd> to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
-- <kbd>hyper</kbd> + <kbd>e</kbd> to open [Atom](https://atom.io) ("E" for "Editor")
-- <kbd>hyper</kbd> + <kbd>f</kbd> to open Finder ("F" for "Finder")
-- <kbd>hyper</kbd> + <kbd>g</kbd> to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
-- <kbd>hyper</kbd> + <kbd>s</kbd> to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
-- <kbd>hyper</kbd> + <kbd>t</kbd> to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
+- <kbd>a</kbd> to open iTunes ("A" for "Apple Music")
+- <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
+- <kbd>c</kbd> to open Slack ("C for "Chat")
+- <kbd>d</kbd> to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
+- <kbd>e</kbd> to open [Atom](https://atom.io) ("E" for "Editor")
+- <kbd>f</kbd> to open Finder ("F" for "Finder")
+- <kbd>g</kbd> to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
+- <kbd>s</kbd> to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
+- <kbd>t</kbd> to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
 
 ### Miscellaneous goodness
 
@@ -164,7 +167,6 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 This setup is honed and tested with the following dependencies.
 
 - macOS High Sierra, 10.13
-- [Karabiner-Elements 11.4.0][karabiner]
 - [Hammerspoon 0.9.66][hammerspoon]
 
 ## Installation
@@ -189,7 +191,6 @@ This setup is honed and tested with the following dependencies.
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
-[karabiner]: https://github.com/tekezo/Karabiner-Elements
 [hammerspoon]: http://www.hammerspoon.org
 [hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
