@@ -12,7 +12,7 @@ modal.new = function(modifier)
 
     tapTimeoutInSeconds = 0.5,
 
-    modalStateTimeoutInSeconds = 0.5,
+    modalStateTimeoutInSeconds = 1.0,
 
     modalKeybindings = {},
 
