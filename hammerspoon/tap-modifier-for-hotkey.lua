@@ -10,6 +10,8 @@ modal.new = function(modifier)
   local instance = {
     modifier = modifier,
 
+    lastFlagsSeen = {},
+
     tapTimeoutInSeconds = 0.5,
 
     modalStateTimeoutInSeconds = 1.0,
@@ -19,7 +21,7 @@ modal.new = function(modifier)
     inModalState = false,
 
     reset = function(self)
-      self.modifierDownHappened = false
+      self.tapStarted = false
 
       return self
     end,
@@ -81,31 +83,35 @@ modal.new = function(modifier)
     end,
   }
 
-  isNoModifiers = function(flagsChangedEvent)
+  isNoModifiers = function(flags)
     local isFalsey = function(value)
       return not value
     end
 
-    return hs.fnutils.every(flagsChangedEvent:getFlags(), isFalsey)
+    return hs.fnutils.every(flags, isFalsey)
   end
 
-  isOnlyModifier = function(flagsChangedEvent)
-    local flags = flagsChangedEvent:getFlags()
-
+  isOnlyModifier = function(flags)
     isPrimaryModiferDown = flags[modifier]
     areOtherModifiersDown = hs.fnutils.some(flags, function(isDown, modifierName)
-      return isDown and not modifierName == modifier
+      local isPrimaryModifier = modifierName == modifier
+      return isDown and not isPrimaryModifier
     end)
 
     return isPrimaryModiferDown and not areOtherModifiersDown
   end
 
   onModifierChange = function(event)
+    local oldFlags = instance.lastFlagsSeen
+    local newFlags = event:getFlags()
 
-    -- If it's only the modifier that we care about, then this could be the
-    -- start of a tap, so start watching for the modifier to be released.
-    if isOnlyModifier(event) and not instance.modifierDownHappened then
-      instance.modifierDownHappened = true
+    instance.lastFlagsSeen = newFlags
+
+    -- If we've transitioned from no modifiers to just the modifier that we care
+    -- about, then this could be the start of a tap, so start watching for the
+    -- modifier to be released.
+    if isNoModifiers(oldFlags) and isOnlyModifier(newFlags) then
+      instance.tapStarted = true
 
       -- If the modifier isn't released before the timeout, then it doesn't seem
       -- like the user is intending to *tap* the modifier key. So, start over.
@@ -116,10 +122,10 @@ modal.new = function(modifier)
       return
     end
 
-    -- If we've seen one press of the modifier we care about, and now no
-    -- modifiers are down, then this is the key-up event for the modifier we care
-    -- about. So, enter the modal state.
-    if isNoModifiers(event) and instance.modifierDownHappened then
+    -- If we saw the modifier we care about get pressed, and now no modifiers
+    -- are down, then this is the key-up event for the modifier we care about.
+    -- So, enter the modal state.
+    if instance.tapStarted and isNoModifiers(newFlags) then
       instance:enter()
 
       return
