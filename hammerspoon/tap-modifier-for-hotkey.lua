@@ -10,10 +10,6 @@ modal.new = function(modifier)
   local instance = {
     modifier = modifier,
 
-    lastFlagsSeen = {},
-
-    tapTimeoutInSeconds = 0.5,
-
     modalStateTimeoutInSeconds = 1.0,
 
     modalKeybindings = {},
@@ -21,7 +17,14 @@ modal.new = function(modifier)
     inModalState = false,
 
     reset = function(self)
-      self.tapStarted = false
+      -- Keep track of the last flags from the three most recent flagsChanged
+      -- events.
+      self.flagsHistory = { {}, {}, {} }
+      self.flagsHistory.push = function(self, flags)
+        self[1] = self[2]
+        self[2] = self[3]
+        self[3] = flags
+      end
 
       return self
     end,
@@ -102,38 +105,18 @@ modal.new = function(modifier)
   end
 
   onModifierChange = function(event)
-    local oldFlags = instance.lastFlagsSeen
-    local newFlags = event:getFlags()
+    instance.flagsHistory:push(event:getFlags())
 
-    instance.lastFlagsSeen = newFlags
+    local flags3 = instance.flagsHistory[3] -- the current flags
+    local flags2 = instance.flagsHistory[2] -- the previous flags
+    local flags1 = instance.flagsHistory[1] -- the flags before the previous flags
 
-    -- If we've transitioned from no modifiers to just the modifier that we care
-    -- about, then this could be the start of a tap, so start watching for the
-    -- modifier to be released.
-    if isNoModifiers(oldFlags) and isOnlyModifier(newFlags) then
-      instance.tapStarted = true
-
-      -- If the modifier isn't released before the timeout, then it doesn't seem
-      -- like the user is intending to *tap* the modifier key. So, start over.
-      hs.timer.doAfter(instance.tapTimeoutInSeconds, function()
-        if not instance.inModalState then instance:reset() end
-      end)
-
-      return
-    end
-
-    -- If we saw the modifier we care about get pressed, and now no modifiers
-    -- are down, then this is the key-up event for the modifier we care about.
-    -- So, enter the modal state.
-    if instance.tapStarted and isNoModifiers(newFlags) then
+    -- If we've transitioned from 1) no modifiers being pressed to 2) just the
+    -- modifier that we care about being pressed, to 3) no modifiers being
+    -- pressed, then enter the modal state.
+    if isNoModifiers(flags1) and isOnlyModifier(flags2) and isNoModifiers(flags3) then
       instance:enter()
-
-      return
     end
-
-    -- If we get here, then this isn't the sequence of events we were looking
-    -- for, so start over.
-    instance:reset()
 
     -- Allow the event to propagate
     return false
