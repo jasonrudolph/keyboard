@@ -125,7 +125,7 @@ modal.new = function(modifier)
       return
     end
 
-    -- If we get there, then this isn't the sequence of events we were looking
+    -- If we get here, then this isn't the sequence of events we were looking
     -- for, so start over.
     instance:reset()
 
