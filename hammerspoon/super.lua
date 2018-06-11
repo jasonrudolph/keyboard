@@ -19,6 +19,7 @@ local superDuperMode = {
     self.isDDown = false
     self.ignoreNextS = false
     self.ignoreNextD = false
+    self.nextKeyAfter = ""
     self.modifiers = {}
     self.statusMessage:hide()
   end,
@@ -51,6 +52,10 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextS = true
         keyUpDown({}, 's')
+        if superDuperMode.nextKeyAfter then
+          keyUpDown({}, superDuperMode.nextKeyAfter)
+          superDuperMode.nextKeyAfter = ""
+        end
         return false
       end
     end)
@@ -72,10 +77,19 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextD = true
         keyUpDown({}, 'd')
+        if superDuperMode.nextKeyAfter then
+          keyUpDown({}, superDuperMode.nextKeyAfter)
+          superDuperMode.nextKeyAfter = ""
+        end
         return false
       end
     end)
     return true
+  else
+    if superDuperMode.isSDown or superDuperMode.isDDown then
+      superDuperMode.nextKeyAfter = characters;
+      return true
+    end
   end
 end):start()
 
