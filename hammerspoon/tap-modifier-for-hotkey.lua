@@ -17,14 +17,20 @@ modal.new = function(modifier)
     inModalState = false,
 
     reset = function(self)
-      -- Keep track of the last flags from the three most recent flagsChanged
-      -- events.
-      self.flagsHistory = { {}, {}, {} }
-      self.flagsHistory.push = function(self, flags)
-        self[1] = self[2]
-        self[2] = self[3]
-        self[3] = flags
-      end
+      -- Keep track of the three most recent events.
+      self.eventHistory = {
+        fetch = function(self, index)
+          if self[index] then
+            return eventtap.event.newEventFromData(self[index])
+          end
+        end,
+
+        push = function(self, event)
+          self[3] = self[2]
+          self[2] = self[1]
+          self[1] = event:asData()
+        end
+      }
 
       return self
     end,
@@ -102,61 +108,67 @@ modal.new = function(modifier)
     return isPrimaryModiferDown and not areOtherModifiersDown
   end
 
-  onModifierChange = function(event)
-    instance.flagsHistory:push(event:getFlags())
-
-    local flags3 = instance.flagsHistory[3] -- the current flags
-    local flags2 = instance.flagsHistory[2] -- the previous flags
-    local flags1 = instance.flagsHistory[1] -- the flags before the previous flags
-
-    -- If we've transitioned from 1) no modifiers being pressed to 2) just the
-    -- modifier that we care about being pressed, to 3) no modifiers being
-    -- pressed, then enter the modal state.
-    if isNoModifiers(flags1) and isOnlyModifier(flags2) and isNoModifiers(flags3) then
-      instance:enter()
-    end
-
-    -- Allow the event to propagate
-    return false
+  isFlagsChangedEvent = function(event)
+    return event and event:getType() == events.flagsChanged
   end
 
-  onKeyDown = function(event)
-    if instance.inModalState then
-      local fn = instance.modalKeybindings[event:getCharacters():lower()]
+  isFlagsChangedEventWithNoModifiers = function(event)
+    return isFlagsChangedEvent(event) and isNoModifiers(event:getFlags())
+  end
 
-      -- Some actions may take a while to perform (e.g., opening Slack when it's
-      -- not yet running). We don't want to keep the modal state active while we
-      -- wait for a long-running action to complete. So, we schedule the action
-      -- to run in the background so that we can exit the modal state and let
-      -- the user go on about their business.
-      local delayInSeconds = 0.001 -- 1 millisecond
-      hs.timer.doAfter(delayInSeconds, function()
-        if fn then fn() end
-      end)
-
-      instance:exit()
-
-      -- Delete the event so that we're the sole consumer of it
-      return true
-    else
-      -- Since we're not in the modal state, this event isn't part of a sequence
-      -- of events that represents the modifier being tapped, so start over.
-      instance:reset()
-
-      -- Allow the event to propagate
-      return false
-    end
+  isFlagsChangedEventWithOnlyModifier = function(event)
+    return isFlagsChangedEvent(event) and isOnlyModifier(event:getFlags())
   end
 
   instance.autoExitTimer = hs.timer.new(0, function() instance:exit() end)
 
   instance.watcher = eventtap.new({events.flagsChanged, events.keyDown},
     function(event)
-      if event:getType() == events.flagsChanged then
-        return onModifierChange(event)
-      else
-        return onKeyDown(event)
+      -- If we're in the modal state, and we got a keydown event, then trigger
+      -- the function associated with the key.
+      if (event:getType() == events.keyDown and instance.inModalState) then
+        local fn = instance.modalKeybindings[event:getCharacters():lower()]
+
+        -- Some actions may take a while to perform (e.g., opening Slack when
+        -- it's not yet running). We don't want to keep the modal state active
+        -- while we wait for a long-running action to complete. So, we schedule
+        -- the action to run in the background so that we can exit the modal
+        -- state and let the user go on about their business.
+        local delayInSeconds = 0.001 -- 1 millisecond
+        hs.timer.doAfter(delayInSeconds, function()
+          if fn then fn() end
+        end)
+
+        instance:exit()
+
+        -- Delete the event so that we're the sole consumer of it
+        return true
       end
+
+      -- Otherwise, determine if this event should cause us to enter the modal
+      -- state.
+
+      local currentEvent = event
+      local lastEvent = instance.eventHistory:fetch(1)
+      local secondToLastEvent = instance.eventHistory:fetch(2)
+
+      instance.eventHistory:push(currentEvent)
+
+      -- If we've observed the following sequence of events, then enter the
+      -- modal state:
+      --
+      -- 1. No modifiers are down
+      -- 2. Modifiers changed, and now only the primary modifier is down
+      -- 3. Modifiers changed, and now no modifiers are down
+      if (secondToLastEvent == nil or isNoModifiers(secondToLastEvent:getFlags())) and
+        isFlagsChangedEventWithOnlyModifier(lastEvent) and
+        isFlagsChangedEventWithNoModifiers(currentEvent) then
+
+        instance:enter()
+      end
+
+      -- Let the event propagate
+      return false
     end
   )
 
