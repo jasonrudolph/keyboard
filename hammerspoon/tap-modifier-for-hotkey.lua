@@ -19,16 +19,18 @@ modal.new = function(modifier)
     reset = function(self)
       -- Keep track of the three most recent events.
       self.eventHistory = {
-        fetch = function(self, index)
-          if self[index] then
-            return eventtap.event.newEventFromData(self[index])
-          end
-        end,
-
+        -- Serialize the event and push it into the history
         push = function(self, event)
           self[3] = self[2]
           self[2] = self[1]
           self[1] = event:asData()
+        end,
+
+        -- Fetch the event (if any) at the given index
+        fetch = function(self, index)
+          if self[index] then
+            return eventtap.event.newEventFromData(self[index])
+          end
         end
       }
 
