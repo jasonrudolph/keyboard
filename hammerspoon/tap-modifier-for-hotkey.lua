@@ -52,10 +52,7 @@ modal.new = function(modifier)
     enter = function(self)
       self.inModalState = true
       self:entered()
-
-      hs.timer.doAfter(self.modalStateTimeoutInSeconds,
-        function() self:exit() end
-      )
+      self.autoExitTimer:setNextTrigger(self.modalStateTimeoutInSeconds)
     end,
 
     -- Exit the modal state in which the modal's hotkey are active
@@ -64,6 +61,7 @@ modal.new = function(modifier)
     exit = function(self)
       if not self.inModalState then return end
 
+      self.autoExitTimer:stop()
       self.inModalState = false
       self:reset()
       self:exited()
@@ -149,6 +147,8 @@ modal.new = function(modifier)
       return false
     end
   end
+
+  instance.autoExitTimer = hs.timer.new(0, function() instance:exit() end)
 
   instance.watcher = eventtap.new({events.flagsChanged, events.keyDown},
     function(event)
