@@ -8,6 +8,7 @@ brew bundle check || brew bundle
 
 # Prepare custom settings for Karabiner-Elements
 # https://github.com/tekezo/Karabiner-Elements/issues/597#issuecomment-282760186
+mkdir -p ~/.config
 ln -sfn $PWD/karabiner ~/.config/
 
 # Prepare custom settings for Hammerspoon
