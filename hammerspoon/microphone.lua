@@ -24,13 +24,13 @@ toggle = function(device)
   end
 end
 
-optionKeyHandler = function()
+fnKeyHandler = function()
   recentlyClicked = false
 end
 
-controlKeyTimer = hs.timer.delayed.new(0.3, optionKeyHandler)
+controlKeyTimer = hs.timer.delayed.new(0.3, fnKeyHandler)
 
-optionHandler = function(event)
+fnHandler = function(event)
   local device = hs.audiodevice.defaultInputDevice()
   local newMods = event:getFlags()
 
@@ -56,5 +56,5 @@ optionHandler = function(event)
   lastMods = newMods
 end
 
-optionKey = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, optionHandler)
-optionKey:start()
+fnKey = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, fnHandler)
+fnKey:start()
