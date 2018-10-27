@@ -45,7 +45,7 @@ optionHandler = function(event)
     controlKeyTimer:start()
 
   -- fn keyUp
-elseif lastMods['fn'] == true and newMods['fn'] == nil then
+  elseif lastMods['fn'] == true and newMods['fn'] == nil then
     if secondClick then
       secondClick = false
     else
