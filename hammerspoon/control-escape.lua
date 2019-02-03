@@ -6,13 +6,13 @@
 sendEscape = false
 lastMods = {}
 
-controlKeyHandler = function()
+ctrlKeyHandler = function()
   sendEscape = false
 end
 
-controlKeyTimer = hs.timer.delayed.new(0.15, controlKeyHandler)
+ctrlKeyTimer = hs.timer.delayed.new(0.15, ctrlKeyHandler)
 
-controlHandler = function(evt)
+ctrlHandler = function(evt)
   local newMods = evt:getFlags()
   if lastMods["ctrl"] == newMods["ctrl"] then
     return false
@@ -20,19 +20,19 @@ controlHandler = function(evt)
   if not lastMods["ctrl"] then
     lastMods = newMods
     sendEscape = true
-    controlKeyTimer:start()
+    ctrlKeyTimer:start()
   else
     if sendEscape then
       keyUpDown({}, 'escape')
     end
     lastMods = newMods
-    controlKeyTimer:stop()
+    ctrlKeyTimer:stop()
   end
   return false
 end
 
-controlTap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, controlHandler)
-controlTap:start()
+ctrlTap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, ctrlHandler)
+ctrlTap:start()
 
 otherHandler = function(evt)
   sendEscape = false
