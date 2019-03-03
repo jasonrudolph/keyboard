@@ -52,7 +52,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextS = true
         keyUpDown({}, 's')
-        if superDuperMode.nextKeyAfter then
+        if (superDuperMode.nextKeyAfter ~= "") then
           keyUpDown({}, superDuperMode.nextKeyAfter)
           superDuperMode.nextKeyAfter = ""
         end
@@ -77,7 +77,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextD = true
         keyUpDown({}, 'd')
-        if superDuperMode.nextKeyAfter then
+        if (superDuperMode.nextKeyAfter ~= "") then
           keyUpDown({}, superDuperMode.nextKeyAfter)
           superDuperMode.nextKeyAfter = ""
         end
