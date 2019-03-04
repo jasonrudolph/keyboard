@@ -9,6 +9,8 @@ local MAX_TIME_BETWEEN_SIMULTANEOUS_KEY_PRESSES = 0.04 -- 40 milliseconds
 
 local superDuperMode = {
   statusMessage = message.new('(S)uper (D)uper Mode'),
+  nextKeyAfter = -1,
+
   enter = function(self)
     if not self.active then self.statusMessage:show() end
     self.active = true
@@ -32,7 +34,12 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
     return false
   end
 
+  if superDuperMode.active then
+    return true
+  end
+
   local characters = event:getCharacters()
+  local keycode = event:getKeyCode()
 
   if characters == 's' then
     if superDuperMode.ignoreNextS then
@@ -51,6 +58,10 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextS = true
         keyUpDown({}, 's')
+        if (superDuperMode.nextKeyAfter ~= -1) then
+          hs.eventtap.keyStroke({}, hs.keycodes.map[superDuperMode.nextKeyAfter], 0)
+          superDuperMode.nextKeyAfter = -1
+        end
         return false
       end
     end)
@@ -72,10 +83,20 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
       else
         superDuperMode.ignoreNextD = true
         keyUpDown({}, 'd')
+        if (superDuperMode.nextKeyAfter ~= -1) then
+          hs.eventtap.keyStroke({}, hs.keycodes.map[superDuperMode.nextKeyAfter], 0)
+          superDuperMode.nextKeyAfter = -1
+        end
         return false
       end
     end)
     return true
+  else
+    if superDuperMode.isSDown or superDuperMode.isDDown then
+      -- We use keycodes, as that allows us to send return, space, delete, etc.
+      superDuperMode.nextKeyAfter = keycode
+      return true
+    end
   end
 end):start()
 
