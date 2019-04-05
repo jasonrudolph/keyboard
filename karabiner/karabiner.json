@@ -74,6 +74,40 @@
                         ]
                     },
                     {
+                        "manipulators": [
+                            {
+                                "description": "[Bear] Use command+v to paste as plain text",
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^net\\.shinyfrog\\.bear$"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "[Bear] Use control+command+down/up to move current line(s) down/up",
                         "manipulators": [
                             {
