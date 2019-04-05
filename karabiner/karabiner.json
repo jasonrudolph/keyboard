@@ -37,7 +37,11 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
                             {
                                 "description": "[Bear] Use control+d to toggle todo state",
                                 "from": {
@@ -66,7 +70,12 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[Bear] Use control+command+down/up to move current line(s) down/up",
+                        "manipulators": [
                             {
                               "description": "[Bear] Use control+command+down to move current line(s) down",
                                 "from": {
