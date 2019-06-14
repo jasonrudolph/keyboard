@@ -9,11 +9,20 @@ function hs.window.left(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local xSizes = xSizes(win)
 
   f.x = max.x
   f.y = max.y
-  f.w = max.w / 2
   f.h = max.h
+ 
+  if f.w == xSizes[0].w then
+    f.w = xSizes[1].w
+  elseif f.w == xSizes[1].w then
+    f.w = xSizes[2].w
+  else
+    f.w = xSizes[0].w
+  end
+
   win:setFrame(f)
 end
 
@@ -26,12 +35,38 @@ function hs.window.right(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local xSizes = xSizes(win)
 
-  f.x = max.x + (max.w / 2)
   f.y = max.y
-  f.w = max.w / 2
   f.h = max.h
+ 
+  if f.x == xSizes[0].x and f.w == sizes[0].w then
+    f.x = xSizes[1].x
+    f.w = xSizes[1].w
+  elseif f.x == xSizes[1].x and f.w == sizes[1].w then
+    f.x = xSizes[2].x
+    f.w = xSizes[2].w
+  else
+    f.x = xSizes[0].x
+    f.w = xSizes[0].w
+  end
+
   win:setFrame(f)
+end
+
+-- +-----------------+
+-- |        |        |
+-- |        |  HERE  |
+-- |        |        |
+-- +-----------------+
+function xSizes(win)
+  local screen = win:screen()
+  local max = screen:frame()
+  local xSizes = { { } }
+  xSizes[0] = { x = max.x + (max.w * 0.5), w = max.w * 0.5 }
+  xSizes[1] = { x = math.ceil(max.x + (max.w / 3)), w = math.floor((max.w / 3) * 2) }
+  xSizes[2] = { x = math.floor(max.x + ((max.w / 3 ) * 2)), w = math.ceil(max.w / 3) }
+  return xSizes
 end
 
 -- +-----------------+
