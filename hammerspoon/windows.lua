@@ -181,7 +181,7 @@ function hs.window.right60(win)
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.w * 0.4
+  f.x = max.x + (max.w * 0.4)
   f.y = max.y
   f.w = max.w * 0.6
   f.h = max.h
