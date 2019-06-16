@@ -11,18 +11,18 @@ function hs.window.left(win)
   local max = screen:frame()
   local xSizes = xSizes(win)
 
-  f.x = max.x
   f.y = max.y
   f.h = max.h
  
-  if f.w == xSizes[0].w then
+  if f.x == max.x and f.w == xSizes[0].w then
     f.w = xSizes[1].w
-  elseif f.w == xSizes[1].w then
+  elseif f.x == max.x and f.w == xSizes[1].w then
     f.w = xSizes[2].w
   else
     f.w = xSizes[0].w
   end
 
+  f.x = max.x
   win:setFrame(f)
 end
 
@@ -40,10 +40,10 @@ function hs.window.right(win)
   f.y = max.y
   f.h = max.h
  
-  if f.x == xSizes[0].x and f.w == sizes[0].w then
+  if f.x == xSizes[0].x and f.w == xSizes[0].w then
     f.x = xSizes[1].x
     f.w = xSizes[1].w
-  elseif f.x == xSizes[1].x and f.w == sizes[1].w then
+  elseif f.x == xSizes[1].x and f.w == xSizes[1].w then
     f.x = xSizes[2].x
     f.w = xSizes[2].w
   else
