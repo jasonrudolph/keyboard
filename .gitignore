@@ -1,3 +1,6 @@
 hammerspoon/hyper-apps.lua
 hammerspoon/windows-bindings.lua
 karabiner/automatic_backups
+.DS_Store
+karabiner/assets/
+karabiner/karabiner.json
