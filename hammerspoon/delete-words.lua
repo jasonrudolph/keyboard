@@ -6,7 +6,7 @@ local isInTerminal = function()
 end
 
 -- Use option + h to delete previous word
-hs.hotkey.bind({'alt'}, 'h', function()
+hs.hotkey.bind({'alt'}, 'd', function()
   if isInTerminal() then
     keyUpDown({'ctrl'}, 'w')
   else
@@ -15,7 +15,7 @@ hs.hotkey.bind({'alt'}, 'h', function()
 end)
 
 -- Use option + l to delete next word
-hs.hotkey.bind({'alt'}, 'l', function()
+hs.hotkey.bind({'alt'}, 'n', function()
   if isInTerminal() then
     keyUpDown({}, 'escape')
     keyUpDown({}, 'd')
@@ -43,7 +43,7 @@ end))
 -- the end of the line (i.e., control+k). To maintain that very useful
 -- functionality, and to keep it on the home row, this hotkey binds control+; to
 -- delete to the end of the line.
-hs.hotkey.bind({'ctrl'}, ';', function()
+hs.hotkey.bind({'ctrl'}, 's', function()
   -- If we're in the terminal, then temporarily disable our custom control+k
   -- hotkey used for pane navigation, then fire control+k to delete to the end
   -- of the line, and then renable the control+k hotkey.

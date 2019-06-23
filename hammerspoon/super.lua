@@ -34,7 +34,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
 
   local characters = event:getCharacters()
 
-  if characters == 's' then
+  if characters == 'o' then
     if superDuperMode.ignoreNextS then
       superDuperMode.ignoreNextS = false
       return false
@@ -50,12 +50,12 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
         superDuperMode:enter()
       else
         superDuperMode.ignoreNextS = true
-        keyUpDown({}, 's')
+        keyUpDown({}, 'o')
         return false
       end
     end)
     return true
-  elseif characters == 'd' then
+  elseif characters == 'e' then
     if superDuperMode.ignoreNextD then
       superDuperMode.ignoreNextD = false
       return false
@@ -71,7 +71,7 @@ superDuperModeActivationListener = eventtap.new({ eventTypes.keyDown }, function
         superDuperMode:enter()
       else
         superDuperMode.ignoreNextD = true
-        keyUpDown({}, 'd')
+        keyUpDown({}, 'e')
         return false
       end
     end)
@@ -81,7 +81,7 @@ end):start()
 
 superDuperModeDeactivationListener = eventtap.new({ eventTypes.keyUp }, function(event)
   local characters = event:getCharacters()
-  if characters == 's' or characters == 'd' then
+  if characters == 'o' or characters == 'e' then
     superDuperMode:reset()
   end
 end):start()
@@ -96,8 +96,8 @@ superDuperModeModifierKeyListener = eventtap.new({ eventTypes.keyDown, eventType
 
   local charactersToModifers = {}
   charactersToModifers['a'] = 'alt'
-  charactersToModifers['f'] = 'cmd'
-  charactersToModifers[' '] = 'shift'
+  charactersToModifers['u'] = 'cmd'
+  charactersToModifers['k'] = 'shift'
 
   local modifier = charactersToModifers[event:getCharacters()]
   if modifier then
@@ -120,10 +120,10 @@ superDuperModeNavListener = eventtap.new({ eventTypes.keyDown }, function(event)
   end
 
   local charactersToKeystrokes = {
-    h = 'left',
-    j = 'down',
-    k = 'up',
-    l = 'right',
+    d = 'left',
+    h = 'down',
+    t = 'up',
+    n = 'right',
   }
 
   local keystroke = charactersToKeystrokes[event:getCharacters(true):lower()]
@@ -156,10 +156,10 @@ superDuperModeTabNavKeyListener = eventtap.new({ eventTypes.keyDown }, function(
   end
 
   local charactersToKeystrokes = {
-    u = { {'cmd'}, '1' },          -- go to first tab
-    i = { {'cmd', 'shift'}, '[' }, -- go to previous tab
-    o = { {'cmd', 'shift'}, ']' }, -- go to next tab
-    p = { {'cmd'}, '9' },          -- go to last tab
+    g = { {'cmd'}, '1' },          -- go to first tab
+    c = { {'cmd', 'shift'}, '[' }, -- go to previous tab
+    r = { {'cmd', 'shift'}, ']' }, -- go to next tab
+    l = { {'cmd'}, '9' },          -- go to last tab
   }
   local keystroke = charactersToKeystrokes[event:getCharacters()]
 
