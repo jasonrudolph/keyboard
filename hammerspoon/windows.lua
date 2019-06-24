@@ -64,8 +64,8 @@ function xSizes(win)
   local max = screen:frame()
   local xSizes = { { } }
   xSizes[0] = { x = max.x + (max.w * 0.5), w = max.w * 0.5 }
-  xSizes[1] = { x = math.ceil(max.x + (max.w / 3)), w = math.floor((max.w / 3) * 2) }
-  xSizes[2] = { x = math.floor(max.x + ((max.w / 3 ) * 2)), w = math.ceil(max.w / 3) }
+  xSizes[1] = { x = math.ceil(max.x + (max.w * 0.4)), w = math.floor(max.w * 0.6) }
+  xSizes[2] = { x = math.floor(max.x + (max.w * 0.6)), w = math.ceil(max.w * 0.4) }
   return xSizes
 end
 
