@@ -14,9 +14,9 @@ function hs.window.left(win)
   f.y = max.y
   f.h = max.h
  
-  if f.x == max.x and f.w == xSizes[0].w then
+  if f.x == max.x and math.abs(f.w - xSizes[0].w) < 5 then
     f.w = xSizes[1].w
-  elseif f.x == max.x and f.w == xSizes[1].w then
+  elseif f.x == max.x and math.abs(f.w - xSizes[1].w) < 5 then
     f.w = xSizes[2].w
   else
     f.w = xSizes[0].w
@@ -40,10 +40,10 @@ function hs.window.right(win)
   f.y = max.y
   f.h = max.h
  
-  if f.x == xSizes[0].x and f.w == xSizes[0].w then
+  if f.x == xSizes[0].x and math.abs(f.w - xSizes[0].w) < 5 then
     f.x = xSizes[1].x
     f.w = xSizes[1].w
-  elseif f.x == xSizes[1].x and f.w == xSizes[1].w then
+  elseif f.x == xSizes[1].x and math.abs(f.w - xSizes[1].w) < 5 then
     f.x = xSizes[2].x
     f.w = xSizes[2].w
   else
@@ -64,8 +64,8 @@ function xSizes(win)
   local max = screen:frame()
   local xSizes = { { } }
   xSizes[0] = { x = max.x + (max.w * 0.5), w = max.w * 0.5 }
-  xSizes[1] = { x = math.ceil(max.x + (max.w * 0.4)), w = math.floor(max.w * 0.6) }
-  xSizes[2] = { x = math.floor(max.x + (max.w * 0.6)), w = math.ceil(max.w * 0.4) }
+  xSizes[1] = { x = max.x + (max.w * 0.4), w = max.w * 0.6 }
+  xSizes[2] = { x = max.x + (max.w * 0.6), w = max.w * 0.4 }
   return xSizes
 end
 
