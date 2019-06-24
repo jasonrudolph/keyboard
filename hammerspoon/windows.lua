@@ -54,11 +54,7 @@ function hs.window.right(win)
   win:setFrame(f)
 end
 
--- +-----------------+
--- |        |        |
--- |        |  HERE  |
--- |        |        |
--- +-----------------+
+-- Return array of screen sizes
 function xSizes(win)
   local screen = win:screen()
   local max = screen:frame()
