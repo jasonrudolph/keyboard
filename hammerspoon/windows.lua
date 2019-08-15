@@ -13,10 +13,10 @@ function hs.window.left(win)
 
   f.y = max.y
   f.h = max.h
- 
-  if f.x == max.x and math.abs(f.w - xSizes[0].w) < 5 then
+
+  if f.x == max.x and math.abs(f.w - xSizes[0].w) <= 5 then
     f.w = xSizes[1].w
-  elseif f.x == max.x and math.abs(f.w - xSizes[1].w) < 5 then
+  elseif f.x == max.x and math.abs(f.w - xSizes[1].w) <= 5 then
     f.w = xSizes[2].w
   else
     f.w = xSizes[0].w
@@ -39,11 +39,11 @@ function hs.window.right(win)
 
   f.y = max.y
   f.h = max.h
- 
-  if f.x == xSizes[0].x and math.abs(f.w - xSizes[0].w) < 5 then
+
+  if f.x == xSizes[0].x and math.abs(f.w - xSizes[0].w) <= 5 then
     f.x = xSizes[1].x
     f.w = xSizes[1].w
-  elseif f.x == xSizes[1].x and math.abs(f.w - xSizes[1].w) < 5 then
+  elseif f.x == xSizes[1].x and math.abs(f.w - xSizes[1].w) <= 5 then
     f.x = xSizes[2].x
     f.w = xSizes[2].w
   else
