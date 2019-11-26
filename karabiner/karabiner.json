@@ -221,9 +221,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -272,9 +269,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -323,9 +317,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -374,9 +365,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -425,9 +413,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -476,9 +461,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -527,9 +509,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -579,9 +558,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -632,9 +608,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -685,9 +658,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
@@ -738,9 +708,6 @@
                         "type" : "basic"
                       }, {
                         "type" : "basic",
-                        "parameters" : {
-                          "basic.simultaneous_threshold_milliseconds" : 250
-                        },
                         "to" : [ {
                           "set_variable" : {
                             "name" : "superduper-mode",
