@@ -219,35 +219,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "left_arrow"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "h"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + J -> Down",
@@ -267,35 +238,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "down_arrow"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "j"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + K -> Up",
@@ -315,35 +257,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "up_arrow"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "k"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + L -> Right",
@@ -363,35 +276,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "right_arrow"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "l"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + A -> Option",
@@ -411,35 +295,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "left_option"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "a"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + F -> Command",
@@ -459,35 +314,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "right_command"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "f"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + Space -> Shift",
@@ -507,35 +333,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "right_shift"
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "spacebar"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + U -> First Tab",
@@ -556,36 +353,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "1",
-                          "modifiers" : [ "left_command" ]
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "u"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + I -> Prev Tab",
@@ -606,36 +373,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "open_bracket",
-                          "modifiers" : [ "left_command", "left_shift" ]
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "i"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + O -> Next Tab",
@@ -656,36 +393,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "close_bracket",
-                          "modifiers" : [ "left_command", "left_shift" ]
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "o"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }, {
                       "description" : "(S)uper(D)uper + P -> Last Tab",
@@ -706,36 +413,6 @@
                           "type" : "variable_if"
                         } ],
                         "type" : "basic"
-                      }, {
-                        "type" : "basic",
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        }, {
-                          "key_code" : "9",
-                          "modifiers" : [ "left_command" ]
-                        } ],
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "f20"
-                          }, {
-                            "key_code" : "p"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "strict",
-                            "key_up_order" : "strict_inverse",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        }
                       } ]
                     }
                 ]
@@ -905,7 +582,7 @@
                     }
                 }
             ],
-            "name": "Default profile",
+            "name": "Default",
             "selected": true,
             "simple_modifications": [
                 {
