@@ -4,7 +4,7 @@
 -- this file, save it as `hyper-apps.lua`, and edit the table below to configure
 -- your preferred shortcuts.
 return {
-  { 'a', 'iTunes' },            -- "A" for "Apple Music"
+  { 'a', 'Music' },             -- "A" for "Apple Music"
   { 'b', 'Google Chrome' },     -- "B" for "Browser"
   { 'c', 'Slack' },             -- "C for "Chat"
   { 'd', 'Remember The Milk' }, -- "D" for "Do!" ... or "Done!"
