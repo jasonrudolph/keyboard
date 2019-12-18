@@ -39,9 +39,12 @@ return {
     { {'shift'},  'l',      'right60' },
     { {},         'i',      'upLeft' },
     { {},         'o',      'upRight' },
+    { {},         'p',      'upCenter' },
     { {},         ',',      'downLeft' },
     { {},         '.',      'downRight' },
+    { {},         '/',      'downCenter' },
     { {},         'n',      'nextScreen' },
+    { {},         'c',      'centerWithQuarterWidthHeight' },
     { {},         'right',  'moveOneScreenEast' },
     { {},         'left',   'moveOneScreenWest' },
   }

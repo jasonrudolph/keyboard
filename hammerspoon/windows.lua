@@ -86,6 +86,57 @@ function hs.window.upLeft(win)
 end
 
 -- +-----------------+
+-- |   |  HERE  |    |
+-- |   +--------+    |
+-- |                 |
+-- +-----------------+
+function hs.window.upCenter(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x + (max.w / 4)
+  f.y = max.y
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- |   +--------+    |
+-- |   |  HERE  |    |
+-- |   +--------+    |
+-- +-----------------+
+function hs.window.centerWithQuarterWidthHeight(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x + (max.w / 4)
+  f.y = max.y + (max.h / 4)
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- |                 |
+-- |   +--------+    |
+-- |   |  HERE  |    |
+-- +-----------------+
+function hs.window.downCenter(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:fullFrame()
+
+  f.x = max.x + (max.w / 4)
+  f.y = max.y + (max.h / 2)
+  f.w = max.w/2
+  f.h = max.h/2
+  win:setFrame(f)
+end
+
+-- +-----------------+
 -- |                 |
 -- +--------+        |
 -- |  HERE  |        |
