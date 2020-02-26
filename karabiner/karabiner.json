@@ -171,7 +171,42 @@
                                 "type": "basic"
                             }
                         ]
-                    }, {
+                    },
+                    {
+                      "manipulators": [
+                          {
+                              "description": "[Firefox] Use command+shift+n to open new private browsing window",
+                              "from": {
+                                  "key_code": "n",
+                                  "modifiers": {
+                                      "mandatory": [
+                                          "command",
+                                          "shift"
+                                      ]
+                                  }
+                              },
+                              "to": [
+                                  {
+                                      "key_code": "p",
+                                      "modifiers": [
+                                          "left_command",
+                                          "left_shift"
+                                      ]
+                                  }
+                              ],
+                              "conditions": [
+                                  {
+                                      "type": "frontmost_application_if",
+                                      "bundle_identifiers": [
+                                          "^org\\.mozilla\\.firefox$"
+                                      ]
+                                  }
+                              ],
+                              "type": "basic"
+                          }
+                      ]
+                    },
+                    {
                       "description" : "S+D -> (S)uper(D)uper Mode",
                       "manipulators" : [ {
                         "from" : {
