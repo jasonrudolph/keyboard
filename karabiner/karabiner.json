@@ -11,7 +11,8 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
                     {
@@ -43,6 +44,14 @@
                     {
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.shinyfrog\\.bear$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "description": "[Bear] Use control+d to toggle todo state",
                                 "from": {
                                     "key_code": "d",
@@ -61,14 +70,6 @@
                                         ]
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^net\\.shinyfrog\\.bear$"
-                                        ]
-                                    }
-                                ],
                                 "type": "basic"
                             }
                         ]
@@ -76,6 +77,14 @@
                     {
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.shinyfrog\\.bear$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "description": "[Bear] Use command+v to paste as plain text",
                                 "from": {
                                     "key_code": "v",
@@ -95,14 +104,6 @@
                                         ]
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^net\\.shinyfrog\\.bear$"
-                                        ]
-                                    }
-                                ],
                                 "type": "basic"
                             }
                         ]
@@ -111,7 +112,15 @@
                         "description": "[Bear] Use control+command+down/up to move current line(s) down/up",
                         "manipulators": [
                             {
-                              "description": "[Bear] Use control+command+down to move current line(s) down",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.shinyfrog\\.bear$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "[Bear] Use control+command+down to move current line(s) down",
                                 "from": {
                                     "key_code": "down_arrow",
                                     "modifiers": {
@@ -130,18 +139,18 @@
                                         ]
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^net\\.shinyfrog\\.bear$"
-                                        ]
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
-                              "description": "[Bear] Use control+command+down to move current line(s) up",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.shinyfrog\\.bear$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "[Bear] Use control+command+down to move current line(s) up",
                                 "from": {
                                     "key_code": "up_arrow",
                                     "modifiers": {
@@ -160,11 +169,37 @@
                                         ]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
-                                            "^net\\.shinyfrog\\.bear$"
+                                            "^org\\.mozilla\\.firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "[Firefox] Use command+shift+n to open new private browsing window",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "p",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
                                         ]
                                     }
                                 ],
@@ -173,282 +208,366 @@
                         ]
                     },
                     {
-                      "manipulators": [
-                          {
-                              "description": "[Firefox] Use command+shift+n to open new private browsing window",
-                              "from": {
-                                  "key_code": "n",
-                                  "modifiers": {
-                                      "mandatory": [
-                                          "command",
-                                          "shift"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "p",
-                                      "modifiers": [
-                                          "left_command",
-                                          "left_shift"
-                                      ]
-                                  }
-                              ],
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                          "^org\\.mozilla\\.firefox$"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic"
-                          }
-                      ]
+                        "description": "S+D -> (S)uper(D)uper Mode",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "s"
+                                        },
+                                        {
+                                            "key_code": "d"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "detect_key_down_uninterruptedly": true,
+                                        "key_down_order": "insensitive",
+                                        "key_up_order": "insensitive",
+                                        "key_up_when": "any",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "superduper-mode",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "superduper-mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
-                      "description" : "S+D -> (S)uper(D)uper Mode",
-                      "manipulators" : [ {
-                        "from" : {
-                          "simultaneous" : [ {
-                            "key_code" : "s"
-                          }, {
-                            "key_code" : "d"
-                          } ],
-                          "simultaneous_options" : {
-                            "detect_key_down_uninterruptedly" : true,
-                            "key_down_order" : "insensitive",
-                            "key_up_order" : "insensitive",
-                            "key_up_when" : "any",
-                            "to_after_key_up" : [ {
-                              "set_variable" : {
-                                "name" : "superduper-mode",
-                                "value" : 0
-                              }
-                            } ]
-                          }
-                        },
-                        "to" : [ {
-                          "set_variable" : {
-                            "name" : "superduper-mode",
-                            "value" : 1
-                          }
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + H -> Left",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "h",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "left_arrow"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + J -> Down",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "j",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "down_arrow"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + K -> Up",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "k",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "up_arrow"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + L -> Right",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "l",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "right_arrow"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + A -> Option",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "a",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "left_option"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + F -> Command",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "f",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "right_command"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + Space -> Shift",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "spacebar",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "right_shift"
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + U -> First Tab",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "u",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "1",
-                          "modifiers" : [ "left_command" ]
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + I -> Prev Tab",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "i",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "open_bracket",
-                          "modifiers" : [ "left_command", "left_shift" ]
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + O -> Next Tab",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "o",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "close_bracket",
-                          "modifiers" : [ "left_command", "left_shift" ]
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
-                    }, {
-                      "description" : "(S)uper(D)uper + P -> Last Tab",
-                      "manipulators" : [ {
-                        "from" : {
-                          "key_code" : "p",
-                          "modifiers" : {
-                            "optional" : [ "any" ]
-                          }
-                        },
-                        "to" : [ {
-                          "key_code" : "9",
-                          "modifiers" : [ "left_command" ]
-                        } ],
-                        "conditions" : [ {
-                          "name" : "superduper-mode",
-                          "value" : 1,
-                          "type" : "variable_if"
-                        } ],
-                        "type" : "basic"
-                      } ]
+                        "description": "(S)uper(D)uper + H -> Left",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + J -> Down",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + K -> Up",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + L -> Right",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + A -> Option",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_option"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + F -> Command",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + Space -> Shift",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + U -> First Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + I -> Prev Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + O -> Next Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "(S)uper(D)uper + P -> Last Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -618,6 +737,9 @@
                 }
             ],
             "name": "Default",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [
                 {
@@ -631,7 +753,9 @@
             ],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
-                "keyboard_type": "ansi"
+                "country_code": 0,
+                "keyboard_type": "ansi",
+                "mouse_key_xy_scale": 100
             }
         }
     ]
