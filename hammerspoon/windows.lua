@@ -1,11 +1,12 @@
 hs.window.animationDuration = 0
+window = hs.getObjectMetatable("hs.window")
 
 -- +-----------------+
 -- |        |        |
 -- |  HERE  |        |
 -- |        |        |
 -- +-----------------+
-function hs.window.left(win)
+function window.left(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -22,7 +23,7 @@ end
 -- |        |  HERE  |
 -- |        |        |
 -- +-----------------+
-function hs.window.right(win)
+function window.right(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -39,7 +40,7 @@ end
 -- +-----------------+
 -- |                 |
 -- +-----------------+
-function hs.window.up(win)
+function window.up(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -56,7 +57,7 @@ end
 -- +-----------------+
 -- |      HERE       |
 -- +-----------------+
-function hs.window.down(win)
+function window.down(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -73,7 +74,7 @@ end
 -- +--------+        |
 -- |                 |
 -- +-----------------+
-function hs.window.upLeft(win)
+function window.upLeft(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
@@ -90,7 +91,7 @@ end
 -- +--------+        |
 -- |  HERE  |        |
 -- +-----------------+
-function hs.window.downLeft(win)
+function window.downLeft(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
@@ -107,7 +108,7 @@ end
 -- |        +--------|
 -- |        |  HERE  |
 -- +-----------------+
-function hs.window.downRight(win)
+function window.downRight(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
@@ -125,7 +126,7 @@ end
 -- |        +--------|
 -- |                 |
 -- +-----------------+
-function hs.window.upRight(win)
+function window.upRight(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
@@ -142,7 +143,7 @@ end
 -- |  |  HERE  |  |
 -- |  |        |  |
 -- +---------------+
-function hs.window.centerWithFullHeight(win)
+function window.centerWithFullHeight(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
@@ -159,7 +160,7 @@ end
 -- | HERE |          |
 -- |      |          |
 -- +-----------------+
-function hs.window.left40(win)
+function window.left40(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -176,7 +177,7 @@ end
 -- |      |   HERE   |
 -- |      |          |
 -- +-----------------+
-function hs.window.right60(win)
+function window.right60(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
@@ -188,7 +189,7 @@ function hs.window.right60(win)
   win:setFrame(f)
 end
 
-function hs.window.nextScreen(win)
+function window.nextScreen(win)
   local currentScreen = win:screen()
   local allScreens = hs.screen.allScreens()
   currentScreenIndex = hs.fnutils.indexOf(allScreens, currentScreen)
