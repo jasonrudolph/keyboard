@@ -189,6 +189,57 @@ function window.right60(win)
   win:setFrame(f)
 end
 
+-- +-----------------+
+-- |     |     |     |
+-- |HERE |     |     |
+-- |     |     |     |
+-- +-----------------+
+function window.left33(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w * 0.333333
+  f.h = max.h
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- |     |     |     |
+-- |     |HERE |     |
+-- |     |     |     |
+-- +-----------------+
+function window.middle33(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w * 0.333333)
+  f.y = max.y
+  f.w = max.w * 0.333333
+  f.h = max.h
+  win:setFrame(f)
+end
+
+-- +-----------------+
+-- |     |     |     |
+-- |     |     |HERE |
+-- |     |     |     |
+-- +-----------------+
+function window.right33(win)
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x + (max.w * 0.666666)
+  f.y = max.y
+  f.w = max.w * 0.333333
+  f.h = max.h
+  win:setFrame(f)
+end
+
 function window.nextScreen(win)
   local currentScreen = win:screen()
   local allScreens = hs.screen.allScreens()
