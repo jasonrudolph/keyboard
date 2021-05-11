@@ -183,12 +183,6 @@ This setup is honed and tested with the following dependencies.
 
 3. You'll be [prompted to allow Karabiner-Elements to load its kernel extension](https://karabiner-elements.pqrs.org/docs/getting-started/installation/#open-karabiner-elements-preferences), followed by a [flurry of prompts related to input monitoring](https://karabiner-elements.pqrs.org/docs/getting-started/installation/#grant-input-monitoring-to-karabiner-elements-processes). Follow the prompts to upgrade your life.
 
-## TODO
-
-- Add [#13](https://github.com/jasonrudolph/keyboard/pull/13) to [features](#features):
-    - Hold option for push-to-talk/push-to-mute
-    - Double-tap option to mute/unmute microphone
-
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
 [karabiner]: https://github.com/tekezo/Karabiner-Elements
