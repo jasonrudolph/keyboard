@@ -165,7 +165,7 @@ This setup is honed and tested with the following dependencies.
 
 - macOS Catalina, 10.15
 - [Karabiner-Elements 13.7.0][karabiner]
-- [Hammerspoon 0.9.81][hammerspoon]
+- [Hammerspoon 0.9.90][hammerspoon]
 
 ## Installation
 
