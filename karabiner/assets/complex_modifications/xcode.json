@@ -1,0 +1,38 @@
+{
+  "title": "[Xcode]",
+  "rules": [
+    {
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.dt\\.Xcode$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "description": "[Xcode] Use control+h to move focus to previous editor. To use this, configure Xcode's \"Move Focus to Next Editor\" keyboard shortcut to ⌃l (control+l).",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": [
+                "left_shift",
+                "left_control"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
