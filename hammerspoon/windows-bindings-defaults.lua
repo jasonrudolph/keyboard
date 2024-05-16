@@ -44,5 +44,10 @@ return {
     { {},         'n',      'nextScreen' },
     { {},         'right',  'moveOneScreenEast' },
     { {},         'left',   'moveOneScreenWest' },
+    { {},         'q',      'left33' },
+    { {},         'w',      'middle33' },
+    { {},         'e',      'right33' },
+    { {},         'a',      'left66' },
+    { {},         'd',      'right66' },
   }
 }
