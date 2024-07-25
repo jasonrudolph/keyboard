@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Homebrew
+      run: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    - name: Verify Homebrew installation
+      run: brew --version
+
+    - run: script/setup
