@@ -21,15 +21,38 @@ end
 -- hotkey       - The hs.hotkey object to enable/disable.
 --
 -- Returns nothing.
-enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
-  windowFilter:subscribe(hs.window.filter.windowFocused, function()
-    hotkey:enable()
-  end)
+-- Keep global references so Lua GC does not collect filtered hotkeys or watchers
+_G._filteredHotkeys = {}
 
-  windowFilter:subscribe(hs.window.filter.windowUnfocused, function()
+enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
+  table.insert(_G._filteredHotkeys, {filter = windowFilter, hotkey = hotkey})
+
+  local fw = hs.window.focusedWindow()
+  if fw and windowFilter:isWindowAllowed(fw) then
+    hotkey:enable()
+  else
     hotkey:disable()
-  end)
+  end
 end
+
+local updateFilteredHotkeys = function()
+  local fw = hs.window.focusedWindow()
+  for _, entry in ipairs(_G._filteredHotkeys) do
+    if fw and entry.filter:isWindowAllowed(fw) then
+      entry.hotkey:enable()
+    else
+      entry.hotkey:disable()
+    end
+  end
+end
+
+if _G._appWatcher then _G._appWatcher:stop() end
+_G._appWatcher = hs.application.watcher.new(function(appName, eventType)
+  if eventType == hs.application.watcher.activated or eventType == hs.application.watcher.deactivated then
+    hs.timer.doAfter(0.05, updateFilteredHotkeys)
+  end
+end)
+_G._appWatcher:start()
 
 require('keyboard.control-escape')
 require('keyboard.delete-words')
